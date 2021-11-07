@@ -1,0 +1,110 @@
+{
+    "most": [{
+            "id": "1",
+            "name": "Fish Teriaki",
+            "location": "Western Food",
+            "price": 55,
+            "pictureId": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
+            "badge": "Most Favorite"
+        },
+        {
+            "id": "2",
+            "name": "Steak Wagyu",
+            "location": "American Food",
+            "price": 55,
+            "pictureId": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+            "badge": "Most Favorite"
+        },
+        {
+            "id": "3",
+            "name": "Red Curry",
+            "location": "American Food",
+            "price": 55,
+            "pictureId": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+            "badge": "Most Favorite"
+        },
+        {
+            "id": "4",
+            "name": "Pork Chop Dinner",
+            "location": "American Food",
+            "price": 55,
+            "pictureId": "https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1476&q=80",
+            "badge": "Most Favorite"
+        },
+        {
+            "id": "5",
+            "name": "Pepperoni and Olive Pizza",
+            "location": "Western Food",
+            "price": 55,
+            "pictureId": "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+            "badge": "Most Favorite"
+        },
+        {
+            "id": "6",
+            "name": "Cookies Fruit",
+            "location": "Western Food",
+            "price": 55,
+            "pictureId": "https://images.unsplash.com/photo-1496412705862-e0088f16f791?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+            "badge": "Most Favorite"
+        },
+        {
+            "id": "7",
+            "name": "Sate Kambing",
+            "location": "Indonesian Food",
+            "price": 40,
+            "pictureId": "https://images.unsplash.com/photo-1520690594286-1aadf7e7af36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+            "badge": "Most Favorite"
+        }
+    ],
+    "all": [{
+            "id": "1",
+            "name": "Seafood Pasta With Shrimps",
+            "location": "Western Food",
+            "price": 38,
+            "pictureId": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
+        },
+        {
+            "id": "2",
+            "name": "Seafood Paella",
+            "location": "Western Food",
+            "price": 28,
+            "pictureId": "https://images.unsplash.com/photo-1515443961218-a51367888e4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        },
+        {
+            "id": "3",
+            "name": "Lontong Sayur",
+            "location": "Indonesian Food",
+            "price": 20,
+            "pictureId": "https://images.unsplash.com/photo-1572656306390-40a9fc3899f7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
+        },
+        {
+            "id": "4",
+            "name": "Bowl Of Oatmeal",
+            "location": "Western Food",
+            "price": 20,
+            "pictureId": "https://images.unsplash.com/photo-1497888329096-51c27beff665?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=871&q=80"
+        },
+        {
+            "id": "5",
+            "name": "Udang Sauce Tiram",
+            "location": "Indonesian Food",
+            "price": 20,
+            "pictureId": "https://images.unsplash.com/photo-1626508034913-8648f3f84b84?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
+        },
+        {
+            "id": "6",
+            "name": "Yam Mie",
+            "location": "Chinese Food",
+            "price": 20,
+            "pictureId": "https://images.unsplash.com/photo-1626509653291-18d9a934b9db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        }
+    ],
+    "choose": [{
+        "id": "1",
+        "title": "A Very Simple Process To Make Order Your Favorite Foods",
+        "reasonOne": "We serve authentic food from the ground up",
+        "reasonTwo": "A special and appetizing presentation",
+        "reasonThree": "Unique quality of food and presentation",
+        "pictureId": "https://images.unsplash.com/photo-1592861956120-e524fc739696?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
+    }]
+}
