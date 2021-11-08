@@ -8,20 +8,10 @@ import {
 const Home = {
 	render() {
 		return `
-      <section class="most-favorite" id="most-food">
-        <h2 class="section-title">Most Ordered <span class="line-style">Food</span></h2>
-        <div id="most" class="food"></div>
-      </section>
-      <section class="all-food" id="all-food">
-			<h2 class="section-title">All Food For <span class="line-style">You</span></h2>
-			<div id="all" class="food"></div>
-    	</section>
-      <section class="choose" id="choose-section">
-			<h2 class="section-title">
-				Why you choose <span class="line-style">Bites?</span>
-			</h2>
-			<div class="choose-container" id="choose"></div>
-		</section>
+		<hero-component></hero-component>
+		<most-food></most-food>
+		<all-food></all-food>
+		<choose-component></choose-component>
       `;
 	},
 

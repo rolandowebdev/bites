@@ -110,6 +110,8 @@
   }
   .choose-container {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .choose-image {
     max-width: 100%;
@@ -137,6 +139,7 @@
 @media (max-width: 1199px) {
   .container {
     max-width: 100%;
+    margin: 0;
   }
   .logo {
     padding-left: 1.2rem;
@@ -144,11 +147,27 @@
   .nav-list {
     padding-right: 1.2rem;
   }
-  .main-container {
-    margin: 0 2.5rem;
-  }
   .hero-image {
     max-width: 100%;
     border-radius: 0;
+  }
+  .outlet {
+    margin-right: 2.25rem;
+    margin-left: 2.25rem;
+  }
+  .most-favorite {
+    margin-right: 2.25rem;
+    margin-left: 2.25rem;
+  }
+  .all-food {
+    margin-right: 2.25rem;
+    margin-left: 2.25rem;
+  }
+  .choose {
+    margin-right: 2.25rem;
+    margin-left: 2.25rem;
+  }
+  .footer-wrapper {
+    margin: 0 2.25rem;
   }
 }
