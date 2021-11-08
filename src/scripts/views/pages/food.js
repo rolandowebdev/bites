@@ -4,16 +4,8 @@ import { allFoodData, chooseBites } from '../templates/local-template';
 const Food = {
 	render() {
 		return `
-      <section class="all-food" id="all-food">
-			<h2 class="section-title">All Food For <span class="line-style">You</span></h2>
-			<div id="all" class="food"></div>
-    	</section>
-      <section class="choose" id="choose-section">
-			<h2 class="section-title">
-				Why you choose <span class="line-style">Bites?</span>
-			</h2>
-			<div class="choose-container" id="choose"></div>
-		</section>
+      <all-food></all-food>
+		<choose-component></choose-component>
    `;
 	},
 
