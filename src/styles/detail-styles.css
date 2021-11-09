@@ -1,0 +1,184 @@
+:root {
+  --primary-color: #ff8303;
+  --dark-black: #1b1a17;
+  --white-color: #ffffff;
+  --gray-color: #a8a8a8;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  margin: 2.25rem 0 0 0;
+}
+
+
+/* detail-outlet section */
+
+.detail-detail-outlet-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-outlet-section .detail-outlet-name {
+  font-size: 2.5em;
+  color: var(--primary-color);
+  letter-spacing: 0.056em;
+  text-align: center;
+}
+
+.detail-outlet-section .detail-outlet-location {
+  margin-bottom: 5rem;
+  color: var(--gray-color);
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.detail-outlet-section .description-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 1.3rem;
+  max-width: 100%;
+  color: var(--dark-black);
+}
+
+.description-wrapper .detail-outlet-image {
+  border-radius: 0.25em;
+  min-width: 55%;
+}
+
+.description-content .about-title {
+  font-size: 1.6em;
+  letter-spacing: 0.056em;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.description-wrapper .detail-outlet-description {
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 9em;
+  font-size: 1em;
+  line-height: 1.8em;
+  margin-bottom: 1rem;
+}
+
+.description-content .favorite-detail-outlet {
+  padding: 0.25rem 0.875rem;
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: -1px 7px 34px -114px rgba(158, 158, 158, 1);
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+
+/* Food Section */
+
+.menu {
+  display: flex;
+}
+
+.menu-title {
+  margin: 6.25rem 0 1rem 0;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.menu-wrapper {
+  flex-direction: row;
+  margin-top: 0.25rem;
+  color: var(--dark-black);
+  font-size: 1.3em;
+}
+
+.menu-list {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+
+/* Customer Section */
+
+.reviews {
+  margin: 6.25rem 0 9.375rem 0;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
+  gap: 3.125rem 1.25rem;
+}
+
+.reviews-title {
+  margin-bottom: 1.875rem;
+  color: var(--primary-color);
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.wrapper .reviews-wrapper {
+  margin-top: 0.75;
+  color: var(--dark-black);
+  background-color: var(--white-color);
+  box-shadow: 10px 10px 29px -44px rgba(212, 212, 212, 1);
+}
+
+.reviews-name {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  font-size: 1.5em;
+  letter-spacing: 0.063em;
+}
+
+.reviews-description {
+  margin-bottom: 0.5rem;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.reviews-date {
+  display: inline-block;
+  font-size: 0.9em;
+  border-radius: 3.125rem;
+  font-weight: 500;
+  color: var(--dark-black);
+}
+
+@media (max-width: 74.938rem) {
+  .wrapper {
+    margin-right: 2.25rem;
+    margin-left: 2.25rem;
+  }
+  .detail-outlet-section .description-wrapper {
+    flex-direction: column;
+  }
+  .detail-outlet-section .detail-outlet-image {
+    min-width: 100%;
+  }
+  .description-content .about-title {
+    margin-top: 1.875rem;
+  }
+  .description-wrapper .detail-outlet-description {
+    max-width: 80%;
+  }
+  .description-content .about-title {
+    font-size: 2em;
+  }
+  .description-content .detail-outlet-description {
+    font-size: 1.3em;
+  }
+}
