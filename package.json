@@ -1,7 +1,7 @@
 {
     "name": "bites-v2",
     "version": "1.0.0",
-    "description": "Website Bites by Rolando Pranata",
+    "description": "Bites is the website of a restaurant called Bites which is very famous in Indonesia",
     "main": "index.js",
     "scripts": {
         "dev": "webpack-dev-server --config webpack.dev.js",
@@ -26,6 +26,7 @@
         "webpack-merge": "^5.0.9"
     },
     "dependencies": {
-        "regenerator-runtime": "^0.13.9"
+        "regenerator-runtime": "^0.13.9",
+        "serviceworker-webpack-plugin": "^1.0.1"
     }
 }

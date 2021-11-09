@@ -6,7 +6,7 @@ class Footer extends HTMLElement {
 	render() {
 		this.innerHTML = `
       <!-- Footer -->
-      <footer class="container">
+      <footer class="footer-container">
         <div class="footer-wrapper">
           <div class="footer-main">
             <img src="logo.svg" alt="Logo Bites" />

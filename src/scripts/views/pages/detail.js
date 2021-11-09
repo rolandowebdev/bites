@@ -1,10 +1,10 @@
 import UrlParser from '../../routes/url-parser';
 import SourceOutlet from '../../data/data-outlet';
 import {
-	detailRestaurant,
+	detailOutlet,
 	foodMenu,
 	drinkMenu,
-	reviewRestaurant,
+	reviewOutlet,
 } from '../templates/api-template';
 
 const DetailOutlets = {
@@ -20,9 +20,9 @@ const DetailOutlets = {
 	async afterRender() {
 		const url = UrlParser.parseActiveUrlWithoutCombiner();
 		const outlet = await SourceOutlet.detailOutlet(url.id);
-		const detailRestaurantContainer =
-			document.querySelector('#detail-restaurant');
-		detailRestaurantContainer.innerHTML = detailRestaurant(outlet.restaurant);
+		const detailOutletContainer = document.querySelector('#detail-restaurant');
+
+		detailOutletContainer.innerHTML = detailOutlet(outlet.restaurant);
 
 		const foodContainer = document.querySelector('#foods');
 		const drinkContainer = document.querySelector('#drinks');
@@ -44,7 +44,7 @@ const DetailOutlets = {
 		});
 
 		reviewData.forEach((review) => {
-			reviewContainer.innerHTML += reviewRestaurant(review);
+			reviewContainer.innerHTML += reviewOutlet(review);
 		});
 	},
 };

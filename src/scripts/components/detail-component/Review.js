@@ -5,7 +5,10 @@ class Review extends HTMLElement {
 
 	render() {
 		this.innerHTML = `
-         <div class="reviews" id="review"><h2 class="reviews-title">Customer Reviews</h2></div>
+         <div class="reviews wrapper">
+				<h2 class="reviews-title">Customer Reviews</h2>
+				<div class="reviews-container" id="review"></div>
+			</div>
       `;
 	}
 }

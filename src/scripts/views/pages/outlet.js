@@ -1,6 +1,6 @@
 import SourceOutlet from '../../data/data-outlet';
 import data from '../../json/BITES.json';
-import { listRestaurant } from '../templates/api-template';
+import { listOutlet } from '../templates/api-template';
 import { chooseBites } from '../templates/local-template';
 
 const Outlets = {
@@ -13,9 +13,9 @@ const Outlets = {
 
 	async afterRender() {
 		const outlet = await SourceOutlet.allOutlet();
-		const restaurantContainer = document.querySelector('#outlet');
+		const outletContainer = document.querySelector('#outlet');
 		outlet.restaurants.forEach((outlet) => {
-			restaurantContainer.innerHTML += listRestaurant(outlet);
+			outletContainer.innerHTML += listOutlet(outlet);
 		});
 
 		const choose = data['choose'];

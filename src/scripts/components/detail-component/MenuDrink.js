@@ -5,7 +5,7 @@ class MenuDrink extends HTMLElement {
 
 	render() {
 		this.innerHTML = `
-      <div id="drinks"><h2 class="menu-title">Drink Menu</h2></div>
+      <div id="drinks" class="wrapper"><h2 class="menu-title">Drink Menu</h2></div>
       `;
 	}
 }

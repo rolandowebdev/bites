@@ -1,6 +1,6 @@
 import CONFIG from '../../global/config';
 
-const listRestaurant = (restaurant) => {
+const listOutlet = (restaurant) => {
 	return `
    <figure class="outlet-card">
       <img class="outlet-image" src="${
@@ -23,63 +23,51 @@ const listRestaurant = (restaurant) => {
    `;
 };
 
-const detailRestaurant = (restaurant) => {
+const detailOutlet = (outlet) => {
 	return `
-   <section class="restaurant-section wrapper">
-   <h2 class="restaurant-name">${restaurant.name}</h2>
-   <p class="restaurant-location">${restaurant.address} ${restaurant.city}</p>
+  <section class="detail-outlet-section wrapper">
+   <h2 class="detail-outlet-name">${outlet.name}</h2>
+   <p class="detail-outlet-location">${outlet.address} ${outlet.city}</p>
    <figure class="description-wrapper">
-     <img class="restaurant-image" src="${
-				CONFIG.BASE_IMAGE_URL + restaurant.pictureId
-			}" alt="${restaurant.name}" />
+     <img class="detail-outlet-image" src="${
+				CONFIG.BASE_IMAGE_URL + outlet.pictureId
+			}" alt="${outlet.name}" />
      <figcaption class="description-content">
-       <h3 class="about-title">About ${restaurant.name}</h3>
-       <p class="restaurant-description">
-         ${restaurant.description}
+       <h3 class="about-title">About ${outlet.name}</h3>
+       <p class="detail-outlet-description">
+         ${outlet.description}
        </p>
-       <button class="favorite-restaurant">Favorite</button>
+       <button class="favorite-detail-outlet">Favorite</button>
      </figcaption>
    </figure>
- </section>
+  </section>
    `;
 };
 
 const foodMenu = (menu) => {
 	return `
-  <section class="wrapper">
     <div class="menu-wrapper" id="foods">
       <p class="menu-list">${menu.name}</p>
     </div>
-  </section>
   `;
 };
 
 const drinkMenu = (menu) => {
 	return `
-  <section class="wrapper">
     <div class="menu-wrapper" id="drinks">
       <p class="menu-list">${menu.name}</p>
     </div>
-  </section>
   `;
 };
 
-const reviewRestaurant = (review) => {
+const reviewOutlet = (review) => {
 	return `
-  <section class="wrapper">
     <div class="reviews-wrapper">
       <h3 class="reviews-name">${review.name}</h3>
       <p class="reviews-description">${review.review}</p>
       <p class="reviews-date">${review.date}</p>
     </div>
-  </section>
   `;
 };
 
-export {
-	listRestaurant,
-	detailRestaurant,
-	foodMenu,
-	drinkMenu,
-	reviewRestaurant,
-};
+export { listOutlet, detailOutlet, foodMenu, drinkMenu, reviewOutlet };
