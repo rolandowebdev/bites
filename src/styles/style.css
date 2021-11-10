@@ -70,6 +70,8 @@ body {
 
 .hamburger-menu {
   position: relative;
+  align-self: center;
+  margin-right: 20px;
   display: none;
   min-width: 2.75rem;
   min-height: 2.75rem;

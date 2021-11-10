@@ -21,6 +21,8 @@ const Outlets = {
 		const choose = data['choose'];
 		let dataChoose = '';
 
+		console.log(data);
+
 		choose.forEach((data) => {
 			dataChoose += chooseBites(data);
 		});

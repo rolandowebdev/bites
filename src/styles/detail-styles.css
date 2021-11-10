@@ -16,7 +16,7 @@ li {
 
 /* detail-outlet section */
 
-.detail-detail-outlet-section {
+.detail-outlet-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,7 +65,7 @@ li {
   word-wrap: break-word;
   overflow: hidden;
   max-height: 9em;
-  font-size: 1em;
+  font-size: 1.3em;
   line-height: 1.8em;
   margin-bottom: 1rem;
 }
@@ -156,6 +156,12 @@ li {
   border-radius: 3.125rem;
   font-weight: 500;
   color: var(--dark-black);
+}
+
+@media (max-width: 800px) {
+  .detail-outlet-section .detail-outlet-name {
+    margin-top: 100px;
+  }
 }
 
 @media (max-width: 74.938rem) {

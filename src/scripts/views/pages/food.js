@@ -16,11 +16,11 @@ const Food = {
 		let dataAllFood = '';
 		let dataChoose = '';
 
-		allFood.forEach((food) => {
+		allFood.map((food) => {
 			dataAllFood += allFoodData(food);
 		});
 
-		choose.forEach((data) => {
+		choose.map((data) => {
 			dataChoose += chooseBites(data);
 		});
 

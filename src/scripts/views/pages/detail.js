@@ -35,15 +35,15 @@ const DetailOutlets = {
 		const limitDataFood = foodData.slice(0, 3);
 		const limitDataDrink = drinksData.slice(0, 3);
 
-		limitDataFood.forEach((food) => {
+		limitDataFood.map((food) => {
 			foodContainer.innerHTML += foodMenu(food);
 		});
 
-		limitDataDrink.forEach((drink) => {
+		limitDataDrink.map((drink) => {
 			drinkContainer.innerHTML += drinkMenu(drink);
 		});
 
-		reviewData.forEach((review) => {
+		reviewData.map((review) => {
 			reviewContainer.innerHTML += reviewOutlet(review);
 		});
 	},
