@@ -6,6 +6,8 @@ import {
 	drinkMenu,
 	reviewOutlet,
 } from '../templates/api-template';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
+import CONFIG from '../../global/config';
 
 const DetailOutlets = {
 	async render() {
@@ -14,19 +16,24 @@ const DetailOutlets = {
 		<menu-food></menu-food>
 		<menu-drink></menu-drink>
 		<review-component></review-component>
+		<div id="likeButtonContainer"></div>
       `;
 	},
 
 	async afterRender() {
 		const url = UrlParser.parseActiveUrlWithoutCombiner();
 		const outlet = await SourceOutlet.detailOutlet(url.id);
-		const detailOutletContainer = document.querySelector('#detail-restaurant');
-
-		detailOutletContainer.innerHTML = detailOutlet(outlet.restaurant);
 
 		const foodContainer = document.querySelector('#foods');
 		const drinkContainer = document.querySelector('#drinks');
 		const reviewContainer = document.querySelector('#review');
+		const detailOutletContainer = document.querySelector('#detail-restaurant');
+		detailOutletContainer.innerHTML = detailOutlet(outlet.restaurant);
+
+		LikeButtonInitiator.init({
+			likeButtonContainer: document.querySelector('#likeButtonContainer'),
+			outlet,
+		});
 
 		const foodData = outlet.restaurant.menus.foods;
 		const drinksData = outlet.restaurant.menus.drinks;

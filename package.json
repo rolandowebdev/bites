@@ -26,6 +26,7 @@
         "webpack-merge": "^5.0.9"
     },
     "dependencies": {
+        "idb": "^6.1.5",
         "regenerator-runtime": "^0.13.9",
         "serviceworker-webpack-plugin": "^1.0.1"
     }

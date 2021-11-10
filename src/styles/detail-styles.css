@@ -70,17 +70,25 @@ li {
   margin-bottom: 1rem;
 }
 
-.description-content .favorite-detail-outlet {
-  padding: 0.25rem 0.875rem;
-  min-height: 2.75rem;
-  min-width: 2.75rem;
-  font-size: 1em;
-  cursor: pointer;
-  border: none;
-  border-radius: 0.25rem;
-  box-shadow: -1px 7px 34px -114px rgba(158, 158, 158, 1);
-  color: var(--white-color);
+.like-btn {
+  font-size: 1.125em;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
   background-color: var(--primary-color);
+  color: var(--white-color);
+  border: 0;
+  border-radius: 50%;
+  width: 3.438rem;
+  height: 3.438rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.like-btn i {
+  color: var(--white-color);
 }
 
 

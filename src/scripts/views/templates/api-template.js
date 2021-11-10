@@ -37,12 +37,23 @@ const detailOutlet = (outlet) => {
        <p class="detail-outlet-description">
          ${outlet.description}
        </p>
-       <button class="favorite-detail-outlet">Favorite</button>
      </figcaption>
    </figure>
   </section>
    `;
 };
+
+const createLikeButton = () => `
+  <button aria-label="like button" id="likeButton" class="like-btn">
+     <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
+`;
+
+const createLikedButton = () => `
+  <button aria-label="unlike button" id="likeButton" class="like-btn">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`;
 
 const foodMenu = (menu) => {
 	return `
@@ -70,4 +81,12 @@ const reviewOutlet = (review) => {
   `;
 };
 
-export { listOutlet, detailOutlet, foodMenu, drinkMenu, reviewOutlet };
+export {
+	listOutlet,
+	detailOutlet,
+	foodMenu,
+	drinkMenu,
+	reviewOutlet,
+	createLikeButton,
+	createLikedButton,
+};
