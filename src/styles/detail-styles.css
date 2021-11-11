@@ -122,7 +122,7 @@ li {
 /* Customer Section */
 
 .reviews {
-  margin: 6.25rem 0 9.375rem 0;
+  margin: 6.25rem 0;
 }
 
 .reviews-container {
@@ -132,7 +132,7 @@ li {
 }
 
 .reviews-title {
-  margin-bottom: 1.875rem;
+  margin-bottom: 2rem;
   color: var(--primary-color);
   font-size: 2em;
   font-weight: 700;
@@ -164,6 +164,43 @@ li {
   border-radius: 3.125rem;
   font-weight: 500;
   color: var(--dark-black);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 100px;
+}
+
+form input[type='text'],
+textarea {
+  display: block;
+  padding: 12px 20px;
+  margin: 0.9rem 0;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1.125em;
+  font-weight: 300;
+  width: 100%;
+  color: var(--dark-black);
+}
+
+form textarea {
+  resize: vertical;
+}
+
+input[type='submit'] {
+  display: block;
+  padding: 12px 20px;
+  margin: 0.9rem 0;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  color: var(--white-color);
 }
 
 @media (max-width: 800px) {

@@ -24,10 +24,6 @@ module.exports = {
 			},
 		],
 	},
-	devServer: {
-		inline: true,
-		port: 8008,
-	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, 'src/templates/index.html'),
@@ -42,7 +38,7 @@ module.exports = {
 			],
 		}),
 		new ServiceWorkerWebpackPlugin({
-			entry: path.resolve(__dirname, 'src/scripts/sw-bites.js'),
+			entry: path.resolve(__dirname, 'src/scripts/sw.js'),
 		}),
 	],
 };

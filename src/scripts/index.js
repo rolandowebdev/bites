@@ -11,6 +11,8 @@ import './components/detail-component/MenuFood';
 import './components/detail-component/MenuDrink';
 import './components/detail-component/DetailOutlet';
 import './components/detail-component/Review';
+import './components/detail-component/ButtonContainer';
+import './components/detail-component/FormContainer';
 import '../styles/style.css';
 import '../styles/responsive.css';
 import '../styles/detail-styles.css';

@@ -342,6 +342,10 @@ body {
   text-decoration: none;
 }
 
+.outlet-name:hover {
+  text-decoration: underline;
+}
+
 .outlet-location {
   display: flex;
   align-items: center;

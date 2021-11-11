@@ -22,6 +22,10 @@ const CacheHelper = {
 		return this._fetchRequest(request);
 	},
 
+	async _openCache() {
+		return caches.open(CONFIG.CACHE_NAME);
+	},
+
 	async _fetchRequest(request) {
 		const response = await fetch(request);
 
@@ -36,10 +40,6 @@ const CacheHelper = {
 	async _addCache(request) {
 		const cache = await this._openCache();
 		cache.add(request);
-	},
-
-	async _openCache() {
-		return caches.open(CONFIG.CACHE_NAME);
 	},
 };
 
