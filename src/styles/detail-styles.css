@@ -94,8 +94,16 @@ li {
 
 /* Food Section */
 
-.menu {
+.menu-wrapper {
   display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.menu-icon {
+  display: inline-block;
+  max-width: 30px;
 }
 
 .menu-title {
@@ -105,17 +113,9 @@ li {
   color: var(--primary-color);
 }
 
-.menu-wrapper {
-  flex-direction: row;
-  margin-top: 0.25rem;
+.menu-list {
   color: var(--dark-black);
   font-size: 1.3em;
-}
-
-.menu-list {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 1rem;
 }
 
 
@@ -127,8 +127,20 @@ li {
 
 .reviews-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
-  gap: 3.125rem 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+}
+
+.reviews-wrapper {
+  margin-top: 0.75;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: var(--white-color);
+  box-shadow: -1px 10px 24px -11px rgba(122, 122, 122, 1);
+}
+
+.user-profile {
+  max-width: 30px;
 }
 
 .reviews-title {
@@ -136,13 +148,6 @@ li {
   color: var(--primary-color);
   font-size: 2em;
   font-weight: 700;
-}
-
-.wrapper .reviews-wrapper {
-  margin-top: 0.75;
-  color: var(--dark-black);
-  background-color: var(--white-color);
-  box-shadow: 10px 10px 29px -44px rgba(212, 212, 212, 1);
 }
 
 .reviews-name {
@@ -172,9 +177,10 @@ li {
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 100px;
+  max-width: 50%;
 }
 
-form input[type='text'],
+.form-container input[type='text'],
 textarea {
   display: block;
   padding: 12px 20px;
@@ -188,12 +194,11 @@ textarea {
   color: var(--dark-black);
 }
 
-form textarea {
+.form-container textarea {
   resize: vertical;
 }
 
-input[type='submit'] {
-  display: block;
+.form-container button {
   padding: 12px 20px;
   margin: 0.9rem 0;
   background-color: var(--primary-color);
@@ -201,6 +206,13 @@ input[type='submit'] {
   border-radius: 8px;
   font-size: 1em;
   color: var(--white-color);
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .form-container {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 800px) {
@@ -210,6 +222,7 @@ input[type='submit'] {
 }
 
 @media (max-width: 74.938rem) {
+  .form-container,
   .wrapper {
     margin-right: 2.25rem;
     margin-left: 2.25rem;

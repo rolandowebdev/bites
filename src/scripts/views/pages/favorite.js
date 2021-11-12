@@ -15,10 +15,6 @@ const Favorite = {
 		const outlets = await FavoriteOutletDatabase.getAllOutlets();
 		const outletsContainer = document.querySelector('#outlet');
 
-		outlets.map((outlet) => {
-			outletsContainer.innerHTML += listOutlet(outlet);
-		});
-
 		const choose = data['choose'];
 		let dataChoose = '';
 
@@ -26,7 +22,14 @@ const Favorite = {
 			dataChoose += chooseBites(data);
 		});
 
-		document.querySelector('#choose').innerHTML = dataChoose;
+		if (outlets.length === 0) {
+			outletsContainer.innerHTML = `Ooopsss...You Don't have favorite food`;
+			document.querySelector('#choose').innerHTML = dataChoose;
+		} else {
+			outlets.map((outlet) => {
+				outletsContainer.innerHTML += listOutlet(outlet);
+			});
+		}
 	},
 };
 
