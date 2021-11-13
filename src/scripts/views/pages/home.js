@@ -24,15 +24,15 @@ const Home = {
 		let dataMostFood = '';
 		let dataAllFood = '';
 
-		allFood.forEach((data) => {
+		allFood.map((data) => {
 			dataAllFood += allFoodData(data);
 		});
 
-		mostFood.forEach((data) => {
+		mostFood.map((data) => {
 			dataMostFood += mostFoodData(data);
 		});
 
-		choose.forEach((data) => {
+		choose.map((data) => {
 			dataChoose += chooseBites(data);
 		});
 

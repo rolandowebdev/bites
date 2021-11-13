@@ -14,14 +14,14 @@ const Outlets = {
 	async afterRender() {
 		const outlet = await SourceOutlet.allOutlet();
 		const outletContainer = document.querySelector('#outlet');
-		outlet.restaurants.forEach((outlet) => {
+		outlet.restaurants.map((outlet) => {
 			outletContainer.innerHTML += listOutlet(outlet);
 		});
 
 		const choose = data['choose'];
 		let dataChoose = '';
 
-		choose.forEach((data) => {
+		choose.map((data) => {
 			dataChoose += chooseBites(data);
 		});
 

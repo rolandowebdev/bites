@@ -37,7 +37,6 @@ const detailOutlet = (outlet) => {
        <p class="detail-outlet-description">
          ${outlet.description}
        </p>
-       <button class="favorite-detail-outlet">Favorite</button>
      </figcaption>
    </figure>
   </section>
@@ -47,6 +46,7 @@ const detailOutlet = (outlet) => {
 const foodMenu = (menu) => {
 	return `
     <div class="menu-wrapper" id="foods">
+      <img class="menu-icon" src="food.svg" alt="Food Menu"/>
       <p class="menu-list">${menu.name}</p>
     </div>
   `;
@@ -55,6 +55,7 @@ const foodMenu = (menu) => {
 const drinkMenu = (menu) => {
 	return `
     <div class="menu-wrapper" id="drinks">
+      <img class="menu-icon" src="drink.svg" alt="Drink Menu"/>
       <p class="menu-list">${menu.name}</p>
     </div>
   `;
@@ -63,6 +64,7 @@ const drinkMenu = (menu) => {
 const reviewOutlet = (review) => {
 	return `
     <div class="reviews-wrapper">
+      <img class="user-profile" src="user.svg" alt="User Profile"/>
       <h3 class="reviews-name">${review.name}</h3>
       <p class="reviews-description">${review.review}</p>
       <p class="reviews-date">${review.date}</p>
@@ -70,4 +72,24 @@ const reviewOutlet = (review) => {
   `;
 };
 
-export { listOutlet, detailOutlet, foodMenu, drinkMenu, reviewOutlet };
+const createLikeButton = () => `
+  <button aria-label="like button" id="likeButton" class="like-btn">
+     <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
+`;
+
+const createLikedButton = () => `
+  <button aria-label="unlike button" id="likeButton" class="like-btn">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+
+export {
+	listOutlet,
+	detailOutlet,
+	foodMenu,
+	drinkMenu,
+	reviewOutlet,
+	createLikeButton,
+	createLikedButton,
+};

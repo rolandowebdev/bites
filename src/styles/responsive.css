@@ -13,9 +13,6 @@
   .main-container {
     margin: 0 20px;
   }
-  .navbar {
-    margin: 0 20px;
-  }
 }
 
 @media (max-width: 50rem) {
@@ -23,11 +20,14 @@
     position: fixed;
     top: 0;
     min-width: 100%;
-    z-index: 7;
+    z-index: 99;
   }
   .navbar.nav-colored {
-    background-color: var(--dark-black);
     transition: all 0.5s;
+    background-color: var(--white-color);
+    box-shadow: 1px 19px 20px -15px rgba(176, 176, 176, 0.75);
+    -webkit-box-shadow: 1px 19px 20px -15px rgba(176, 176, 176, 0.75);
+    -moz-box-shadow: 1px 19px 20px -15px rgba(176, 176, 176, 0.75);
   }
   .navbar.nav-transparent {
     background-color: transparent;
