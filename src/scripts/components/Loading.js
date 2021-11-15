@@ -5,9 +5,9 @@ class Loading extends HTMLElement {
 
 	render() {
 		this.innerHTML = `
-         <div class="loading overlay">
-            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-         </div>
+      <div class="loading overlay" id="loading">
+         <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+      </div>
       `;
 	}
 }

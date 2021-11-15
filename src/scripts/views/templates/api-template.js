@@ -37,6 +37,12 @@ const detailOutlet = (outlet) => {
        <p class="detail-outlet-description">
          ${outlet.description}
        </p>
+       <p class="detail-outlet-category">
+        ${outlet.categories.map((category) => category.name).join(' | ')}
+       </p>
+       <p class="detail-outlet-rating"> <img src="star.svg" alt="Star Icon"/> ${
+					outlet.rating
+				}</p>
      </figcaption>
    </figure>
   </section>

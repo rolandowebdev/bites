@@ -1,9 +1,19 @@
 const loading = {
 	show() {
-		document.querySelector('.loading').classList.add('loading-active');
+		document.getElementById('loading').style.display = 'block';
 	},
 	hide() {
-		document.querySelector('.loading').classList.remove('loading-active');
+		let fadeEffect = setInterval(() => {
+			if (!document.getElementById('loading').style.opacity) {
+				document.getElementById('loading').style.opacity = 1;
+			}
+			if (document.getElementById('loading').style.opacity > 0) {
+				document.getElementById('loading').style.opacity -= 0.1;
+			} else {
+				clearInterval(fadeEffect);
+				document.getElementById('loading').style.display = 'none';
+			}
+		}, 50);
 	},
 };
 

@@ -33,7 +33,7 @@ registerRoute(
 		plugins: [
 			new ExpirationPlugin({
 				maxEntries: 100,
-				maxAgeSeconds: 30 * 24 * 60 * 60, // lama waktu cache 30 Days
+				maxAgeSeconds: 30 * 24 * 60 * 60,
 			}),
 		],
 	})
@@ -46,7 +46,7 @@ registerRoute(
 		plugins: [
 			new ExpirationPlugin({
 				maxEntries: 60,
-				maxAgeSeconds: 30 * 24 * 60 * 60, // lama waktu cache 30 Days
+				maxAgeSeconds: 30 * 24 * 60 * 60,
 			}),
 		],
 	})

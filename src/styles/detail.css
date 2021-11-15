@@ -1,5 +1,6 @@
 :root {
   --primary-color: #ff8303;
+  --gold-color: #ffcc47;
   --dark-black: #1b1a17;
   --white-color: #ffffff;
   --gray-color: #a8a8a8;
@@ -16,7 +17,7 @@ li {
 
 .notfound-container {
   display: none;
-  margin: 100px auto 200px auto;
+  margin: 6.25rem auto 12.5rem auto;
   text-align: center;
 }
 
@@ -26,7 +27,7 @@ li {
 
 .notfound-container .notfound-title {
   margin-top: 0.5em;
-  font-size: 2.5em;
+  font-size: 2em;
   color: var(--warning-color);
 }
 
@@ -92,6 +93,26 @@ li {
   margin-bottom: 1rem;
 }
 
+.description-wrapper .detail-outlet-category {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--white-color);
+  border-radius: 3.125rem;
+  background-color: var(--primary-color);
+}
+
+.detail-outlet-rating {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 1.2em;
+  font-weight: 500;
+  border-radius: 3.125rem;
+  color: var(--gold-color);
+}
+
 .like-btn {
   font-size: 1.125em;
   position: fixed;
@@ -125,7 +146,7 @@ li {
 
 .menu-icon {
   display: inline-block;
-  max-width: 30px;
+  max-width: 1.875rem;
 }
 
 .menu-title {
@@ -156,13 +177,13 @@ li {
 .reviews-wrapper {
   margin-top: 0.75;
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: var(--white-color);
   box-shadow: -1px 10px 24px -11px rgba(122, 122, 122, 1);
 }
 
 .user-profile {
-  max-width: 30px;
+  max-width: 1.875rem;
 }
 
 .reviews-title {
@@ -199,17 +220,17 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
   max-width: 50%;
 }
 
 .form-container input[type='text'],
 textarea {
   display: block;
-  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
   margin: 0.9rem 0;
   border: 2px solid var(--primary-color);
-  border-radius: 8px;
+  border-radius: 0.5rem;
   box-sizing: border-box;
   font-size: 1.125em;
   font-weight: 300;
@@ -222,22 +243,22 @@ textarea {
 }
 
 .form-container button {
-  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
   margin: 0.9rem 0;
   background-color: var(--primary-color);
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   font-size: 1em;
   color: var(--white-color);
   cursor: pointer;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 43.75rem) {
   .form-container {
     max-width: 100%;
   }
   .notfound-container {
-    margin-bottom: 100px;
+    margin-bottom: 6.25rem;
     margin-left: 2.25rem;
     margin-right: 2.25rem;
   }
@@ -249,9 +270,9 @@ textarea {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 50rem) {
   .detail-outlet-section .detail-outlet-name {
-    margin-top: 100px;
+    margin-top: 6.25rem;
   }
 }
 

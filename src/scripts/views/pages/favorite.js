@@ -15,9 +15,6 @@ const Favorite = {
 	async afterRender() {
 		const outlets = await FavoriteOutletDatabase.getAllOutlets();
 		const outletsData = document.querySelector('#outlet');
-		const outletContainer = document.querySelector('#outlet-section');
-		const chooseContainer = document.querySelector('#choose-section');
-		const notFoundContainer = document.querySelector('#notfound-container');
 
 		const choose = data['choose'];
 		let dataChoose = '';
@@ -27,9 +24,9 @@ const Favorite = {
 		});
 
 		if (outlets.length === 0) {
-			notFoundContainer.style.display = 'block';
-			outletContainer.style.display = 'none';
-			chooseContainer.style.display = 'none';
+			document.getElementById('notfound-container').style.display = 'block';
+			document.querySelector('#outlet-section').style.display = 'none';
+			document.querySelector('#choose-section').style.display = 'none';
 		} else {
 			outlets.map((outlet) => {
 				outletsData.innerHTML += listOutlet(outlet);
