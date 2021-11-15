@@ -8,12 +8,14 @@ const Outlets = {
 		return `
 		<outlet-component></outlet-component>
 		<choose-component></choose-component>
+		<not-found></not-found>
       `;
 	},
 
 	async afterRender() {
 		const outlet = await SourceOutlet.allOutlet();
 		const outletContainer = document.querySelector('#outlet');
+
 		outlet.restaurants.map((outlet) => {
 			outletContainer.innerHTML += listOutlet(outlet);
 		});

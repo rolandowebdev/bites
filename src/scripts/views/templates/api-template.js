@@ -74,13 +74,13 @@ const reviewOutlet = (review) => {
 
 const createLikeButton = () => `
   <button aria-label="like button" id="likeButton" class="like-btn">
-     <i class="fa fa-heart-o" aria-hidden="true"></i>
+    <img class="like" src="heart-regular.svg" alt="Heart Regular" />
   </button>
-`;
+  `;
 
 const createLikedButton = () => `
   <button aria-label="unlike button" id="likeButton" class="like-btn">
-    <i class="fa fa-heart" aria-hidden="true"></i>
+    <img class="like" src="heart-solid.svg" alt="Heart Solid" />
   </button>
 `;
 

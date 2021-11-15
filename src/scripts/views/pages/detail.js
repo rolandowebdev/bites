@@ -12,6 +12,7 @@ import LikeButtonInitiator from '../../utils/like-button-initiator';
 const DetailOutlets = {
 	async render() {
 		return `
+		<not-found></not-found>
 		<detail-outlet></detail-outlet>
 		<menu-food></menu-food>
 		<menu-drink></menu-drink>
@@ -25,7 +26,12 @@ const DetailOutlets = {
 		const url = UrlParser.parseActiveUrlWithoutCombiner();
 		const outlet = await SourceOutlet.detailOutlet(url.id);
 
+		const reviewWrapper = document.querySelector('#reviews');
+		const formContainer = document.querySelector('#form-container');
+		const likeButton = document.querySelector('#likeButtonContainer');
+
 		const detailOutletContainer = document.querySelector('#detail-restaurant');
+		const notFoundContainer = document.querySelector('#notfound-container');
 		const foodContainer = document.querySelector('#foods');
 		const drinkContainer = document.querySelector('#drinks');
 		const reviewContainer = document.querySelector('#review');
@@ -34,13 +40,11 @@ const DetailOutlets = {
 		const inputReview = document.querySelector('#reviewValue');
 		const submit = document.querySelector('#submit');
 
-		if (outlet.error === true) {
-			return `<h1>Data Not Found</h1>`;
-		} else {
-			const foodData = outlet.restaurant.menus.foods;
-			const drinksData = outlet.restaurant.menus.drinks;
-			const reviewData = outlet.restaurant.customerReviews;
+		const foodData = outlet.restaurant.menus.foods;
+		const drinksData = outlet.restaurant.menus.drinks;
+		const reviewData = outlet.restaurant.customerReviews;
 
+		if (outlet.error === false) {
 			submit.addEventListener('click', () => {
 				const review = {
 					id: url.id,
@@ -80,11 +84,8 @@ const DetailOutlets = {
 				reviewContainer.innerHTML += reviewOutlet(review);
 			});
 
-			// post data method for review
-
 			LikeButtonInitiator.init({
 				likeButtonContainer: document.querySelector('#likeButtonContainer'),
-
 				outlet: {
 					id: outlet.restaurant.id,
 					name: outlet.restaurant.name,
@@ -94,6 +95,14 @@ const DetailOutlets = {
 					city: outlet.restaurant.city,
 				},
 			});
+		} else {
+			notFoundContainer.style.display = 'block';
+			reviewWrapper.style.display = 'none';
+			detailOutletContainer.style.display = 'none';
+			foodContainer.style.display = 'none';
+			drinkContainer.style.display = 'none';
+			formContainer.style.display = 'none';
+			likeButton.style.display = 'none';
 		}
 	},
 };

@@ -3,6 +3,7 @@
   --dark-black: #1b1a17;
   --white-color: #ffffff;
   --gray-color: #a8a8a8;
+  --warning-color: #ff0000;
 }
 
 li {
@@ -11,6 +12,27 @@ li {
 
 .wrapper {
   margin: 2.25rem 0 0 0;
+}
+
+.notfound-container {
+  display: none;
+  margin: 100px auto 200px auto;
+  text-align: center;
+}
+
+.notfound-container .notfound-image {
+  max-width: 30%;
+}
+
+.notfound-container .notfound-title {
+  margin-top: 0.5em;
+  font-size: 2.5em;
+  color: var(--warning-color);
+}
+
+.notfound-container .notfound-description {
+  font-size: 1.25em;
+  color: var(--gray-color);
 }
 
 
@@ -87,8 +109,8 @@ li {
   justify-content: center;
 }
 
-.like-btn i {
-  color: var(--white-color);
+.like-btn img {
+  max-width: 1.2rem;
 }
 
 
@@ -160,6 +182,7 @@ li {
 .reviews-description {
   margin-bottom: 0.5rem;
   font-size: 1em;
+  word-wrap: break-word;
   font-weight: 300;
 }
 
@@ -212,6 +235,17 @@ textarea {
 @media (max-width: 700px) {
   .form-container {
     max-width: 100%;
+  }
+  .notfound-container {
+    margin-bottom: 100px;
+    margin-left: 2.25rem;
+    margin-right: 2.25rem;
+  }
+  .notfound-container .notfound-title {
+    font-size: 1.8em;
+  }
+  .notfound-container .notfound-description {
+    font-size: 1em;
   }
 }
 
