@@ -8,12 +8,13 @@ const Favorite = {
 		return `	
       <outlet-component></outlet-component>
 		<choose-component></choose-component>
+		<favorite-notfound></favorite-notfound>
       `;
 	},
 
 	async afterRender() {
 		const outlets = await FavoriteOutletDatabase.getAllOutlets();
-		const outletsContainer = document.querySelector('#outlet');
+		const outletsData = document.querySelector('#outlet');
 
 		const choose = data['choose'];
 		let dataChoose = '';
@@ -23,12 +24,14 @@ const Favorite = {
 		});
 
 		if (outlets.length === 0) {
-			outletsContainer.innerHTML = `Ooopsss...You Don't have favorite food`;
-			document.querySelector('#choose').innerHTML = dataChoose;
+			document.getElementById('notfound-container').style.display = 'block';
+			document.querySelector('#outlet-section').style.display = 'none';
+			document.querySelector('#choose-section').style.display = 'none';
 		} else {
 			outlets.map((outlet) => {
-				outletsContainer.innerHTML += listOutlet(outlet);
+				outletsData.innerHTML += listOutlet(outlet);
 			});
+			document.querySelector('#choose').innerHTML = dataChoose;
 		}
 	},
 };

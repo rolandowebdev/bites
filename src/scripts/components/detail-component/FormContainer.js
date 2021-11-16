@@ -5,7 +5,7 @@ class FormContainer extends HTMLElement {
 
 	render() {
 		this.innerHTML = `
-      <div class="form-container">
+      <div class="form-container" id="form-container">
          <label for="name">Name</label>
          <input type="text" name="name" id="reviewName"/>
          <label for="review">Review</label>

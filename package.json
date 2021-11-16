@@ -10,9 +10,11 @@
     "author": "Rolando Pranata",
     "license": "MIT",
     "devDependencies": {
+        "@babel/cli": "^7.16.0",
         "@babel/core": "^7.16.0",
-        "@babel/preset-env": "^7.16.0",
-        "babel-loader": "^8.2.3",
+        "@babel/eslint-parser": "^7.16.3",
+        "@babel/preset-env": "^7.10.4",
+        "babel-loader": "^8.1.0",
         "copy-webpack-plugin": "^6.4.1",
         "css-loader": "^3.6.0",
         "eslint": "^7.32.0",
@@ -23,12 +25,18 @@
         "webpack": "^4.43.0",
         "webpack-cli": "^3.3.12",
         "webpack-dev-server": "^3.11.0",
-        "webpack-merge": "^5.0.9"
+        "webpack-merge": "^5.0.9",
+        "workbox-webpack-plugin": "^6.3.0"
     },
     "dependencies": {
         "idb": "^6.1.5",
         "regenerator-runtime": "^0.13.9",
-        "serviceworker-webpack-plugin": "^1.0.1",
-        "sweetalert2": "^11.1.10"
+        "sweetalert2": "^11.1.10",
+        "workbox-core": "^6.0.2",
+        "workbox-expiration": "^6.0.2",
+        "workbox-precaching": "^6.0.2",
+        "workbox-routing": "^6.0.2",
+        "workbox-strategies": "^6.0.2",
+        "workbox-window": "^6.0.2"
     }
 }

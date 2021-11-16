@@ -1,4 +1,4 @@
-import 'regenerator-runtime';
+import 'regenerator-runtime/runtime';
 import './components/Footer';
 import './components/Navbar';
 import './components/Main';
@@ -7,17 +7,20 @@ import './components/AllFood';
 import './components/MostFood';
 import './components/Choose';
 import './components/Outlet';
+import './components/FavoriteNotFound';
+import './components/Loading';
 import './components/detail-component/MenuFood';
 import './components/detail-component/MenuDrink';
 import './components/detail-component/DetailOutlet';
 import './components/detail-component/Review';
 import './components/detail-component/ButtonContainer';
 import './components/detail-component/FormContainer';
-import '../styles/style.css';
-import '../styles/responsive.css';
-import '../styles/detail-styles.css';
 import './views/pages/home';
 import './utils/hide-drawer';
+import '../styles/style.css';
+import '../styles/responsive.css';
+import '../styles/detail.css';
+import '../styles/loading.css';
 import swRegister from './utils/sw-register';
 import App from './views/app';
 
@@ -36,7 +39,7 @@ window.addEventListener('load', () => {
 	swRegister();
 });
 
-window.addEventListener('scroll', function (e) {
+window.addEventListener('scroll', (e) => {
 	var nav = document.getElementById('navbar');
 	if (document.documentElement.scrollTop || document.body.scrollTop) {
 		nav.classList.add('nav-colored');

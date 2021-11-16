@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
-
-/* Root */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
   --primary-color: #ff8303;
   --dark-black: #1b1a17;
@@ -41,8 +38,8 @@ body {
 }
 
 .skip-link:focus {
-  top: 2px;
-  left: 2px;
+  top: 0.125rem;
+  left: 0.125rem;
   border: 2px solid var(--dark-black);
 }
 
@@ -71,7 +68,7 @@ body {
 .hamburger-menu {
   position: relative;
   align-self: center;
-  margin-right: 20px;
+  margin-right: 1.25rem;
   display: none;
   min-width: 2.75rem;
   min-height: 2.75rem;
@@ -175,7 +172,7 @@ body {
 /* Hero */
 
 .hero {
-  margin-top: 30px;
+  margin-top: 1.875rem;
   position: relative;
 }
 
@@ -212,11 +209,15 @@ body {
 .section-title {
   font-size: 2em;
   text-align: center;
+  color: var(--primary-color);
 }
 
 .line-style {
   background: var(--primary-color);
   color: var(--white-color);
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  padding: 0.125rem 0.5rem;
   font-size: 1em;
 }
 
@@ -229,7 +230,7 @@ body {
 
 .food {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
   grid-template-rows: auto;
   gap: 1.25rem;
   margin-top: 3.125rem;
@@ -307,7 +308,7 @@ body {
 
 .outlet-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
   grid-template-rows: auto;
   row-gap: 2rem;
   column-gap: 1.25rem;
@@ -324,6 +325,7 @@ body {
 
 .outlet-image {
   max-width: 100%;
+  height: 11.25rem;
   border-radius: 0.75rem;
 }
 

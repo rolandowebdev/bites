@@ -35,12 +35,12 @@
   }
   .logo {
     position: fixed;
-    left: 20px;
+    left: 1.25rem;
     z-index: 1;
   }
   .hamburger-menu {
     position: fixed;
-    right: 20px;
+    right: 1.25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -74,18 +74,18 @@
     display: none;
   }
   .social {
-    margin: 20px 0;
+    margin: 1.25rem 0;
     flex-direction: column;
     display: none;
   }
   .social-items {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .section-title {
     font-size: 1.4em;
   }
   .choose-title {
-    margin-top: 30px;
+    margin-top: 1.875rem;
     font-size: 1em;
   }
 }

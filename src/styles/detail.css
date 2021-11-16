@@ -1,8 +1,10 @@
 :root {
   --primary-color: #ff8303;
+  --gold-color: #ffcc47;
   --dark-black: #1b1a17;
   --white-color: #ffffff;
   --gray-color: #a8a8a8;
+  --warning-color: #ff0000;
 }
 
 li {
@@ -11,6 +13,27 @@ li {
 
 .wrapper {
   margin: 2.25rem 0 0 0;
+}
+
+.notfound-container {
+  display: none;
+  margin: 6.25rem auto 12.5rem auto;
+  text-align: center;
+}
+
+.notfound-container .notfound-image {
+  max-width: 30%;
+}
+
+.notfound-container .notfound-title {
+  margin-top: 0.5em;
+  font-size: 2em;
+  color: var(--warning-color);
+}
+
+.notfound-container .notfound-description {
+  font-size: 1.25em;
+  color: var(--gray-color);
 }
 
 
@@ -70,6 +93,26 @@ li {
   margin-bottom: 1rem;
 }
 
+.description-wrapper .detail-outlet-category {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--white-color);
+  border-radius: 3.125rem;
+  background-color: var(--primary-color);
+}
+
+.detail-outlet-rating {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 1.2em;
+  font-weight: 500;
+  border-radius: 3.125rem;
+  color: var(--gold-color);
+}
+
 .like-btn {
   font-size: 1.125em;
   position: fixed;
@@ -87,8 +130,8 @@ li {
   justify-content: center;
 }
 
-.like-btn i {
-  color: var(--white-color);
+.like-btn img {
+  max-width: 1.2rem;
 }
 
 
@@ -103,7 +146,7 @@ li {
 
 .menu-icon {
   display: inline-block;
-  max-width: 30px;
+  max-width: 1.875rem;
 }
 
 .menu-title {
@@ -134,13 +177,13 @@ li {
 .reviews-wrapper {
   margin-top: 0.75;
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: var(--white-color);
   box-shadow: -1px 10px 24px -11px rgba(122, 122, 122, 1);
 }
 
 .user-profile {
-  max-width: 30px;
+  max-width: 1.875rem;
 }
 
 .reviews-title {
@@ -160,6 +203,7 @@ li {
 .reviews-description {
   margin-bottom: 0.5rem;
   font-size: 1em;
+  word-wrap: break-word;
   font-weight: 300;
 }
 
@@ -176,17 +220,23 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
   max-width: 50%;
+}
+
+.form-container label {
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--primary-color);
 }
 
 .form-container input[type='text'],
 textarea {
   display: block;
-  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
   margin: 0.9rem 0;
   border: 2px solid var(--primary-color);
-  border-radius: 8px;
+  border-radius: 0.5rem;
   box-sizing: border-box;
   font-size: 1.125em;
   font-weight: 300;
@@ -199,25 +249,36 @@ textarea {
 }
 
 .form-container button {
-  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
   margin: 0.9rem 0;
   background-color: var(--primary-color);
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   font-size: 1em;
   color: var(--white-color);
   cursor: pointer;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 43.75rem) {
   .form-container {
     max-width: 100%;
   }
+  .notfound-container {
+    margin-bottom: 6.25rem;
+    margin-left: 2.25rem;
+    margin-right: 2.25rem;
+  }
+  .notfound-container .notfound-title {
+    font-size: 1.8em;
+  }
+  .notfound-container .notfound-description {
+    font-size: 1em;
+  }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 50rem) {
   .detail-outlet-section .detail-outlet-name {
-    margin-top: 100px;
+    margin-top: 6.25rem;
   }
 }
 
