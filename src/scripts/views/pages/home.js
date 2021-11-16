@@ -1,31 +1,32 @@
 import data from '../../json/BITES.json';
-import {
-	mostFoodData,
-	allFoodData,
-	chooseBites,
-} from '../templates/local-template';
+import SourceOutlet from '../../data/data-outlet';
+import loading from '../../utils/loading-initiator';
+import { listOutlet } from '../templates/api-template';
+import { mostFoodData, chooseBites } from '../templates/local-template';
 
 const Home = {
-	render() {
+	async render() {
 		return `
+		<loading-component></loading-component>
 		<hero-component></hero-component>
+		<outlet-component></outlet-component>
 		<most-food></most-food>
-		<all-food></all-food>
 		<choose-component></choose-component>
       `;
 	},
 
-	afterRender() {
+	async afterRender() {
+		loading.show();
+		const outlet = await SourceOutlet.allOutlet();
+		const outletWrapper = document.querySelector('#outlet');
 		const mostFood = data['most'];
 		const choose = data['choose'];
-		const allFood = data['all'];
 
 		let dataChoose = '';
 		let dataMostFood = '';
-		let dataAllFood = '';
 
-		allFood.map((data) => {
-			dataAllFood += allFoodData(data);
+		outlet.restaurants.map((outlet) => {
+			outletWrapper.innerHTML += listOutlet(outlet);
 		});
 
 		mostFood.map((data) => {
@@ -36,12 +37,10 @@ const Home = {
 			dataChoose += chooseBites(data);
 		});
 
-		document.querySelector('#all').innerHTML = dataAllFood;
 		document.querySelector('#most').innerHTML = dataMostFood;
 		document.querySelector('#choose').innerHTML = dataChoose;
+		loading.hide();
 	},
 };
 
 export default Home;
-
-// function looping data using

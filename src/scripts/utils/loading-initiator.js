@@ -3,7 +3,7 @@ const loading = {
 		document.getElementById('loading').style.display = 'block';
 	},
 	hide() {
-		let fadeEffect = setInterval(() => {
+		const fadeEffect = setInterval(() => {
 			if (!document.getElementById('loading').style.opacity) {
 				document.getElementById('loading').style.opacity = 1;
 			}

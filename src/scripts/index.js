@@ -7,7 +7,6 @@ import './components/AllFood';
 import './components/MostFood';
 import './components/Choose';
 import './components/Outlet';
-import './components/NotFound';
 import './components/FavoriteNotFound';
 import './components/Loading';
 import './components/detail-component/MenuFood';
@@ -40,7 +39,7 @@ window.addEventListener('load', () => {
 	swRegister();
 });
 
-window.addEventListener('scroll', function (e) {
+window.addEventListener('scroll', (e) => {
 	var nav = document.getElementById('navbar');
 	if (document.documentElement.scrollTop || document.body.scrollTop) {
 		nav.classList.add('nav-colored');

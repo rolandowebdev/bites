@@ -224,6 +224,12 @@ li {
   max-width: 50%;
 }
 
+.form-container label {
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
 .form-container input[type='text'],
 textarea {
   display: block;

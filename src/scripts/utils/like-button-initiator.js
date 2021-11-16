@@ -1,4 +1,5 @@
 import FavoriteOutletDatabase from '../data/favorite-outlet';
+import Swal from 'sweetalert2';
 import {
 	createLikeButton,
 	createLikedButton,
@@ -14,7 +15,6 @@ const LikeButtonInitiator = {
 
 	async _renderButton() {
 		const { id } = this._outlet;
-
 		if (await this._isOutletExist(id)) {
 			this._renderLiked();
 		} else {
@@ -34,6 +34,11 @@ const LikeButtonInitiator = {
 		likeButton.addEventListener('click', async () => {
 			await FavoriteOutletDatabase.putOutlet(this._outlet);
 			this._renderButton();
+			Swal.fire({
+				title: 'You have favorite outlet now!',
+				text: 'See your favorite food in favorite menu😍',
+				icon: 'success',
+			});
 		});
 	},
 
@@ -44,6 +49,12 @@ const LikeButtonInitiator = {
 		likeButton.addEventListener('click', async () => {
 			await FavoriteOutletDatabase.deleteOutlet(this._outlet.id);
 			this._renderButton();
+			Swal.fire({
+				title: 'You remove your favorite outlet!',
+				width: '42%',
+				text: 'Please come back later😥',
+				icon: 'error',
+			});
 		});
 	},
 };

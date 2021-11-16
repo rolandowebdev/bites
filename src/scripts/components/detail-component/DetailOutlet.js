@@ -5,7 +5,7 @@ class DetailOutlet extends HTMLElement {
 
 	render() {
 		this.innerHTML = `
-         <div id="detail-restaurant"></div>
+         <div id="detail-outlet"></div>
       `;
 	}
 }

@@ -25,7 +25,6 @@ precacheAndRoute(
 		ignoreURLParametersMatching: [/.*/],
 	}
 );
-
 registerRoute(
 	/^https:\/\/restaurant-api\.dicoding\.dev\/(?:(list|detail|review|search))/,
 	new StaleWhileRevalidate({
