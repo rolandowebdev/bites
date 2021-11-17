@@ -26,6 +26,7 @@
         "webpack-cli": "^3.3.12",
         "webpack-dev-server": "^3.11.0",
         "webpack-merge": "^5.0.9",
+        "webpack-pwa-manifest": "^4.3.0",
         "workbox-webpack-plugin": "^6.3.0"
     },
     "dependencies": {
