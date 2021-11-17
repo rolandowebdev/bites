@@ -1,7 +1,9 @@
+/* eslint-disable no-useless-concat */
 /* eslint-disable consistent-return */
 /* eslint-disable no-return-assign */
 import UrlParser from '../../routes/url-parser';
 import SourceOutlet from '../../data/data-outlet';
+import checkOnline from '../../utils/check-online';
 import Swal from 'sweetalert2';
 import {
 	detailOutlet,
@@ -15,7 +17,7 @@ const DetailOutlets = {
 	async render() {
 		return `
 		<div class="notfound-container" id="notfound">
-		<img class="notfound-image" src="404.svg" alt="Not Found" />
+			<img class="notfound-image" src="404.svg" alt="Not Found" />
 			<h1 class="notfound-title">404 Not Found</h1>
 			<p class="notfound-description">Failed to fetch data, please check your connection</p>
 		</div>
@@ -30,6 +32,7 @@ const DetailOutlets = {
 
 	async afterRender() {
 		const detailOutletContainer = document.querySelector('#detail-outlet');
+		const outletWrapper = document.querySelector('#outlet');
 		const foodContainer = document.querySelector('#foods');
 		const drinkContainer = document.querySelector('#drinks');
 		const reviewContainer = document.querySelector('#review');
@@ -50,27 +53,33 @@ const DetailOutlets = {
 			const drinksData = outlet.restaurant.menus.drinks;
 			const reviewData = outlet.restaurant.customerReviews;
 
+			console.log();
+
 			submit.addEventListener('click', () => {
 				const review = {
 					id: url.id,
 					name: inputName.value,
 					review: inputReview.value,
 				};
-				if (review.name === '' || review.review === '') {
-					Swal.fire({
-						title: 'All data must be filled!',
-						text: 'Failed to send review feedback😪',
-						icon: 'failed',
-					});
+				if (window.navigator.onLine === true) {
+					if (review.name === '' || review.review === '') {
+						Swal.fire({
+							title: 'All data must be filled!',
+							text: 'Failed to send review feedback😪',
+							icon: 'failed',
+						});
+					} else {
+						Swal.fire({
+							title: 'Successfully added review',
+							text: 'Thank you for your feedback😄',
+							icon: 'success',
+						});
+						SourceOutlet.postReview(review);
+						window.location.reload(3);
+						return false;
+					}
 				} else {
-					Swal.fire({
-						title: 'Successfully added review',
-						text: 'Thank you for your feedback😄',
-						icon: 'success',
-					});
-					SourceOutlet.postReview(review);
-					window.location.reload(2);
-					return false;
+					checkOnline.status();
 				}
 			});
 
@@ -99,7 +108,6 @@ const DetailOutlets = {
 					city: outlet.restaurant.city,
 				},
 			});
-			console.log('Success');
 		} catch (err) {
 			notFoundContainer.style.display = 'block';
 			foodContainer.style.display = 'none';
@@ -108,7 +116,6 @@ const DetailOutlets = {
 			formContainer.style.display = 'none';
 			reviewWrapper.style.display = 'none';
 			detailOutletContainer.style.display = 'none';
-			console.log('Data Not Found');
 		}
 	},
 };

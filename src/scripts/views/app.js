@@ -25,8 +25,9 @@ class App {
 		try {
 			this._content.innerHTML = await page.render();
 			await page.afterRender();
+			console.log(page);
 		} catch (error) {
-			console.log('Data tidak ada');
+			console.log('Go to the home');
 		}
 	}
 }

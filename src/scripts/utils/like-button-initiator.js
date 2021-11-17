@@ -4,6 +4,7 @@ import {
 	createLikeButton,
 	createLikedButton,
 } from '../views/templates/api-template';
+import checkOnline from './check-online';
 
 const LikeButtonInitiator = {
 	async init({ likeButtonContainer, outlet }) {
@@ -32,13 +33,16 @@ const LikeButtonInitiator = {
 
 		const likeButton = document.querySelector('#likeButton');
 		likeButton.addEventListener('click', async () => {
-			await FavoriteOutletDatabase.putOutlet(this._outlet);
-			this._renderButton();
-			Swal.fire({
-				title: 'You have favorite outlet now!',
-				text: 'See your favorite food in favorite menu😍',
-				icon: 'success',
-			});
+			if (window.navigator.onLine === true) {
+				await FavoriteOutletDatabase.putOutlet(this._outlet);
+				this._renderButton();
+				Swal.fire({
+					title: 'You have favorite outlet now!',
+					text: 'See your favorite food in favorite menu😍',
+					icon: 'success',
+				});
+			}
+			checkOnline.status();
 		});
 	},
 
@@ -47,14 +51,17 @@ const LikeButtonInitiator = {
 
 		const likeButton = document.querySelector('#likeButton');
 		likeButton.addEventListener('click', async () => {
-			await FavoriteOutletDatabase.deleteOutlet(this._outlet.id);
-			this._renderButton();
-			Swal.fire({
-				title: 'You remove your favorite outlet!',
-				width: '42%',
-				text: 'Please come back later😥',
-				icon: 'error',
-			});
+			if (window.navigator.onLine === true) {
+				await FavoriteOutletDatabase.deleteOutlet(this._outlet.id);
+				this._renderButton();
+				Swal.fire({
+					title: 'You remove your favorite outlet!',
+					width: '42%',
+					text: 'Please come back later😥',
+					icon: 'error',
+				});
+			}
+			checkOnline.status();
 		});
 	},
 };
