@@ -27,7 +27,9 @@
 		"comma-dangle": "off",
 		"func-names": "off",
 		"no-var": "off",
-		"class-methods-use-this": "off"
+		"class-methods-use-this": "off",
+		"no-mixed-spaces-and-tabs": "off",
+		"no-unused-expressions": "off"
 	},
 	"parser": "@babel/eslint-parser"
 }

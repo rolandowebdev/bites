@@ -7,7 +7,7 @@ const checkOnline = {
 			return Swal.fire({
 				title: 'Your connection offline',
 				text: 'Please check your connection😥',
-				icon: 'error',
+				icon: 'warning',
 			});
 		}
 		return false;

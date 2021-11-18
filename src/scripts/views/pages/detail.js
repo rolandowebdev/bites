@@ -32,7 +32,6 @@ const DetailOutlets = {
 
 	async afterRender() {
 		const detailOutletContainer = document.querySelector('#detail-outlet');
-		const outletWrapper = document.querySelector('#outlet');
 		const foodContainer = document.querySelector('#foods');
 		const drinkContainer = document.querySelector('#drinks');
 		const reviewContainer = document.querySelector('#review');
@@ -52,8 +51,6 @@ const DetailOutlets = {
 			const foodData = outlet.restaurant.menus.foods;
 			const drinksData = outlet.restaurant.menus.drinks;
 			const reviewData = outlet.restaurant.customerReviews;
-
-			console.log();
 
 			submit.addEventListener('click', () => {
 				const review = {
@@ -78,9 +75,8 @@ const DetailOutlets = {
 						window.location.reload(3);
 						return false;
 					}
-				} else {
-					checkOnline.status();
 				}
+				checkOnline.status();
 			});
 
 			detailOutletContainer.innerHTML = detailOutlet(outlet.restaurant);

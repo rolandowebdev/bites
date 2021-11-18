@@ -87,8 +87,8 @@ li {
   text-overflow: ellipsis;
   word-wrap: break-word;
   overflow: hidden;
-  max-height: 9em;
-  font-size: 1.3em;
+  max-height: 12em;
+  font-size: 1.1em;
   line-height: 1.8em;
   margin-bottom: 1rem;
 }
@@ -259,6 +259,15 @@ textarea {
   cursor: pointer;
 }
 
+@media (max-width: 37rem) {
+  .detail-outlet-section .detail-outlet-name {
+    font-size: 1.7em;
+  }
+  .description-content .about-title {
+    font-size: 1.3em;
+  }
+}
+
 @media (max-width: 43.75rem) {
   .form-container {
     max-width: 100%;
@@ -296,14 +305,5 @@ textarea {
   }
   .description-content .about-title {
     margin-top: 1.875rem;
-  }
-  .description-wrapper .detail-outlet-description {
-    max-width: 80%;
-  }
-  .description-content .about-title {
-    font-size: 2em;
-  }
-  .description-content .detail-outlet-description {
-    font-size: 1.3em;
   }
 }

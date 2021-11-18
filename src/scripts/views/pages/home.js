@@ -26,7 +26,7 @@ const Home = {
 		let dataChoose = '';
 		let dataMostFood = '';
 
-		if (window.location.pathname === '/') {
+		if (window.location.href === 'http://localhost:8080/') {
 			link.style.display = 'block';
 		}
 

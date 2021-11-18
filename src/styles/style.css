@@ -210,6 +210,7 @@ body {
   font-size: 2em;
   text-align: center;
   color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
 .line-style {
@@ -233,6 +234,10 @@ body {
   display: inline-block;
 }
 
+.link-container:hover {
+  text-decoration: underline;
+}
+
 .link-container .food-link {
   margin-top: 1rem;
   padding: 1rem 0;
@@ -240,6 +245,7 @@ body {
   text-align: right;
   font-size: 1.125em;
   font-weight: 500;
+  color: var(--primary-color);
 }
 
 .food {
@@ -247,7 +253,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
   grid-template-rows: auto;
   gap: 1.25rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   text-align: left;
 }
 
@@ -314,6 +320,10 @@ body {
   margin-top: 6.25rem;
 }
 
+.allfood-title {
+  margin-bottom: 2.563rem;
+}
+
 
 /* Outlest Section */
 
@@ -329,6 +339,7 @@ body {
   text-align: right;
   font-size: 1.125em;
   font-weight: 500;
+  color: var(--primary-color);
 }
 
 .outlet-container {
@@ -337,7 +348,6 @@ body {
   grid-template-rows: auto;
   place-items: center;
   gap: 1.25rem;
-  margin-top: 1rem;
   text-align: left;
 }
 
@@ -456,11 +466,6 @@ body {
   margin: 0 auto;
 }
 
-.bites-description {
-  font-size: 1.1em;
-  font-weight: 500;
-}
-
 .footer-main {
   text-align: start;
 }
@@ -468,6 +473,11 @@ body {
 .footer-title {
   font-size: 1.1em;
   margin-bottom: 0.5rem;
+}
+
+.bites-description {
+  font-size: 1.1em;
+  font-weight: 500;
 }
 
 .list-footer {

@@ -25,9 +25,8 @@ class App {
 		try {
 			this._content.innerHTML = await page.render();
 			await page.afterRender();
-			console.log(page);
 		} catch (error) {
-			console.log('Go to the home');
+			console.log(`Sedang terjadi masalah ${error}`);
 		}
 	}
 }
