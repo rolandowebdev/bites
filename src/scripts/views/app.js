@@ -26,7 +26,7 @@ class App {
 			this._content.innerHTML = await page.render();
 			await page.afterRender();
 		} catch (error) {
-			console.log('Data tidak ada');
+			routes['/'];
 		}
 	}
 }

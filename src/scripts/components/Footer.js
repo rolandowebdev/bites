@@ -5,7 +5,6 @@ class Footer extends HTMLElement {
 
 	render() {
 		this.innerHTML = `
-      <!-- Footer -->
       <footer class="footer-container">
         <div class="footer-wrapper">
           <div class="footer-main">

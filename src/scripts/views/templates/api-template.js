@@ -7,7 +7,7 @@ const listOutlet = (restaurant) => {
 				CONFIG.BASE_IMAGE_URL + restaurant.pictureId
 			}" alt="${restaurant.name}">
       <figcaption class="outlet-wrapper">
-         <p class="outlet-name"><a href="${`/#/detail/${restaurant.id}`}">${
+         <p class="outlet-name" id="ouletName"><a href="${`/#/detail/${restaurant.id}`}">${
 		restaurant.name
 	}</a></p>
          <p class="outlet-location"><img class="location-icon" src="location.svg" alt="Location Icon">${
@@ -52,8 +52,10 @@ const detailOutlet = (outlet) => {
 const foodMenu = (menu) => {
 	return `
     <div class="menu-wrapper" id="foods">
-      <img class="menu-icon" src="food.svg" alt="Food Menu"/>
-      <p class="menu-list">${menu.name}</p>
+      <div class="menu-card">
+        <img class="menu-icon" src="food.svg" alt="Food Menu"/>
+        <p class="menu-list">${menu.name}</p>
+      </div>
     </div>
   `;
 };
@@ -61,8 +63,10 @@ const foodMenu = (menu) => {
 const drinkMenu = (menu) => {
 	return `
     <div class="menu-wrapper" id="drinks">
-      <img class="menu-icon" src="drink.svg" alt="Drink Menu"/>
-      <p class="menu-list">${menu.name}</p>
+      <div class="menu-card">
+        <img class="menu-icon" src="drink.svg" alt="Drink Menu"/>
+        <p class="menu-list">${menu.name}</p>
+      </div>
     </div>
   `;
 };

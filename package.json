@@ -26,10 +26,13 @@
         "webpack-cli": "^3.3.12",
         "webpack-dev-server": "^3.11.0",
         "webpack-merge": "^5.0.9",
+        "webpack-pwa-manifest": "^4.3.0",
         "workbox-webpack-plugin": "^6.3.0"
     },
     "dependencies": {
+        "aos": "^2.3.4",
         "idb": "^6.1.5",
+        "lit": "^2.0.2",
         "regenerator-runtime": "^0.13.9",
         "sweetalert2": "^11.1.10",
         "workbox-core": "^6.0.2",

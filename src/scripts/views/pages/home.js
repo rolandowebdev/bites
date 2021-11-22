@@ -19,17 +19,22 @@ const Home = {
 		loading.show();
 		const outlet = await SourceOutlet.allOutlet();
 		const outletWrapper = document.querySelector('#outlet');
+		const link = document.querySelector('.outlet-link');
 		const mostFood = data['most'];
 		const choose = data['choose'];
 
 		let dataChoose = '';
 		let dataMostFood = '';
 
-		outlet.restaurants.map((outlet) => {
+		if (window.location.href === 'http://localhost:8080/') {
+			link.style.display = 'block';
+		}
+
+		outlet.restaurants.slice(0, 4).map((outlet) => {
 			outletWrapper.innerHTML += listOutlet(outlet);
 		});
 
-		mostFood.map((data) => {
+		mostFood.slice(0, 4).map((data) => {
 			dataMostFood += mostFoodData(data);
 		});
 

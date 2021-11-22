@@ -13,6 +13,12 @@
   .main-container {
     margin: 0 20px;
   }
+  .outlet-image {
+    height: 14.375rem;
+  }
+  .link-container {
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 50rem) {
