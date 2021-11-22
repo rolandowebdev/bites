@@ -53,8 +53,11 @@ const foodMenu = (menu) => {
 	return `
     <div class="menu-wrapper" id="foods">
       <div class="menu-card">
-        <img class="menu-icon" src="food.svg" alt="Food Menu"/>
-        <p class="menu-list">${menu.name}</p>
+        <img class="menu-icon" src="https://images.unsplash.com/photo-1543826173-70651703c5a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZHxlbnwwfDJ8MHxibGFja3w%3D&auto=format&fit=crop&w=500&q=60" alt="Food Menu"/>
+        <div class="menu-list">
+          <p class="menu-name">${menu.name}</p>
+          <p class="menu-price">$4.3</p>
+        </div>
       </div>
     </div>
   `;
@@ -64,8 +67,11 @@ const drinkMenu = (menu) => {
 	return `
     <div class="menu-wrapper" id="drinks">
       <div class="menu-card">
-        <img class="menu-icon" src="drink.svg" alt="Drink Menu"/>
-        <p class="menu-list">${menu.name}</p>
+        <img class="menu-icon" src="https://images.unsplash.com/photo-1616360151857-3914da25dbe0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGRyaW5rcyUyMGJvdHRsZXxlbnwwfDJ8MHxibGFja3w%3D&auto=format&fit=crop&w=500&q=60" alt="Drink Menu"/>
+        <div class="menu-list">
+          <p class="menu-name">${menu.name}</p>
+          <p class="menu-price">$4.3</p>
+        </div>
       </div>
     </div>
   `;
@@ -73,12 +79,16 @@ const drinkMenu = (menu) => {
 
 const reviewOutlet = (review) => {
 	return `
-    <div class="reviews-wrapper">
-      <img class="user-profile" src="user.svg" alt="User Profile"/>
-      <h3 class="reviews-name">${review.name}</h3>
-      <p class="reviews-description">${review.review}</p>
-      <p class="reviews-date">${review.date}</p>
-    </div>
+    <div class="review-card">
+        <div class="desc"><p class="review-text">${review.review}</p></div>
+        <div class="profile">
+          <img class="photo" src="profile.jpg" alt="Profile Photo" />
+          <div class="profile-desc">
+            <p class="name">${review.name}</p>
+            <p class="date">${review.date}</p>
+          </div>
+        </div>
+      </div>
   `;
 };
 

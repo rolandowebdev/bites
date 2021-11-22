@@ -29,7 +29,10 @@
 		"no-var": "off",
 		"class-methods-use-this": "off",
 		"no-mixed-spaces-and-tabs": "off",
-		"no-unused-expressions": "off"
+		"no-unused-expressions": "off",
+		"no-useless-concat": "off",
+		"consistent-return": "off",
+		"no-return-assign": "off"
 	},
 	"parser": "@babel/eslint-parser"
 }

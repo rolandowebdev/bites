@@ -59,7 +59,6 @@ const LikeButtonInitiator = {
 				this._renderButton();
 				Swal.fire({
 					title: 'You remove your favorite outlet!',
-					width: '42%',
 					text: 'Please come back later😥',
 					icon: 'error',
 				});

@@ -1,6 +1,3 @@
-/* eslint-disable no-useless-concat */
-/* eslint-disable consistent-return */
-/* eslint-disable no-return-assign */
 import UrlParser from '../../routes/url-parser';
 import SourceOutlet from '../../data/data-outlet';
 import checkOnline from '../../utils/check-online';
@@ -62,7 +59,7 @@ const DetailOutlets = {
 					if (review.name === '' || review.review === '') {
 						Swal.fire({
 							title: 'All data must be filled!',
-							text: 'Failed to send review feedback😪',
+							text: 'Failed to send review feedback😒',
 							icon: 'failed',
 						});
 					} else {
@@ -72,8 +69,6 @@ const DetailOutlets = {
 							icon: 'success',
 						});
 						SourceOutlet.postReview(review);
-						window.location.reload(3);
-						return false;
 					}
 				}
 				checkOnline.status();

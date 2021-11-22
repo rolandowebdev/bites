@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
   --primary-color: #ff8303;
-  --dark-black: #1b1a17;
-  --white-color: #ffffff;
+  --dark-black: ##112031;
+  --white-color: #fff;
   --badge-color: #ff3d68;
   --gold-color: #ffcc47;
+  --blue-gray: #87a7b3;
   --border-accent: #ececec;
 }
 
@@ -186,7 +187,7 @@ body {
   position: absolute;
   top: 20%;
   left: 5%;
-  font-size: 6vw;
+  font-size: 5vw;
   letter-spacing: 0.125em;
   color: var(--primary-color);
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -197,7 +198,7 @@ body {
   left: 5%;
   top: 60%;
   max-width: 80%;
-  font-size: 1.9vw;
+  font-size: 1.5vw;
   line-height: 2em;
   color: var(--white-color);
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -276,7 +277,7 @@ body {
 
 .food-title {
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 0.313rem;
 }
 
@@ -284,11 +285,12 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 0.188rem;
-  font-weight: 400;
+  font-weight: 300;
+  color: var(--blue-gray);
 }
 
 .location-icon {
-  max-width: 0.75rem;
+  max-width: 0.7rem;
   margin-right: 0.313rem;
 }
 
@@ -387,6 +389,7 @@ body {
   align-items: center;
   margin-bottom: 0.188rem;
   font-weight: 400;
+  color: var(--blue-gray);
 }
 
 .outlet-description {
