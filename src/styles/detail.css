@@ -137,16 +137,33 @@ li {
 
 /* Food Section */
 
-.menu-wrapper {
-  display: flex;
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
 }
 
+.menu-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #eaeaea;
+  max-width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.menu-card {
+  padding: 3px;
+}
+
 .menu-icon {
   display: inline-block;
-  max-width: 1.875rem;
+  max-width: 1.7rem;
+  margin-bottom: 0.5rem;
 }
 
 .menu-title {
@@ -158,7 +175,8 @@ li {
 
 .menu-list {
   color: var(--dark-black);
-  font-size: 1.3em;
+  font-size: 1em;
+  font-weight: 400;
 }
 
 
@@ -171,6 +189,7 @@ li {
 .reviews-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1.25rem;
 }
 
@@ -178,8 +197,7 @@ li {
   margin-top: 0.75;
   padding: 1rem;
   border-radius: 0.25rem;
-  background-color: var(--white-color);
-  box-shadow: -1px 10px 24px -11px rgba(122, 122, 122, 1);
+  background-color: #eaeaea;
 }
 
 .user-profile {
@@ -196,8 +214,9 @@ li {
 .reviews-name {
   margin-bottom: 0.25rem;
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1;
   letter-spacing: 0.063em;
+  word-wrap: break-word;
 }
 
 .reviews-description {

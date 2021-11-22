@@ -52,8 +52,10 @@ const detailOutlet = (outlet) => {
 const foodMenu = (menu) => {
 	return `
     <div class="menu-wrapper" id="foods">
-      <img class="menu-icon" src="food.svg" alt="Food Menu"/>
-      <p class="menu-list">${menu.name}</p>
+      <div class="menu-card">
+        <img class="menu-icon" src="food.svg" alt="Food Menu"/>
+        <p class="menu-list">${menu.name}</p>
+      </div>
     </div>
   `;
 };
@@ -61,8 +63,10 @@ const foodMenu = (menu) => {
 const drinkMenu = (menu) => {
 	return `
     <div class="menu-wrapper" id="drinks">
-      <img class="menu-icon" src="drink.svg" alt="Drink Menu"/>
-      <p class="menu-list">${menu.name}</p>
+      <div class="menu-card">
+        <img class="menu-icon" src="drink.svg" alt="Drink Menu"/>
+        <p class="menu-list">${menu.name}</p>
+      </div>
     </div>
   `;
 };

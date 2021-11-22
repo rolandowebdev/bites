@@ -81,11 +81,11 @@ const DetailOutlets = {
 
 			detailOutletContainer.innerHTML = detailOutlet(outlet.restaurant);
 
-			foodData.slice(0, 5).map((food) => {
+			foodData.slice(0, 4).map((food) => {
 				foodContainer.innerHTML += foodMenu(food);
 			});
 
-			drinksData.slice(0, 5).map((drink) => {
+			drinksData.slice(0, 4).map((drink) => {
 				drinkContainer.innerHTML += drinkMenu(drink);
 			});
 
