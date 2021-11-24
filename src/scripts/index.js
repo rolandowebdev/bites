@@ -15,12 +15,12 @@ import './components/detail-component/DetailOutlet';
 import './components/detail-component/Review';
 import './components/detail-component/ButtonContainer';
 import './components/detail-component/FormContainer';
-import './views/pages/home';
-import './utils/hide-drawer';
 import '../styles/style.css';
 import '../styles/responsive.css';
 import '../styles/detail.css';
 import '../styles/loading.css';
+import './views/pages/home';
+import maxLength from './utils/form-validation';
 import swRegister from './utils/sw-register';
 import App from './views/app';
 

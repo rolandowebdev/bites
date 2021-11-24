@@ -3,7 +3,7 @@
   --gold-color: #ffcc47;
   --dark-black: #112031;
   --white-color: #ffffff;
-  --blue-gray: #87a7b3;
+  --blue-gray: #6d8299;
   --warning-color: #ff0000;
 }
 
@@ -105,7 +105,6 @@ li {
 }
 
 .detail-outlet-rating {
-  display: block;
   padding: 0.5rem 0;
   font-size: 1.2em;
   font-weight: 500;
@@ -252,7 +251,7 @@ li {
 }
 
 .profile .name {
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 500;
   letter-spacing: 1px;
   color: var(--dark-black);
@@ -276,14 +275,19 @@ li {
   max-width: 50%;
 }
 
+.form-container .name-input {
+  position: relative;
+  width: 100%;
+}
+
 .form-container label {
   font-size: 1em;
   font-weight: 500;
-  color: var(--dark-black);
 }
 
 .form-container input[type='text'],
 textarea {
+  position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
   margin: 0.9rem 0;
@@ -293,19 +297,27 @@ textarea {
   font-size: 1.125em;
   font-weight: 300;
   width: 100%;
-  color: var(--white-color);
 }
 
-.form-container input[type='text']:focus {
-  background-color: var(--dark-black);
+#countInfo {
+  visibility: hidden;
+}
+
+label.count {
+  position: absolute;
+  top: 53%;
+  right: 0.8rem;
+}
+
+label.count,
+span {
+  color: #aaa492;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .form-container textarea {
   resize: vertical;
-}
-
-.form-container textarea:focus {
-  background-color: var(--dark-black);
 }
 
 .form-container button {
@@ -317,7 +329,7 @@ textarea {
   font-size: 1em;
   color: var(--white-color);
   cursor: pointer;
-  transition: 0.5s all;
+  transition: 0.3s all;
 }
 
 .form-container button:hover {
@@ -391,7 +403,8 @@ textarea {
     columns: 1;
   }
   .detail-outlet-section .detail-outlet-name {
-    font-size: 1.7em;
+    margin-top: 3rem;
+    font-size: 2em;
   }
   .description-content .about-title {
     font-size: 1.3em;

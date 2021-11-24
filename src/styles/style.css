@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
   --primary-color: #ff8303;
-  --dark-black: ##112031;
+  --dark-black: #112031;
   --white-color: #fff;
   --badge-color: #ff3d68;
   --gold-color: #ffcc47;
@@ -187,7 +187,7 @@ body {
   position: absolute;
   top: 20%;
   left: 5%;
-  font-size: 5vw;
+  font-size: 5vmax;
   letter-spacing: 0.125em;
   color: var(--primary-color);
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -198,7 +198,7 @@ body {
   left: 5%;
   top: 60%;
   max-width: 80%;
-  font-size: 1.5vw;
+  font-size: 2vmax;
   line-height: 2em;
   color: var(--white-color);
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -211,7 +211,6 @@ body {
   font-size: 2em;
   text-align: center;
   color: var(--primary-color);
-  margin-bottom: 1rem;
 }
 
 .line-style {
@@ -240,8 +239,8 @@ body {
 }
 
 .link-container .food-link {
-  margin-top: 1rem;
-  padding: 1rem 0;
+  /* margin-top: 1rem; */
+  /* padding: 1rem 0; */
   text-decoration: none;
   text-align: right;
   font-size: 1.125em;
@@ -322,7 +321,7 @@ body {
   margin-top: 6.25rem;
 }
 
-.allfood-title {
+.another-food {
   margin-bottom: 2.563rem;
 }
 
@@ -336,7 +335,7 @@ body {
 
 .link-container .outlet-link {
   display: none;
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
   text-decoration: none;
   text-align: right;
   font-size: 1.125em;
@@ -350,6 +349,7 @@ body {
   grid-template-rows: auto;
   place-items: center;
   gap: 1.25rem;
+  margin-top: 1rem;
   text-align: left;
 }
 
@@ -447,6 +447,8 @@ body {
   align-items: center;
   column-gap: 1.25rem;
   margin-bottom: 1.25rem;
+  font-size: 1.125em;
+  color: var(--dark-black);
 }
 
 .arrow-icon {

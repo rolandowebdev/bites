@@ -1,6 +1,8 @@
 import UrlParser from '../../routes/url-parser';
 import SourceOutlet from '../../data/data-outlet';
+import countIteration from '../../utils/form-validation';
 import checkOnline from '../../utils/check-online';
+
 import Swal from 'sweetalert2';
 import {
 	detailOutlet,
@@ -40,14 +42,37 @@ const DetailOutlets = {
 		const inputName = document.querySelector('#reviewName');
 		const inputReview = document.querySelector('#reviewValue');
 		const submit = document.querySelector('#submit');
+		const inputMaxLengthOnLoad =
+			document.getElementById('reviewName').maxLength;
+		document.getElementById('countIteration').innerText = inputMaxLengthOnLoad;
+		// const countInfo = document.getElementById('countInfo');
 
 		try {
 			const url = UrlParser.parseActiveUrlWithoutCombiner();
 			const outlet = await SourceOutlet.detailOutlet(url.id);
 
-			const foodData = outlet.restaurant.menus.foods;
-			const drinksData = outlet.restaurant.menus.drinks;
-			const reviewData = outlet.restaurant.customerReviews;
+			document.getElementById('reviewName').addEventListener('input', () => {
+				const jumlahKarakterDiketik =
+					document.getElementById('reviewName').value.length;
+				const jumlahKarakterMaksimal =
+					document.getElementById('reviewName').maxLength;
+
+				const sisaKarakterUpdate =
+					jumlahKarakterMaksimal - jumlahKarakterDiketik;
+				document.getElementById('countIteration').innerText =
+					sisaKarakterUpdate;
+				document.getElementById('countInfo');
+
+				countIteration(sisaKarakterUpdate, 'countIteration', 'countInfo');
+			});
+
+			document.getElementById('reviewName').addEventListener('focus', () => {
+				document.getElementById('countInfo').style.visibility = 'inherit';
+			});
+
+			document.getElementById('reviewName').addEventListener('blur', () => {
+				document.getElementById('countInfo').style.visibility = 'hidden';
+			});
 
 			submit.addEventListener('click', () => {
 				const review = {
@@ -55,6 +80,7 @@ const DetailOutlets = {
 					name: inputName.value,
 					review: inputReview.value,
 				};
+
 				if (window.navigator.onLine === true) {
 					if (review.name === '' || review.review === '') {
 						Swal.fire({
@@ -76,15 +102,15 @@ const DetailOutlets = {
 
 			detailOutletContainer.innerHTML = detailOutlet(outlet.restaurant);
 
-			foodData.slice(0, 4).map((food) => {
+			outlet.restaurant.menus.foods.slice(0, 4).map((food) => {
 				foodContainer.innerHTML += foodMenu(food);
 			});
 
-			drinksData.slice(0, 4).map((drink) => {
+			outlet.restaurant.menus.drinks.slice(0, 4).map((drink) => {
 				drinkContainer.innerHTML += drinkMenu(drink);
 			});
 
-			reviewData.map(
+			outlet.restaurant.customerReviews.map(
 				(review) => (reviewContainer.innerHTML += reviewOutlet(review))
 			);
 
