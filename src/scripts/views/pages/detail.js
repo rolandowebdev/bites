@@ -21,8 +21,10 @@ const DetailOutlets = {
 			<p class="notfound-description">Failed to fetch data, please check your connection</p>
 		</div>
 		<detail-outlet></detail-outlet>
-		<menu-food></menu-food>
-		<menu-drink></menu-drink>
+		<div class="menu wrapper">
+			<menu-food></menu-food>
+			<menu-drink></menu-drink>
+		</div>
 		<review-component></review-component>
 		<button-container></button-container>
 		<form-container></form-container>

@@ -136,8 +136,15 @@ li {
 
 /* Food Section */
 
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
 .menu-container {
-  margin-top: 1rem;
+  margin: 1rem auto 0 auto;
 }
 
 .menu-title {
@@ -148,7 +155,7 @@ li {
 }
 
 .menu-wrapper {
-  max-width: 30%;
+  width: 100%;
   padding: 0.5rem;
   border-radius: 4px;
 }
@@ -349,9 +356,6 @@ span {
     margin-right: 2.25rem;
     margin-left: 2.25rem;
   }
-  .menu-wrapper {
-    max-width: 45%;
-  }
   .detail-outlet-section .description-wrapper {
     flex-direction: column;
   }
@@ -364,9 +368,6 @@ span {
 }
 
 @media (max-width: 50rem) {
-  .menu-wrapper {
-    max-width: 50%;
-  }
   .review-container {
     columns: 2;
   }
@@ -379,8 +380,13 @@ span {
   .form-container {
     max-width: 100%;
   }
-  .menu-wrapper {
-    max-width: 60%;
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu-title {
+    margin-left: inherit;
+    margin-right: inherit;
   }
   .notfound-container {
     margin-bottom: 6.25rem;
@@ -396,9 +402,6 @@ span {
 }
 
 @media (max-width: 37rem) {
-  .menu-wrapper {
-    max-width: 100%;
-  }
   .review-container {
     columns: 1;
   }
