@@ -32,11 +32,6 @@ class Navbar extends HTMLElement {
                         >
                      </li>
                      <li class="nav-items">
-                        <a class="list-items" href="#choose-section" aria-label="list-items"
-                           >Why Choose</a
-                        >
-                     </li>
-                     <li class="nav-items">
                         <a
                            class="list-items"
                            href="https://github.com/rolandopranata"

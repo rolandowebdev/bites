@@ -15,14 +15,13 @@ class FormContainer extends HTMLElement {
                placeholder="Name"
                maxlength="15"
                autocomplete="off"
-               required
             />
             <label class="count" id="countInfo" for="name">
-            15/<span id="countIteration"></span>
+            15/<span id="countIteration">15</span>
             </label>
          </div>
          <label for="review">Review</label>
-         <textarea id="reviewValue" name="review" placeholder="Review"></textarea>
+         <textarea id="reviewDetail" name="review" placeholder="Review"></textarea>
          <button id="submit">Submit</button>
       </div>
       `;

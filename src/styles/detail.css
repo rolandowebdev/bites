@@ -287,6 +287,11 @@ li {
   width: 100%;
 }
 
+.form-container .detail-input {
+  position: relative;
+  width: 100%;
+}
+
 .form-container label {
   font-size: 1em;
   font-weight: 500;
@@ -306,7 +311,7 @@ textarea {
   width: 100%;
 }
 
-#countInfo {
+.count {
   visibility: hidden;
 }
 
@@ -351,7 +356,7 @@ span {
     columns: 3;
   }
   .form-container,
-  .menu-title,
+  .menu,
   .wrapper {
     margin-right: 2.25rem;
     margin-left: 2.25rem;

@@ -27,7 +27,9 @@ const mostFoodData = (data) => {
 
 const chooseBites = (data) => {
 	return `
-   <img class="choose-image" src="${data['pictureId']}" alt="choice image">
+   <div class="choose-outline">
+    <img class="choose-image" src="${data['pictureId']}" alt="choice image">
+   </div>
    <div class="choose-description">
      <h3 class="choose-title">${data['title']}</h3>
      <div class="list-choose">

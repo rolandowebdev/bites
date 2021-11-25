@@ -1,9 +1,7 @@
 import UrlParser from '../../routes/url-parser';
 import SourceOutlet from '../../data/data-outlet';
-import countIteration from '../../utils/form-validation';
+import { countIteration, handleInputFill } from '../../utils/form-validation';
 import checkOnline from '../../utils/check-online';
-
-import Swal from 'sweetalert2';
 import {
 	detailOutlet,
 	foodMenu,
@@ -42,38 +40,31 @@ const DetailOutlets = {
 		const reviewWrapper = document.querySelector('#reviews');
 
 		const inputName = document.querySelector('#reviewName');
-		const inputReview = document.querySelector('#reviewValue');
+		const inputReview = document.querySelector('#reviewDetail');
 		const submit = document.querySelector('#submit');
-		const inputMaxLengthOnLoad =
-			document.getElementById('reviewName').maxLength;
-		document.getElementById('countIteration').innerText = inputMaxLengthOnLoad;
-		// const countInfo = document.getElementById('countInfo');
+		const iteration = document.querySelector('#countIteration');
+		const countInfo = document.querySelector('#countInfo');
 
 		try {
 			const url = UrlParser.parseActiveUrlWithoutCombiner();
 			const outlet = await SourceOutlet.detailOutlet(url.id);
 
-			document.getElementById('reviewName').addEventListener('input', () => {
-				const jumlahKarakterDiketik =
-					document.getElementById('reviewName').value.length;
-				const jumlahKarakterMaksimal =
-					document.getElementById('reviewName').maxLength;
-
+			inputName.addEventListener('input', () => {
+				const jumlahKarakterDiketik = inputName.value.length;
+				const jumlahKarakterMaksimal = inputName.maxLength;
 				const sisaKarakterUpdate =
 					jumlahKarakterMaksimal - jumlahKarakterDiketik;
-				document.getElementById('countIteration').innerText =
-					sisaKarakterUpdate;
-				document.getElementById('countInfo');
 
+				iteration.innerText = sisaKarakterUpdate;
 				countIteration(sisaKarakterUpdate, 'countIteration', 'countInfo');
 			});
 
-			document.getElementById('reviewName').addEventListener('focus', () => {
-				document.getElementById('countInfo').style.visibility = 'inherit';
+			inputName.addEventListener('focus', () => {
+				countInfo.style.visibility = 'inherit';
 			});
 
-			document.getElementById('reviewName').addEventListener('blur', () => {
-				document.getElementById('countInfo').style.visibility = 'hidden';
+			inputName.addEventListener('blur', () => {
+				countInfo.style.visibility = 'hidden';
 			});
 
 			submit.addEventListener('click', () => {
@@ -82,24 +73,9 @@ const DetailOutlets = {
 					name: inputName.value,
 					review: inputReview.value,
 				};
-
-				if (window.navigator.onLine === true) {
-					if (review.name === '' || review.review === '') {
-						Swal.fire({
-							title: 'All data must be filled!',
-							text: 'Failed to send review feedback😒',
-							icon: 'failed',
-						});
-					} else {
-						Swal.fire({
-							title: 'Successfully added review',
-							text: 'Thank you for your feedback😄',
-							icon: 'success',
-						});
-						SourceOutlet.postReview(review);
-					}
-				}
-				checkOnline.status();
+				window.navigator.onLine === true
+					? handleInputFill(review)
+					: checkOnline.status();
 			});
 
 			detailOutletContainer.innerHTML = detailOutlet(outlet.restaurant);

@@ -1,3 +1,6 @@
+import Swal from 'sweetalert2';
+import SourceOutlet from '../data/data-outlet';
+
 function countIteration(count, iterator, notif) {
 	if (count === 0) {
 		document.getElementById(iterator).innerText = 'max';
@@ -10,4 +13,21 @@ function countIteration(count, iterator, notif) {
 	}
 }
 
-export default countIteration;
+function handleInputFill(review) {
+	if (review.name === '' || review.review === '') {
+		Swal.fire({
+			title: 'All data must be filled!',
+			text: 'Failed to send review feedback😒',
+			icon: 'error',
+		});
+	} else {
+		Swal.fire({
+			title: 'Successfully added review',
+			text: 'Thank you for your feedback😄',
+			icon: 'success',
+		});
+		SourceOutlet.postReview(review);
+	}
+}
+
+export { countIteration, handleInputFill };
