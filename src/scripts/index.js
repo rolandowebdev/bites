@@ -20,7 +20,6 @@ import '../styles/responsive.css';
 import '../styles/detail.css';
 import '../styles/loading.css';
 import './views/pages/home';
-import maxLength from './utils/form-validation';
 import swRegister from './utils/sw-register';
 import App from './views/app';
 

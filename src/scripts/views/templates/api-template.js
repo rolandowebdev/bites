@@ -29,9 +29,11 @@ const detailOutlet = (outlet) => {
    <h2 class="detail-outlet-name">${outlet.name}</h2>
    <p class="detail-outlet-location">${outlet.address} ${outlet.city}</p>
    <figure class="description-wrapper">
-     <img class="detail-outlet-image" src="${
+     <div class="outlet-border">
+      <img class="detail-outlet-image" src="${
 				CONFIG.BASE_IMAGE_URL + outlet.pictureId
 			}" alt="${outlet.name}" />
+     </div>
      <figcaption class="description-content">
        <h3 class="about-title">About ${outlet.name}</h3>
        <p class="detail-outlet-description">
@@ -56,7 +58,11 @@ const foodMenu = (menu) => {
         <img class="menu-icon" src="https://images.unsplash.com/photo-1543826173-70651703c5a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZHxlbnwwfDJ8MHxibGFja3w%3D&auto=format&fit=crop&w=500&q=60" alt="Food Menu"/>
         <div class="menu-list">
           <p class="menu-name">${menu.name}</p>
-          <p class="menu-price">$4.3</p>
+          <span class="menu-location"><img class="location-icon" src="location.svg" alt="Location Icon">Western food</span>
+          <span class="menu-buy">
+            <p class="menu-price">$4.3</p>
+            <span class="chart-wrapper"><img class="chart-icon" src="chart.svg" alt="Chart Icon"/></span>
+          </span>
         </div>
       </div>
     </div>
@@ -70,7 +76,11 @@ const drinkMenu = (menu) => {
         <img class="menu-icon" src="https://images.unsplash.com/photo-1616360151857-3914da25dbe0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGRyaW5rcyUyMGJvdHRsZXxlbnwwfDJ8MHxibGFja3w%3D&auto=format&fit=crop&w=500&q=60" alt="Drink Menu"/>
         <div class="menu-list">
           <p class="menu-name">${menu.name}</p>
-          <p class="menu-price">$4.3</p>
+          <span class="menu-location"><img class="location-icon" src="location.svg" alt="Location Icon">Indonesian food</span>
+          <span class="menu-buy">
+            <p class="menu-price">$4.3</p>
+            <span class="chart-wrapper"><img class="chart-icon" src="chart.svg" alt="Chart Icon"/></span>
+          </span>
         </div>
       </div>
     </div>

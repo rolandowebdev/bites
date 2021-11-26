@@ -6,7 +6,6 @@ class MenuFood extends HTMLElement {
 	render() {
 		this.innerHTML = `
 		<div class="menu-section">
-			<h2 class="menu-title">Food Menu</h2>
 			<div id="foods" class="menu-container"></div>
 		</div>
       `;

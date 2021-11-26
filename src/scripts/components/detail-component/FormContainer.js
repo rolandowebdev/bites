@@ -22,7 +22,7 @@ class FormContainer extends HTMLElement {
          </div>
          <label for="review">Review</label>
          <textarea id="reviewDetail" name="review" placeholder="Review"></textarea>
-         <button id="submit">Submit</button>
+         <button class="btn-form btn" id="submit">Submit</button>
       </div>
       `;
 	}

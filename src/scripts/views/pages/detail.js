@@ -20,6 +20,11 @@ const DetailOutlets = {
 		</div>
 		<detail-outlet></detail-outlet>
 		<div class="menu wrapper">
+			<div class="list-menu-description">
+				<h2 class="menu-title">Food & Drink Menu</h2>
+				<p class="menu-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero unde cumque id sit atque neque at dolorum quae ea.</p>
+				<a class="seeall-menu btn" href="#/food">See all menu</a>
+			</div>
 			<menu-food></menu-food>
 			<menu-drink></menu-drink>
 		</div>
