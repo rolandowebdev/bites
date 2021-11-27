@@ -66,6 +66,10 @@ body {
   margin: 0 auto;
 }
 
+.navbar .logo {
+  max-width: 60%;
+}
+
 .hamburger-menu {
   position: relative;
   align-self: center;
@@ -170,39 +174,76 @@ body {
   min-width: 100%;
 }
 
+.account-wrapper {
+  display: none;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.social-media {
+  padding: 0.8rem;
+  color: var(--white-color);
+}
+
+.social-media .fab {
+  max-width: 1.6rem;
+  color: var(--white-color);
+  transition: 0.4s;
+}
+
+.social-media .fab:hover {
+  transform: translateY(-0.5rem) scale(1.02);
+}
+
+.social-media .fa-instagram:hover {
+  color: #833ab4;
+}
+
+.social-media .fa-twitter:hover {
+  color: #1da1f2;
+}
+
+.social-media .fa-github:hover {
+  color: #ff501b;
+}
+
 
 /* Hero */
 
 .hero {
   margin-top: 1.875rem;
-  position: relative;
-}
-
-.hero-image {
-  position: relative;
   max-width: 62.5rem;
-  border-radius: 0.5rem;
+  position: relative;
 }
 
-.hero-title {
+.hero .hero-image {
+  position: relative;
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  background-blend-mode: darken;
+}
+
+.hero .hero-title {
   position: absolute;
   top: 20%;
   left: 5%;
-  font-size: 5vmax;
+  font-size: 4vw;
   letter-spacing: 0.125em;
   color: var(--primary-color);
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero-description {
+.hero .hero-description {
   position: absolute;
   left: 5%;
-  top: 60%;
+  top: 50%;
   max-width: 80%;
-  font-size: 2vmax;
+  font-size: 1.8vw;
   line-height: 2em;
   color: var(--white-color);
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -244,8 +285,6 @@ body {
 }
 
 .link-container .food-link {
-  /* margin-top: 1rem; */
-  /* padding: 1rem 0; */
   text-decoration: none;
   text-align: right;
   font-size: 1.125em;
@@ -436,7 +475,7 @@ body {
 
 .choose-outline {
   max-width: 50%;
-  border: 1px solid var(--primary-color);
+  border: 4px solid var(--dark-black);
   border-radius: 0.75rem;
 }
 
@@ -444,8 +483,8 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  clip-path: polygon(18% 0, 100% 0, 100% 77%, 77% 100%, 0 100%, 0 20%);
-  border-radius: 0.75rem;
+  clip-path: polygon( 50% 0%, 100% 0, 100% 43%, 100% 80%, 80% 100%, 32% 100%, 0 100%, 0 18%, 18% 0);
+  border-radius: 0.5rem;
 }
 
 .choose-title {

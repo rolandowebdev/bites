@@ -92,13 +92,18 @@ li {
   border: 1px solid var(--dark-black);
   border-radius: 0.75rem;
   min-width: 53%;
+  height: 21.875rem;
+  overflow: hidden;
 }
 
 .outlet-border .detail-outlet-image {
   display: block;
-  border-radius: 0.75rem;
-  clip-path: polygon(18% 0, 100% 0, 100% 77%, 77% 100%, 0 100%, 0 20%);
   width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  object-position: center;
+  clip-path: polygon( 50% 0%, 100% 0, 100% 43%, 100% 80%, 80% 100%, 32% 100%, 0 100%, 0 18%, 18% 0);
 }
 
 .description-content .about-title {
@@ -418,6 +423,12 @@ span {
 @media (max-width: 74.938rem) {
   .menu {
     grid-template-columns: repeat(2, minmax(1rem, 1fr));
+  }
+  .outlet-border {
+    border: 0;
+  }
+  .outlet-border .detail-outlet-image {
+    clip-path: initial;
   }
   .list-menu-description {
     grid-column: span 2;

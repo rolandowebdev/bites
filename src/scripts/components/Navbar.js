@@ -41,6 +41,11 @@ class Navbar extends HTMLElement {
                            >About Us</a
                         >
                      </li>
+                     <div class="account-wrapper">
+                        <p><a class="social-media" href=""><i class="fab fa-instagram fa-2x"></i></a></p>
+                        <p><a class="social-media" href=""><i class="fab fa-github fa-2x"></i></a></p>
+                        <p><a class="social-media" href=""><i class="fab fa-twitter fa-2x"></i></a></p>
+                     </div>       
                   </ul>
                   <a href="#" class="hamburger-menu" id="hamburger">
                      <input class="check" type="checkbox" />

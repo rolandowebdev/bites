@@ -1,10 +1,13 @@
-const navmenu = document.querySelectorAll('.nav-list');
-const drawer = document.querySelector('#navbar ul');
-
-navmenu.forEach((nav) => {
-	nav.addEventListener('click', (event) => {
-		event.stopPropagation();
-		drawer.classList.remove('slide');
-		window.scrollTo(0, 0);
+function hideDrawer(menu, drawer, checkbox) {
+	const check = checkbox;
+	menu.forEach((nav) => {
+		nav.addEventListener('click', (event) => {
+			event.stopPropagation();
+			window.scrollTo(0, 0);
+			check.checked = false;
+			drawer.classList.remove('slide');
+		});
 	});
-});
+}
+
+export default hideDrawer;
