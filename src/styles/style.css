@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
   --primary-color: #ff8303;
-  --dark-black: #112031;
+  --dark-black: #1f1d36;
   --white-color: #fff;
   --badge-color: #ff3d68;
   --gold-color: #ffcc47;
-  --blue-gray: #87a7b3;
+  --blue-gray: #9d9d9d;
   --border-accent: #ececec;
 }
 
@@ -328,7 +328,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 0.188rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--blue-gray);
 }
 
@@ -379,7 +379,6 @@ body {
 
 .link-container .outlet-link {
   display: none;
-  /* padding: 1rem 0; */
   text-decoration: none;
   text-align: right;
   font-size: 1.125em;
@@ -392,7 +391,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
   grid-template-rows: auto;
   place-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
   margin-top: 1rem;
   text-align: left;
 }
@@ -400,12 +399,14 @@ body {
 .outlet-card {
   position: relative;
   border-radius: 0.75rem;
-  width: 100%;
+  min-width: 85%;
 }
 
 .outlet-image {
   width: 100%;
   height: 11.25rem;
+  background-size: cover;
+  background-position: center;
   border-radius: 0.75rem;
 }
 
@@ -474,8 +475,8 @@ body {
 }
 
 .choose-outline {
-  max-width: 50%;
-  border: 4px solid var(--dark-black);
+  max-width: 100%;
+  border: 2px solid var(--primary-color);
   border-radius: 0.75rem;
 }
 

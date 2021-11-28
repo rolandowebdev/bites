@@ -21,13 +21,15 @@ import '../styles/detail.css';
 import '../styles/loading.css';
 import '../public/hero.jpg';
 import './views/pages/home';
-import hideDrawer from './utils/hide-drawer';
+import hideDrawer from './utils/menu-initiator';
 import swRegister from './utils/sw-register';
 import App from './views/app';
 
 const menu = document.querySelectorAll('.list-items');
 const drawer = document.querySelector('#navbar .nav-list');
 const checkbox = document.querySelector('.hamburger-menu input');
+const hamburger = document.querySelectorAll('.hamburger-menu span');
+const nav = document.getElementById('navbar');
 
 const app = new App({
 	button: document.querySelector('#hamburger'),
@@ -35,7 +37,7 @@ const app = new App({
 	content: document.querySelector('#mainContent'),
 });
 
-hideDrawer(menu, drawer, checkbox);
+hideDrawer(menu, drawer, checkbox, hamburger);
 
 window.addEventListener('hashchange', () => {
 	app.renderPage();
@@ -48,7 +50,7 @@ window.addEventListener('load', () => {
 
 window.addEventListener('scroll', (event) => {
 	event.stopPropagation();
-	const nav = document.getElementById('navbar');
+
 	if (document.documentElement.scrollTop || document.body.scrollTop) {
 		nav.classList.add('nav-colored');
 		nav.classList.remove('nav-transparent');

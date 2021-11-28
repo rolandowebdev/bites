@@ -20,8 +20,20 @@ const Home = {
 		const outlet = await SourceOutlet.allOutlet();
 		const outletWrapper = document.querySelector('#outlet');
 		const link = document.querySelector('.outlet-link');
+		const checkbox = document.querySelector('.hamburger-menu input');
+		const hamburger = document.querySelectorAll('.hamburger-menu span');
 		const mostFood = data['most'];
 		const choose = data['choose'];
+
+		checkbox.addEventListener('change', (event) => {
+			event.stopPropagation();
+			hamburger.forEach((menus) => {
+				const menu = menus;
+				checkbox.checked === true
+					? (menu.style.backgroundColor = '#fff')
+					: (menu.style.backgroundColor = '#ff8303');
+			});
+		});
 
 		let dataChoose = '';
 		let dataMostFood = '';

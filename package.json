@@ -31,10 +31,12 @@
     },
     "dependencies": {
         "aos": "^2.3.4",
+        "file-loader": "^6.2.0",
         "idb": "^6.1.5",
         "lit": "^2.0.2",
         "regenerator-runtime": "^0.13.9",
         "sweetalert2": "^11.1.10",
+        "url-loader": "^4.1.1",
         "workbox-core": "^6.0.2",
         "workbox-expiration": "^6.0.2",
         "workbox-precaching": "^6.0.2",

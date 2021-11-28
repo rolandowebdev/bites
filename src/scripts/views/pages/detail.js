@@ -36,6 +36,7 @@ const DetailOutlets = {
 
 	async afterRender() {
 		const detailOutletContainer = document.querySelector('#detail-outlet');
+		const menuDescription = document.querySelector('.list-menu-description');
 		const foodContainer = document.querySelector('#foods');
 		const drinkContainer = document.querySelector('#drinks');
 		const reviewContainer = document.querySelector('#review');
@@ -116,6 +117,7 @@ const DetailOutlets = {
 			formContainer.style.display = 'none';
 			reviewWrapper.style.display = 'none';
 			detailOutletContainer.style.display = 'none';
+			menuDescription.style.display = 'none';
 		}
 	},
 };

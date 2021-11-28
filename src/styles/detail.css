@@ -1,9 +1,10 @@
 :root {
   --primary-color: #ff8303;
   --gold-color: #ffcc47;
-  --dark-black: #112031;
+  --dark-black: #1f1d36;
   --white-color: #ffffff;
-  --blue-gray: #6d8299;
+  --gray-color: #9d9d9d;
+  --blue-color: #577bc1;
   --warning-color: #ff0000;
 }
 
@@ -33,7 +34,7 @@ li {
 
 .notfound-container .notfound-description {
   font-size: 1.25em;
-  color: var(--blue-gray);
+  color: var(--gray-color);
 }
 
 .btn {
@@ -73,7 +74,7 @@ li {
 
 .detail-outlet-section .detail-outlet-location {
   margin-bottom: 5rem;
-  color: var(--blue-gray);
+  color: var(--gray-color);
   font-size: 1em;
   font-weight: 300;
   text-align: center;
@@ -115,6 +116,7 @@ li {
 
 .description-wrapper .detail-outlet-description {
   display: block;
+  margin-bottom: 2rem;
   text-overflow: ellipsis;
   word-wrap: break-word;
   overflow: hidden;
@@ -122,7 +124,6 @@ li {
   font-size: 1em;
   font-weight: 400;
   line-height: 1.8em;
-  margin-bottom: 2rem;
 }
 
 .description-wrapper .detail-outlet-category {
@@ -241,7 +242,7 @@ li {
   display: flex;
   column-gap: 0.2rem;
   margin: 4px 0;
-  color: var(--blue-gray);
+  color: var(--gray-color);
 }
 
 .menu-buy {
@@ -302,7 +303,7 @@ li {
 
 .review-card .desc {
   position: relative;
-  background: var(--blue-gray);
+  background-image: linear-gradient( to right bottom, #577bc1, #5b77c5, #6172c8, #686dca, #7267cb);
   border-radius: 1.5rem;
 }
 
@@ -323,7 +324,7 @@ li {
   min-height: 2.2rem;
   min-width: 2rem;
   z-index: -1;
-  background-color: var(--blue-gray);
+  background-color: var(--blue-color);
   clip-path: polygon(100% 0, 0 0, 51% 100%);
 }
 
@@ -351,7 +352,7 @@ li {
 .profile .date {
   font-size: 12px;
   margin-top: 4px;
-  color: var(--blue-gray);
+  color: var(--gray-color);
 }
 
 
