@@ -9,6 +9,7 @@ import './components/Choose';
 import './components/Outlet';
 import './components/FavoriteNotFound';
 import './components/Loading';
+import './components/ExcessSection';
 import './components/detail-component/MenuFood';
 import './components/detail-component/MenuDrink';
 import './components/detail-component/DetailOutlet';

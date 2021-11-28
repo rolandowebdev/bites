@@ -305,6 +305,7 @@ li {
   position: relative;
   background-image: linear-gradient( to right bottom, #577bc1, #5b77c5, #6172c8, #686dca, #7267cb);
   border-radius: 1.5rem;
+  word-wrap: break-word;
 }
 
 .desc .review-text {

@@ -2,6 +2,7 @@
 :root {
   --primary-color: #ff8303;
   --dark-black: #1f1d36;
+  --orange-soft: #ffc285;
   --white-color: #fff;
   --badge-color: #ff3d68;
   --gold-color: #ffcc47;
@@ -211,13 +212,12 @@ body {
 /* Hero */
 
 .hero {
+  position: relative;
   margin-top: 1.875rem;
   max-width: 62.5rem;
-  position: relative;
 }
 
 .hero .hero-image {
-  position: relative;
   max-height: 500px;
   width: 100%;
   object-fit: cover;
@@ -244,6 +244,66 @@ body {
   line-height: 2em;
   color: var(--white-color);
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Bites Excess */
+
+.bites-excess {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin: 150px auto;
+  min-width: 100%;
+}
+
+.bites-excess .excess {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 3rem;
+  width: 100%;
+  /* border-left: 1px solid var(--orange-soft); */
+}
+
+.bites-excess .excess:first-child::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background-color: var(--orange-soft);
+}
+
+.bites-excess .excess:last-child::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background-color: var(--orange-soft);
+}
+
+.excess .excesss-number {
+  font-size: 4em;
+  color: var(--orange-soft);
+}
+
+.excess .excess-title {
+  margin: 4px 0 8px 0;
+  font-weight: 2.3em;
+  font-weight: 700;
+  color: var(--dark-black);
+}
+
+.excess .excess-description {
+  font-size: 1em;
+  color: var(--blue-gray);
 }
 
 
@@ -389,7 +449,6 @@ body {
 .outlet-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
-  grid-template-rows: auto;
   place-items: center;
   gap: 1rem;
   margin-top: 1rem;
@@ -399,7 +458,7 @@ body {
 .outlet-card {
   position: relative;
   border-radius: 0.75rem;
-  min-width: 85%;
+  width: 100%;
 }
 
 .outlet-image {

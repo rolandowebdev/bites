@@ -9,6 +9,7 @@ const Home = {
 		return `
 		<loading-component></loading-component>
 		<hero-component></hero-component>
+		<excess-component></excess-component>
 		<outlet-component></outlet-component>
 		<most-food></most-food>
 		<choose-component></choose-component>
