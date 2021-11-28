@@ -1,6 +1,8 @@
 import data from '../../json/BITES.json';
 import SourceOutlet from '../../data/data-outlet';
 import loading from '../../utils/loading-initiator';
+import arrowAnimation from '../../utils/arrow-animation';
+import hamburgerAction from '../../utils/hamburger-action';
 import { listOutlet } from '../templates/api-template';
 import { mostFoodData, chooseBites } from '../templates/local-template';
 
@@ -19,39 +21,34 @@ const Home = {
 	async afterRender() {
 		loading.show();
 		const outlet = await SourceOutlet.allOutlet();
+		const linkFood = document.querySelector('.food-link');
+		const arrowFood = document.querySelector('.food-link .fas');
+		const linkOutlet = document.querySelector('.outlet-link');
+		const arrowOutlet = document.querySelector('.outlet-link .fas');
 		const outletWrapper = document.querySelector('#outlet');
-		const link = document.querySelector('.outlet-link');
 		const checkbox = document.querySelector('.hamburger-menu input');
 		const hamburger = document.querySelectorAll('.hamburger-menu span');
-		const mostFood = data['most'];
-		const choose = data['choose'];
-
-		checkbox.addEventListener('change', (event) => {
-			event.stopPropagation();
-			hamburger.forEach((menus) => {
-				const menu = menus;
-				checkbox.checked === true
-					? (menu.style.backgroundColor = '#fff')
-					: (menu.style.backgroundColor = '#ff8303');
-			});
-		});
 
 		let dataChoose = '';
 		let dataMostFood = '';
 
+		arrowAnimation(linkFood, arrowFood);
+		arrowAnimation(linkOutlet, arrowOutlet);
+		hamburgerAction(checkbox, hamburger);
+
 		if (window.location.href === 'http://localhost:8080/') {
-			link.style.display = 'block';
+			linkOutlet.style.display = 'block';
 		}
 
 		outlet.restaurants.slice(0, 4).map((outlet) => {
 			outletWrapper.innerHTML += listOutlet(outlet);
 		});
 
-		mostFood.slice(0, 4).map((data) => {
+		data['most'].slice(0, 4).map((data) => {
 			dataMostFood += mostFoodData(data);
 		});
 
-		choose.map((data) => {
+		data['choose'].map((data) => {
 			dataChoose += chooseBites(data);
 		});
 

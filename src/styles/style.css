@@ -340,15 +340,17 @@ body {
   display: inline-block;
 }
 
-.link-container:hover {
-  text-decoration: underline;
+.link-container .fas {
+  color: var(--primary-color);
+  transition: 0.5s;
+  margin-left: 0.4rem;
 }
 
 .link-container .food-link {
+  display: inline-block;
   text-decoration: none;
-  text-align: right;
   font-size: 1.125em;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--primary-color);
 }
 

@@ -22,7 +22,8 @@ import '../styles/detail.css';
 import '../styles/loading.css';
 import '../public/hero.jpg';
 import './views/pages/home';
-import hideDrawer from './utils/menu-initiator';
+import hideDrawer from './utils/close-drawer';
+import arrowAnimation from './utils/arrow-animation';
 import swRegister from './utils/sw-register';
 import App from './views/app';
 
