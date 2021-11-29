@@ -363,7 +363,7 @@ body {
   text-align: left;
 }
 
-.card {
+.food .card {
   position: relative;
   background-color: var(--white-color);
   box-shadow: 0 43px 181px rgba(27, 26, 23, 0.07), 0 19.1268px 79.4118px rgba(27, 26, 23, 0.0456112), 0 13.3398px 53.9366px rgba(27, 26, 23, 0.035), 0 7.20765px 29.2138px rgba(27, 26, 23, 0.0243888);
@@ -452,23 +452,46 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
   place-items: center;
-  gap: 1rem;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
   margin-top: 1rem;
   text-align: left;
 }
 
-.outlet-card {
+.outlet-container .outlet-card {
   position: relative;
   border-radius: 0.75rem;
   width: 100%;
 }
 
-.outlet-image {
-  width: 100%;
-  height: 11.25rem;
-  background-size: cover;
-  background-position: center;
+.outlet-container .outlet-card:first-child {
+  grid-column: 1 / span 2;
+}
+
+.outlet-container .outlet-card:last-child {
+  grid-column: 3 / 5;
+  grid-row: 2;
+}
+
+.outlet-image-wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #833ab4;
   border-radius: 0.75rem;
+}
+
+.outlet-image-wrapper .outlet-image {
+  display: block;
+  height: 11.25rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.75rem;
+  transition: 0.4s;
+}
+
+.outlet-image-wrapper .outlet-image:hover {
+  transform: scale(1.05);
 }
 
 .outlet-wrapper {
@@ -503,7 +526,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 14.375rem;
+  max-width: 100%;
 }
 
 .outlet-rating {

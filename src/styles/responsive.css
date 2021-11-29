@@ -11,6 +11,13 @@
     max-width: 100%;
     margin: 0;
   }
+  .outlet-container .outlet-card:first-child {
+    grid-column: initial;
+  }
+  .outlet-container .outlet-card:last-child {
+    grid-column: initial;
+    grid-row: initial;
+  }
   .navbar-wrapper {
     border: 0;
   }
