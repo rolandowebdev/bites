@@ -40,7 +40,7 @@ const Home = {
 			linkOutlet.style.display = 'block';
 		}
 
-		outlet.restaurants.slice(0, 6).map((outlet) => {
+		outlet.restaurants.slice(0, 3).map((outlet) => {
 			outletWrapper.innerHTML += listOutlet(outlet);
 		});
 

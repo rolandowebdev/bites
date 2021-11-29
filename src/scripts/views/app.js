@@ -25,8 +25,9 @@ class App {
 		try {
 			this._content.innerHTML = await page.render();
 			await page.afterRender();
+			console.log(this._content.innerHTML);
 		} catch (error) {
-			routes['/'];
+			document.body.innerHTML = '<h1>404 Not Found</h1>';
 		}
 	}
 }

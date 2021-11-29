@@ -1,7 +1,7 @@
 const allFoodData = (data) => {
 	return `
    <figure class="card">
-      <img class="food-image" src="${data['pictureId']}" alt="${data['name']}"> 
+      <img class="food-image lazyload" data-src="${data['pictureId']}" src="${data['pictureId']}" alt="${data['name']}"> 
       <figcaption class="food-description">
          <p class="food-title">${data['name']}</p>
          <p class="location"><img class="location-icon" src="location.svg" alt="Location Logo">${data['location']}</p>
@@ -14,7 +14,7 @@ const allFoodData = (data) => {
 const mostFoodData = (data) => {
 	return `
    <figure class="card">
-      <img class="food-image" src="${data['pictureId']}" alt="${data['name']}"> 
+   <img class="food-image lazyload" data-src="${data['pictureId']}" src="${data['pictureId']}" alt="${data['name']}"> 
       <figcaption class="food-description">
          <p class="food-title">${data['name']}</p>
          <p class="location"><img class="location-icon" src="location.svg" alt="Location Logo">${data['location']}</p>
@@ -28,7 +28,7 @@ const mostFoodData = (data) => {
 const chooseBites = (data) => {
 	return `
    <div class="choose-outline">
-    <img class="choose-image" src="${data['pictureId']}" alt="choice image">
+   <img class="choose-image lazyload" data-src="${data['pictureId']}" src="${data['pictureId']}" alt="Choose Image"> 
    </div>
    <div class="choose-description">
      <h3 class="choose-title">${data['title']}</h3>

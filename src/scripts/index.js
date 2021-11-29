@@ -22,8 +22,9 @@ import '../styles/detail.css';
 import '../styles/loading.css';
 import '../public/hero.jpg';
 import './views/pages/home';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import hideDrawer from './utils/close-drawer';
-import arrowAnimation from './utils/arrow-animation';
 import swRegister from './utils/sw-register';
 import App from './views/app';
 
@@ -52,7 +53,6 @@ window.addEventListener('load', () => {
 
 window.addEventListener('scroll', (event) => {
 	event.stopPropagation();
-
 	if (document.documentElement.scrollTop || document.body.scrollTop) {
 		nav.classList.add('nav-colored');
 		nav.classList.remove('nav-transparent');

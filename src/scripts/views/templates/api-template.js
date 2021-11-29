@@ -4,9 +4,11 @@ const listOutlet = (restaurant) => {
 	return `
    <figure class="outlet-card">
       <div class="outlet-image-wrapper">
-        <img class="outlet-image" src="${
-					CONFIG.BASE_IMAGE_URL + restaurant.pictureId
-				}" alt="${restaurant.name}">
+        <img class="outlet-image lazyload" 
+        data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"
+        src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${
+		restaurant.name
+	}">
       </div>
       <figcaption class="outlet-wrapper">
          <p class="outlet-name" id="ouletName"><a href="${`/#/detail/${restaurant.id}`}">${

@@ -23,15 +23,24 @@ const Favorite = {
 			dataChoose += chooseBites(data);
 		});
 
+		outlets.map((outlet) => {
+			outletsData.innerHTML += listOutlet(outlet);
+		});
+		document.querySelector('#choose').innerHTML = dataChoose;
+
 		if (outlets.length === 0) {
 			document.getElementById('notfound-container').style.display = 'block';
 			document.querySelector('#outlet-section').style.display = 'none';
 			document.querySelector('#choose-section').style.display = 'none';
 		} else {
-			outlets.map((outlet) => {
-				outletsData.innerHTML += listOutlet(outlet);
-			});
-			document.querySelector('#choose').innerHTML = dataChoose;
+			document.getElementById('notfound-container').style.display = 'none';
+			document.querySelector('#outlet-section').style.display = 'block';
+			document.querySelector('#choose-section').style.display = 'block';
+			outlets.length === 1
+				? (document.querySelector('.outlet-image-wrapper').style.maxWidth =
+						'40%') &&
+				  (document.querySelector('.outlet-description').style.width = '40%')
+				: '';
 		}
 	},
 };

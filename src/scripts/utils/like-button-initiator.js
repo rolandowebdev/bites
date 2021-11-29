@@ -1,6 +1,5 @@
 import FavoriteOutletDatabase from '../data/favorite-outlet';
 import Swal from 'sweetalert2';
-// import routes from '../routes/routes';
 import {
 	createLikeButton,
 	createLikedButton,
@@ -40,9 +39,9 @@ const LikeButtonInitiator = {
 				Swal.fire({
 					title: 'You have favorite outlet now!',
 					text: 'Enjoy for all menu here😍',
+					icon: 'success',
 					confirmButtonText:
 						'<a href="#/food"  style="text-decoration: none; color: #fff ;">Let\'s go see all menu</a>',
-					icon: 'success',
 				});
 			}
 			checkOnline.status();
