@@ -21,10 +21,10 @@ const Home = {
 	async afterRender() {
 		loading.show();
 		const outlet = await SourceOutlet.allOutlet();
-		const linkFood = document.querySelector('.food-link');
-		const arrowFood = document.querySelector('.food-link .fas');
 		const linkOutlet = document.querySelector('.outlet-link');
-		const arrowOutlet = document.querySelector('.outlet-link .fas');
+		const linkFood = document.querySelector('.food-link');
+		const arrowOutlet = document.querySelector('#fasOutlet');
+		const arrowFood = document.querySelector('#fasFood');
 		const outletWrapper = document.querySelector('#outlet');
 		const checkbox = document.querySelector('.hamburger-menu input');
 		const hamburger = document.querySelectorAll('.hamburger-menu span');
@@ -32,8 +32,8 @@ const Home = {
 		let dataChoose = '';
 		let dataMostFood = '';
 
-		arrowAnimation(linkFood, arrowFood);
 		arrowAnimation(linkOutlet, arrowOutlet);
+		arrowAnimation(linkFood, arrowFood);
 		hamburgerAction(checkbox, hamburger);
 
 		if (window.location.href === 'http://localhost:8080/') {

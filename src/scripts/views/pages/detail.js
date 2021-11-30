@@ -8,7 +8,7 @@ import {
 	drinkMenu,
 	reviewOutlet,
 } from '../templates/api-template';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 
 const DetailOutlets = {
 	async render() {
@@ -98,7 +98,7 @@ const DetailOutlets = {
 				(review) => (reviewContainer.innerHTML += reviewOutlet(review))
 			);
 
-			LikeButtonInitiator.init({
+			LikeButtonPresenter.init({
 				likeButtonContainer: document.querySelector('#likeButtonContainer'),
 				outlet: {
 					id: outlet.restaurant.id,

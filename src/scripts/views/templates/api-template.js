@@ -106,14 +106,14 @@ const reviewOutlet = (review) => {
   `;
 };
 
-const createLikeButton = () => `
-  <button aria-label="like button" id="likeButton" class="like-btn">
+const createLikeOuletTemplate = () => `
+  <button aria-label="like outlet" id="likeButton" class="like-btn">
     <img class="like" src="heart-regular.svg" alt="Heart Regular" />
   </button>
   `;
 
-const createLikedButton = () => `
-  <button aria-label="unlike button" id="likeButton" class="like-btn">
+const createUnlikeOuletTemplate = () => `
+  <button aria-label="unlike outlet" id="likeButton" class="like-btn">
     <img class="like" src="heart-solid.svg" alt="Heart Solid" />
   </button>
 `;
@@ -124,6 +124,6 @@ export {
 	foodMenu,
 	drinkMenu,
 	reviewOutlet,
-	createLikeButton,
-	createLikedButton,
+	createLikeOuletTemplate,
+	createUnlikeOuletTemplate,
 };

@@ -193,7 +193,7 @@ body {
 }
 
 .social-media .fab:hover {
-  transform: translateY(-0.5rem) scale(1.02);
+  transform: translateY(-5px);
 }
 
 .social-media .fa-instagram:hover {
@@ -216,6 +216,7 @@ body {
   margin-top: 1.875rem;
   max-width: 62.5rem;
   background-image: linear-gradient( to right top, #636363, #565656, #494949, #3c3c3c, #303030);
+  background-attachment: fixed;
   border-radius: 0.5rem;
 }
 
@@ -338,7 +339,7 @@ body {
 /* Most Favorite Section */
 
 .most-favorite {
-  margin-top: 6.25rem;
+  margin-top: 9.375rem;
   text-align: right;
 }
 
@@ -362,34 +363,56 @@ body {
 
 .food {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
   grid-template-rows: auto;
-  gap: 1.25rem;
+  gap: 0.75rem;
   margin-top: 1rem;
   text-align: left;
 }
 
 .food .card {
   position: relative;
+  max-width: 100%;
+  max-height: 100%;
   background-color: var(--white-color);
-  box-shadow: 0 43px 181px rgba(27, 26, 23, 0.07), 0 19.1268px 79.4118px rgba(27, 26, 23, 0.0456112), 0 13.3398px 53.9366px rgba(27, 26, 23, 0.035), 0 7.20765px 29.2138px rgba(27, 26, 23, 0.0243888);
-  border-radius: 0.75rem;
+  background-color: var(--white-color);
+  -webkit-box-shadow: 2px 10px 48px -15px rgba(209, 209, 209, 1);
+  -moz-box-shadow: 2px 10px 48px -15px rgba(209, 209, 209, 1);
+  box-shadow: 2px 10px 48px -15px rgba(209, 209, 209, 1);
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .food-image {
-  max-width: 100%;
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+  transition: 0.4s;
+  transform: scale(1.1);
+}
+
+.food-image:hover {
+  transform: scale(1);
 }
 
 .food-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   padding: 0.313rem 0.625rem;
+  background-image: linear-gradient(to top, #202020, transparent);
 }
 
 .food-title {
-  font-size: 1em;
+  margin-bottom: 2px;
+  font-size: 1.8em;
   font-weight: 600;
-  margin-bottom: 0.313rem;
+  color: var(--white-color);
 }
 
 .location {
@@ -397,12 +420,13 @@ body {
   align-items: center;
   margin-bottom: 0.188rem;
   font-weight: 400;
-  color: var(--blue-gray);
+  color: var(--white-color);
 }
 
 .location-icon {
   max-width: 0.7rem;
   margin-right: 0.313rem;
+  color: var(--white-color);
 }
 
 .price {
@@ -420,8 +444,8 @@ body {
   font-weight: 500;
   font-size: 1em;
   color: var(--white-color);
-  border-top-right-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
   box-shadow: 0 43px 181px rgba(27, 26, 23, 0.07), 0 19.1268px 79.4118px rgba(27, 26, 23, 0.0456112), 0 13.3398px 53.9366px rgba(27, 26, 23, 0.035), 0 7.20765px 29.2138px rgba(27, 26, 23, 0.0243888);
   opacity: 0.9;
 }
@@ -458,8 +482,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
   place-items: center;
-  column-gap: 1rem;
-  row-gap: 0.5rem;
+  column-gap: 1.25rem;
+  row-gap: 0.8rem;
   margin-top: 1rem;
   text-align: left;
 }
@@ -470,27 +494,15 @@ body {
   max-width: 100%;
 }
 
-.outlet-container .outlet-card:first-child {
-  grid-column: 1 / span 2;
-}
-
-.outlet-container .outlet-card:nth-child(6) {
-  grid-column: 3 / span 2;
-}
-
-.outlet-container .outlet-card:nth-child(7) {
-  grid-column: 1 / span 2;
-}
-
-.outlet-container .outlet-card:nth-child(12) {
-  grid-column: 3 / span 2;
-}
-
+.outlet-container .outlet-card:first-child,
+.outlet-container .outlet-card:nth-child(7),
 .outlet-container .outlet-card:nth-child(13) {
   grid-column: 1 / span 2;
 }
 
-.outlet-container .outlet-card:nth-child(18) {
+.outlet-container .outlet-card:nth-child(12),
+.outlet-container .outlet-card:nth-child(18),
+.outlet-container .outlet-card:nth-child(6) {
   grid-column: 3 / span 2;
 }
 
@@ -509,11 +521,12 @@ body {
   object-fit: cover;
   object-position: center;
   border-radius: 0.75rem;
+  transform: scale(1.1);
   transition: 0.4s;
 }
 
 .outlet-image-wrapper .outlet-image:hover {
-  transform: scale(1.05);
+  transform: scale(1);
 }
 
 .outlet-wrapper {
@@ -569,7 +582,7 @@ body {
 /* Choose Section */
 
 .choose {
-  margin: 6.25rem auto;
+  margin: 9.375rem auto;
 }
 
 .choose-container {

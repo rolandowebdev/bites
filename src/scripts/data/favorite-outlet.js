@@ -11,6 +11,7 @@ const databasePromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
 
 const FavoriteOutletDatabase = {
 	async getOutlet(id) {
+		if (!id) return;
 		return (await databasePromise).get(OBJECT_STORE_NAME, id);
 	},
 
@@ -19,6 +20,7 @@ const FavoriteOutletDatabase = {
 	},
 
 	async putOutlet(outlet) {
+		if (!outlet.hasOwnProperty('id')) return;
 		return (await databasePromise).put(OBJECT_STORE_NAME, outlet);
 	},
 

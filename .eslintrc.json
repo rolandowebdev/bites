@@ -34,5 +34,6 @@
 		"consistent-return": "off",
 		"no-return-assign": "off"
 	},
-	"parser": "@babel/eslint-parser"
+	"parser": "@babel/eslint-parser",
+	"plugins": ["jasmine", "codeceptjs"]
 }

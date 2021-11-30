@@ -1,6 +1,5 @@
 function arrowAnimation(link, arrows) {
 	const arrow = arrows;
-	// link.forEach((link) => {
 	link.addEventListener('mouseover', (event) => {
 		event.stopPropagation();
 		arrow.style.transform = 'translateX(5px)';
@@ -10,7 +9,6 @@ function arrowAnimation(link, arrows) {
 		event.stopPropagation();
 		arrow.style.transform = 'translateX(0px)';
 	});
-	// });
 }
 
 export default arrowAnimation;

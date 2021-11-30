@@ -1,8 +1,8 @@
 import FavoriteOutletDatabase from '../data/favorite-outlet';
 import Swal from 'sweetalert2';
 import {
-	createLikeButton,
-	createLikedButton,
+	createLikeOuletTemplate,
+	createUnlikeOuletTemplate,
 } from '../views/templates/api-template';
 import checkOnline from './check-online';
 
@@ -29,7 +29,7 @@ const LikeButtonInitiator = {
 	},
 
 	_renderLike() {
-		this._likeButtonContainer.innerHTML = createLikeButton();
+		this._likeButtonContainer.innerHTML = createLikeOuletTemplate();
 
 		const likeButton = document.querySelector('#likeButton');
 		likeButton.addEventListener('click', async () => {
@@ -49,7 +49,7 @@ const LikeButtonInitiator = {
 	},
 
 	_renderLiked() {
-		this._likeButtonContainer.innerHTML = createLikedButton();
+		this._likeButtonContainer.innerHTML = createUnlikeOuletTemplate();
 
 		const likeButton = document.querySelector('#likeButton');
 		likeButton.addEventListener('click', async () => {

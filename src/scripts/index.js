@@ -32,15 +32,13 @@ const menu = document.querySelectorAll('.list-items');
 const drawer = document.querySelector('#navbar .nav-list');
 const checkbox = document.querySelector('.hamburger-menu input');
 const hamburger = document.querySelectorAll('.hamburger-menu span');
-const nav = document.getElementById('navbar');
+const nav = document.querySelector('#navbar');
 
 const app = new App({
 	button: document.querySelector('#hamburger'),
 	drawer: document.querySelector('#navbar .nav-list'),
 	content: document.querySelector('#mainContent'),
 });
-
-hideDrawer(menu, drawer, checkbox, hamburger);
 
 window.addEventListener('hashchange', () => {
 	app.renderPage();
@@ -61,3 +59,5 @@ window.addEventListener('scroll', (event) => {
 		nav.classList.remove('nav-colored');
 	}
 });
+
+hideDrawer(menu, drawer, checkbox, hamburger);
