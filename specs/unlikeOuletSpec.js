@@ -17,19 +17,19 @@ describe('Unlike a Favorite Oulet Category', () => {
 	});
 
 	it('should display unlike widget when the outlet has been liked', async () => {
-		await TestFactory.createLikeButtonPresenter({ id: 1 });
+		await TestFactory.createLikeButtonPresenterWithOutlet({ id: 1 });
 
 		expect(document.querySelector('[aria-label="unlike outlet"]')).toBeTruthy();
 	});
 
 	it('should not display like widget when the outlet has been liked', async () => {
-		await TestFactory.createLikeButtonPresenter({ id: 1 });
+		await TestFactory.createLikeButtonPresenterWithOutlet({ id: 1 });
 
 		expect(document.querySelector('[aria-label="like outlet"]')).toBeFalsy();
 	});
 
 	it('should be able to remove liked outlet from the list', async () => {
-		await TestFactory.createLikeButtonPresenter({ id: 1 });
+		await TestFactory.createLikeButtonPresenterWithOutlet({ id: 1 });
 
 		document
 			.querySelector('[aria-label="unlike outlet"]')
@@ -39,7 +39,7 @@ describe('Unlike a Favorite Oulet Category', () => {
 	});
 
 	it('should not throw error if the unliked outlet is not in the favorite oulet', async () => {
-		await TestFactory.createLikeButtonPresenter({ id: 1 });
+		await TestFactory.createLikeButtonPresenterWithOutlet({ id: 1 });
 
 		await FavoriteOulet.deleteOutlet(1);
 

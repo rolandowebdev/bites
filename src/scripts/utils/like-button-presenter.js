@@ -1,4 +1,3 @@
-import FavoriteOutletDatabase from '../data/favorite-outlet';
 import Swal from 'sweetalert2';
 import {
 	createLikeOuletTemplate,
@@ -7,9 +6,10 @@ import {
 import checkOnline from './check-online';
 
 const LikeButtonInitiator = {
-	async init({ likeButtonContainer, outlet }) {
+	async init({ likeButtonContainer, favoriteOutlet, outlet }) {
 		this._likeButtonContainer = likeButtonContainer;
 		this._outlet = outlet;
+		this._favoriteOutlet = favoriteOutlet;
 
 		await this._renderButton();
 	},
@@ -24,7 +24,7 @@ const LikeButtonInitiator = {
 	},
 
 	async _isOutletExist(id) {
-		const outlet = await FavoriteOutletDatabase.getOutlet(id);
+		const outlet = await this._favoriteOutlet.getOutlet(id);
 		return !!outlet;
 	},
 
@@ -34,7 +34,7 @@ const LikeButtonInitiator = {
 		const likeButton = document.querySelector('#likeButton');
 		likeButton.addEventListener('click', async () => {
 			if (window.navigator.onLine === true) {
-				await FavoriteOutletDatabase.putOutlet(this._outlet);
+				await this._favoriteOutlet.putOutlet(this._outlet);
 				this._renderButton();
 				Swal.fire({
 					title: 'You have favorite outlet now!',
@@ -54,7 +54,7 @@ const LikeButtonInitiator = {
 		const likeButton = document.querySelector('#likeButton');
 		likeButton.addEventListener('click', async () => {
 			if (window.navigator.onLine === true) {
-				await FavoriteOutletDatabase.deleteOutlet(this._outlet.id);
+				await this._favoriteOutlet.deleteOutlet(this._outlet.id);
 				this._renderButton();
 				Swal.fire({
 					title: 'You remove your favorite outlet!',

@@ -1,5 +1,6 @@
 import UrlParser from '../../routes/url-parser';
 import SourceOutlet from '../../data/data-outlet';
+import FavoriteOutletDatabase from '../../data/favorite-outlet';
 import { countIteration, handleInputFill } from '../../utils/form-validation';
 import checkOnline from '../../utils/check-online';
 import {
@@ -100,6 +101,7 @@ const DetailOutlets = {
 
 			LikeButtonPresenter.init({
 				likeButtonContainer: document.querySelector('#likeButtonContainer'),
+				favoriteOutlet: FavoriteOutletDatabase,
 				outlet: {
 					id: outlet.restaurant.id,
 					name: outlet.restaurant.name,
