@@ -29,11 +29,11 @@ const Favorite = {
 		document.querySelector('#choose').innerHTML = dataChoose;
 
 		if (outlets.length === 0) {
-			document.getElementById('notfound-container').style.display = 'block';
+			document.querySelector('#notfound-container').style.display = 'block';
 			document.querySelector('#outlet-section').style.display = 'none';
 			document.querySelector('#choose-section').style.display = 'none';
 		} else {
-			document.getElementById('notfound-container').style.display = 'none';
+			document.querySelector('#notfound-container').style.display = 'none';
 			document.querySelector('#outlet-section').style.display = 'block';
 			document.querySelector('#choose-section').style.display = 'block';
 			outlets.length === 1

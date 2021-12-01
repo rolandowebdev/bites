@@ -8,7 +8,7 @@ class FavoriteNotFound extends HTMLElement {
          <div class="notfound-container" id="notfound-container">
          <img class="notfound-image" src="404.svg" alt="Not Found" />
             <h1 class="notfound-title">
-            You haven't chosen your favorite restaurant</h1>
+            You haven't chosen your favorite outlet</h1>
             <p class="notfound-description">
             Please choose your favorite outlet on the outlet page</p>
          </div>

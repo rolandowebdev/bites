@@ -14,11 +14,7 @@ import LikeButtonPresenter from '../../utils/like-button-presenter';
 const DetailOutlets = {
 	async render() {
 		return `
-		<div class="notfound-container" id="notfound">
-			<img class="notfound-image" src="404.svg" alt="Not Found" />
-			<h1 class="notfound-title">404 Not Found</h1>
-			<p class="notfound-description">Failed to fetch data, please check your connection</p>
-		</div>
+		
 		<detail-outlet></detail-outlet>
 		<div class="menu wrapper">
 			<div class="list-menu-description">
@@ -32,6 +28,11 @@ const DetailOutlets = {
 		<review-component></review-component>
 		<button-container></button-container>
 		<form-container></form-container>
+		<div class="notfound-container" id="notfound">
+			<img class="notfound-image" src="404.svg" alt="Not Found" />
+			<h1 class="notfound-title">404 Not Found</h1>
+			<p class="notfound-description">Failed to fetch data, please check your connection</p>
+		</div>
       `;
 	},
 

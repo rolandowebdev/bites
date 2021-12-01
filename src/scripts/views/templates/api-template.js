@@ -11,7 +11,7 @@ const listOutlet = (restaurant) => {
 	}">
       </div>
       <figcaption class="outlet-wrapper">
-         <p class="outlet-name" id="ouletName"><a href="${`/#/detail/${restaurant.id}`}">${
+         <p class="outlet-name" id="outletName"><a href="${`/#/detail/${restaurant.id}`}">${
 		restaurant.name
 	}</a></p>
          <p class="outlet-location"><img class="location-icon" src="location.svg" alt="Location Icon">${
