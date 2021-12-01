@@ -27,6 +27,7 @@ const Home = {
 		const arrowFood = document.querySelector('#fasFood');
 		const outletWrapper = document.querySelector('#outlet');
 		const checkbox = document.querySelector('.hamburger-menu input');
+
 		const hamburger = document.querySelectorAll('.hamburger-menu span');
 
 		let dataChoose = '';
@@ -38,6 +39,8 @@ const Home = {
 
 		if (window.location.href === 'http://localhost:8080/') {
 			linkOutlet.style.display = 'block';
+			document.querySelector('.search-container').style.display = 'none';
+			document.querySelector('.outlet-container').style.marginTop = '1rem';
 		}
 
 		outlet.restaurants.slice(0, 3).map((outlet) => {

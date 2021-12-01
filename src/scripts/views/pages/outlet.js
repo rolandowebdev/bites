@@ -7,9 +7,9 @@ import { chooseBites } from '../templates/local-template';
 const Outlets = {
 	async render() {
 		return `
-		<loading-component></loading-component>
 		<outlet-component></outlet-component>
 		<choose-component></choose-component>
+		<loading-component></loading-component>
       `;
 	},
 
