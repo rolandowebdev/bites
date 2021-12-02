@@ -1,5 +1,6 @@
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
+import NotFound from './pages/notfound';
 import routes from '../routes/routes';
 
 class App {
@@ -27,7 +28,11 @@ class App {
 			await page.afterRender();
 			console.log(this._content.innerHTML);
 		} catch (error) {
-			document.body.innerHTML = '<h1>404 Not Found</h1>';
+			if (!(url in routes)) {
+				document.body.innerHTML = '404 Not Found';
+				// window.location.hash = '#/404';
+				// url = UrlParser.parseActiveUrlWithCombiner();
+			}
 		}
 	}
 }

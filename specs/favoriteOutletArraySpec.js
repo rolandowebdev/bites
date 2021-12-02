@@ -16,6 +16,8 @@ const FavoriteOutletArray = {
 		// If outlet not have id, return false
 		if (!outlet.hasOwnProperty('id')) return;
 
+		if (this.getOutlet(outlet.id)) return;
+
 		favoriteOutletArray.push(outlet);
 	},
 
@@ -24,6 +26,18 @@ const FavoriteOutletArray = {
 		favoriteOutletArray = favoriteOutletArray.filter(
 			(outlet) => outlet.id !== id
 		);
+	},
+
+	searchOutlet(query) {
+		return this.getAllOutlets().filter((outlet) => {
+			const loweredCaseOutletName = (outlet.name || '-').toLowerCase();
+			const OutletName = loweredCaseOutletName.replace(/\s/g, '');
+
+			const loweredCaseQuery = query.toLowerCase();
+			const Query = loweredCaseQuery.replace(/\s/g, '');
+
+			return OutletName.indexOf(Query) !== -1;
+		});
 	},
 };
 

@@ -1,25 +1,23 @@
 import CONFIG from '../../global/config';
 
-const listOutlet = (restaurant) => {
+const listOutlet = (outlet) => {
 	return `
    <figure class="outlet-card">
       <div class="outlet-image-wrapper">
         <img class="outlet-image lazyload" 
-        data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"
-        src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${
-		restaurant.name
-	}">
+        data-src="${CONFIG.BASE_IMAGE_URL + outlet.pictureId}"
+        src="${CONFIG.BASE_IMAGE_URL + outlet.pictureId}" alt="${outlet.name}">
       </div>
       <figcaption class="outlet-wrapper">
-         <p class="outlet-name" id="outletName"><a href="${`/#/detail/${restaurant.id}`}">${
-		restaurant.name
+         <p class="outlet-name" id="outletName"><a href="${`/#/detail/${outlet.id}`}">${
+		outlet.name
 	}</a></p>
          <p class="outlet-location"><img class="location-icon" src="location.svg" alt="Location Icon">${
-						restaurant.city
+						outlet.city
 					}</p>
-         <p class="outlet-description">${restaurant.description}</p>
+         <p class="outlet-description">${outlet.description}</p>
          <p class="outlet-rating"><img class="star" src="star.svg" alt="Star Logo">${
-						restaurant.rating
+						outlet.rating
 					}</p>
       </figcaption>
       <span class="location-badge"></span>

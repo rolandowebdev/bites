@@ -7,6 +7,7 @@ import './components/AllFood';
 import './components/MostFood';
 import './components/Choose';
 import './components/Outlet';
+import './components/NotFound';
 import './components/FavoriteNotFound';
 import './components/Loading';
 import './components/ExcessSection';

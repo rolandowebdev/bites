@@ -27,6 +27,18 @@ const FavoriteOutletDatabase = {
 	async deleteOutlet(id) {
 		return (await databasePromise).delete(OBJECT_STORE_NAME, id);
 	},
+
+	async searchOutlet(query) {
+		return (await this.getAllOutlets()).filter((outlet) => {
+			const loweredCaseOutletName = (outlet.name || '-').toLowerCase();
+			const OutletName = loweredCaseOutletName.replace(/\s/g, '');
+
+			const loweredCaseQuery = query.toLowerCase();
+			const Query = loweredCaseQuery.replace(/\s/g, '');
+
+			return OutletName.indexOf(Query) !== -1;
+		});
+	},
 };
 
 export default FavoriteOutletDatabase;
