@@ -26,7 +26,7 @@ class FavoriteOutletSearchPresenter {
 	}
 
 	_showFoundOutlet(outlet) {
-		this._view.showOutlet(outlet);
+		this._view.showFavoriteOutlet(outlet);
 	}
 
 	get latestQuery() {

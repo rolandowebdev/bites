@@ -7,7 +7,7 @@ describe('Showing all favorite outlet', () => {
 
 	const renderTemplate = () => {
 		view = new FavoriteOutletSearchView();
-		document.body.innerHTML = view.getFavoriteOutletTemplate();
+		document.body.innerHTML = view.getTemplate();
 	};
 
 	beforeEach(() => {
@@ -28,7 +28,7 @@ describe('Showing all favorite outlet', () => {
 
 		it('should show the information that no outlet have been liked', (done) => {
 			document
-				.getElementById('outlet-section')
+				.getElementById('outlet')
 				.addEventListener('outlet:updated', () => {
 					expect(
 						document.querySelectorAll('.notfound-container').length
@@ -48,9 +48,9 @@ describe('Showing all favorite outlet', () => {
 	});
 
 	describe('When favorite outlet exist', () => {
-		it('should show the empty message', (done) => {
+		it('should show the outlet', (done) => {
 			document
-				.getElementById('outlet-section')
+				.getElementById('outlet')
 				.addEventListener('outlet:updated', () => {
 					expect(document.querySelectorAll('.outlet-card').length).toEqual(2);
 					done();

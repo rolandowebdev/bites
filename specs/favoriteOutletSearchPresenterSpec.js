@@ -44,8 +44,8 @@ describe('Searching Outlet', () => {
 
 		it('should show outlet not found when the outlet returned does not contain a title', (done) => {
 			document
-				.getElementById('outlet-section')
-				.addEventListener('outlet:searched:updated', () => {
+				.getElementById('outlet')
+				.addEventListener('outlet:updated', () => {
 					const outletName = document.querySelectorAll('.outlet-name');
 					expect(outletName.item(0).textContent).toEqual('outlet not found');
 
@@ -61,8 +61,8 @@ describe('Searching Outlet', () => {
 
 		it('should show the outlet found by Favorite Outlets', (done) => {
 			document
-				.getElementById('outlet-section')
-				.addEventListener('outlet:searched:updated', () => {
+				.getElementById('outlet')
+				.addEventListener('outlet:updated', () => {
 					expect(document.querySelectorAll('.outlet-name').length).toEqual(3);
 					done();
 				});
@@ -78,8 +78,8 @@ describe('Searching Outlet', () => {
 
 		it('should show the name of the outlet found be Favorite Outlet', (done) => {
 			document
-				.getElementById('outlet-section')
-				.addEventListener('outlet:searched:updated', () => {
+				.getElementById('outlet')
+				.addEventListener('outlet:updated', () => {
 					const outletTitles = document.querySelectorAll('.outlet-name');
 					expect(outletTitles.item(0).textContent).toEqual('outlet abc');
 					expect(outletTitles.item(1).textContent).toEqual('outlet def');
@@ -124,8 +124,8 @@ describe('Searching Outlet', () => {
 	describe('When no favorite movies could be found', () => {
 		it('should show the empty message', (done) => {
 			document
-				.getElementById('outlet-section')
-				.addEventListener('outlet:searched:updated', () => {
+				.getElementById('outlet')
+				.addEventListener('outlet:updated', () => {
 					expect(
 						document.querySelectorAll('.notfound-container').length
 					).toEqual(1);
@@ -137,8 +137,8 @@ describe('Searching Outlet', () => {
 
 		it('should not show any outlet', (done) => {
 			document
-				.getElementById('outlet-section')
-				.addEventListener('outlet:searched:updated', () => {
+				.getElementById('outlet')
+				.addEventListener('outlet:updated', () => {
 					expect(document.querySelectorAll('.outlet-card').length).toEqual(0);
 					done();
 				});

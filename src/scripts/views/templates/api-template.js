@@ -5,19 +5,23 @@ const listOutlet = (outlet) => {
    <figure class="outlet-card">
       <div class="outlet-image-wrapper">
         <img class="outlet-image lazyload" 
-        data-src="${CONFIG.BASE_IMAGE_URL + outlet.pictureId}"
-        src="${CONFIG.BASE_IMAGE_URL + outlet.pictureId}" alt="${outlet.name}">
+        data-src="${
+					CONFIG.BASE_IMAGE_URL + outlet.pictureId || 'outlet not found'
+				}"
+        src="${
+					CONFIG.BASE_IMAGE_URL + outlet.pictureId || 'outlet not found'
+				}" alt="${outlet.name || 'outlet not found'}">
       </div>
       <figcaption class="outlet-wrapper">
-         <p class="outlet-name" id="outletName"><a href="${`/#/detail/${outlet.id}`}">${
-		outlet.name
-	}</a></p>
+         <p class="outlet-name" id="outletName"><a href="${`/#/detail/${
+						outlet.id || 'outlet not found'
+					}`}">${outlet.name || 'outlet not found'}</a></p>
          <p class="outlet-location"><img class="location-icon" src="location.svg" alt="Location Icon">${
-						outlet.city
+						outlet.city || 'outlet not found'
 					}</p>
          <p class="outlet-description">${outlet.description}</p>
          <p class="outlet-rating"><img class="star" src="star.svg" alt="Star Logo">${
-						outlet.rating
+						outlet.rating || 'outlet not found'
 					}</p>
       </figcaption>
       <span class="location-badge"></span>
