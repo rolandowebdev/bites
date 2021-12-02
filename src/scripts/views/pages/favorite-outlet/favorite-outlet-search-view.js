@@ -1,5 +1,22 @@
+import { listOutlet } from '../../templates/api-template';
+
 class FavoriteOutletSearchView {
 	getTemplate() {
+		return `
+		<section class="outlet" id="outlet-section">
+			<h2 class="section-title">Explore All Our <span class="line-style">Outlets</span></h2>
+			<div class="search-container">
+				<input class="search" type="text" id="query" placeholder="Search..." autocomplete="off">
+			</div>
+			<p class="link-container"><a class="outlet-link" href="#/outlet">See all<i id="fasOutlet" class="fas fa-arrow-right"></i></a></p>
+			<div class="outlet-container" id="outlet">
+
+			</div>
+		</section>
+		`;
+	}
+
+	getFavoriteOutletTemplate() {
 		return `
 		<section class="outlet" id="outlet-section">
 			<h2 class="section-title">Explore All Our <span class="line-style">Outlets</span></h2>
@@ -42,6 +59,25 @@ class FavoriteOutletSearchView {
 		document
 			.getElementById('outlet-section')
 			.dispatchEvent(new Event('outlet:searched:updated'));
+	}
+
+	showFavoriteOutlet(outlet = []) {
+		let html;
+
+		if (outlet.length) {
+			html = outlet.reduce(
+				(carry, outlet) => carry.concat(listOutlet(outlet)),
+				''
+			);
+		} else {
+			html = '<div class="notfound-container"></div>';
+		}
+
+		document.getElementById('outlet-section').innerHTML = html;
+
+		document
+			.getElementById('outlet-section')
+			.dispatchEvent(new Event('outlet:updated'));
 	}
 }
 
