@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const ImageminPlugin = require('imagemin-webp-webpack-plugin');
 const { InjectManifest } = require('workbox-webpack-plugin');
 const path = require('path');
 
@@ -48,6 +49,17 @@ module.exports = {
 		}),
 		new InjectManifest({
 			swSrc: path.resolve(__dirname, 'src/scripts/sw.js'),
+		}),
+		new ImageminPlugin({
+			config: [
+				{
+					test: /\.(jpe?g|png)(\?[a-z0-9=.]+)?$/,
+					options: {
+						quality: 50,
+					},
+				},
+			],
+			overrideExtension: true,
 		}),
 		new WebpackPwaManifest({
 			name: 'Bites',

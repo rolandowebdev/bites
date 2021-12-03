@@ -28,11 +28,12 @@ class App {
 			await page.afterRender();
 			console.log(this._content.innerHTML);
 		} catch (error) {
-			if (!(url in routes)) {
-				document.body.innerHTML = '404 Not Found';
-				// window.location.hash = '#/404';
-				// url = UrlParser.parseActiveUrlWithCombiner();
-			}
+			document.body.innerHTML = `
+				<div class="pagenotfound-container">
+					<img class="page-notfound" src="page.jpg" alt="Page Not Found" />
+					<a class="home-link" href="/">Go to the home</a>
+					<p>Your route is undefined, please back to the home</p>
+				</div>`;
 		}
 	}
 }

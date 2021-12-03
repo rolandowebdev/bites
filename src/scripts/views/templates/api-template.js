@@ -24,7 +24,6 @@ const listOutlet = (outlet) => {
 						outlet.rating || 'outlet not found'
 					}</p>
       </figcaption>
-      <span class="location-badge"></span>
    </figure>
    `;
 };

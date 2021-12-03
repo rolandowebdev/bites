@@ -4,7 +4,7 @@
     "description": "Bites is the website of a restaurant called Bites which is very famous in Indonesia",
     "main": "index.js",
     "scripts": {
-        "dev": "webpack-dev-server --config webpack.dev.js",
+        "dev": "webpack-dev-server --config webpack.dev.js --watch",
         "build": "webpack --config webpack.prod.js",
         "test": "karma start",
         "e2e": "codeceptjs run --steps"
@@ -24,6 +24,7 @@
         "eslint-config-airbnb-base": "^14.2.1",
         "eslint-plugin-import": "^2.25.2",
         "html-webpack-plugin": "^4.5.2",
+        "imagemin-webp-webpack-plugin": "^3.3.6",
         "jasmine-core": "^3.10.1",
         "karma": "^5.1.0",
         "karma-chrome-launcher": "^3.1.0",

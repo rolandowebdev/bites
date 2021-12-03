@@ -5,7 +5,6 @@
   --white-color: #ffffff;
   --gray-color: #9d9d9d;
   --blue-color: #577bc1;
-  --warning-color: #ff0000;
 }
 
 li {
@@ -18,22 +17,20 @@ li {
 
 .notfound-container {
   display: none;
-  margin: 3rem auto 9.375rem auto;
+  margin: 0 auto 9.375rem auto;
   text-align: center;
 }
 
 .notfound-container .notfound-image {
-  max-width: 30%;
+  max-width: 50%;
 }
 
 .notfound-container .notfound-title {
-  margin-top: 0.5em;
-  font-size: 2em;
-  color: var(--warning-color);
+  font-size: 1.6em;
 }
 
 .notfound-container .notfound-description {
-  font-size: 1.25em;
+  font-size: 1em;
   color: var(--gray-color);
 }
 

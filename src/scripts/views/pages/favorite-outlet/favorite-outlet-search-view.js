@@ -49,7 +49,7 @@ class FavoriteOutletSearchView {
 	_getEmptyOutletTemplate() {
 		return `
 		<div class="notfound-container notfound" id="notfound-container" style="display: initial">
-			<img class="notfound-image" src="404.svg" alt="Not Found" />
+			<img class="notfound-image" src="data.jpg" alt="Not Found" />
 			<h1 class="notfound-title">The outlet you are looking for does not exist</h1>
 			<p class="notfound-description">
 			Search again and make sure your outlet name what you want
