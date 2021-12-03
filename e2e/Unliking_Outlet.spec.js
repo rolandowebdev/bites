@@ -17,10 +17,12 @@ Before(async ({ I }) => {
 
 	I.click('#likeButton');
 	I.amOnPage('/#/favorite');
+
+	I.wait(3);
 });
 
 Scenario('Display Favorite Outlet', async ({ I }) => {
-	I.seeElement('outlet-component');
+	I.seeElement('.outlet');
 	const favoriteOutletName = await I.grabTextFrom('#outletName a');
 
 	assert.strictEqual(firstOutletName, favoriteOutletName);

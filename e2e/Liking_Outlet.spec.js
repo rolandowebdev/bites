@@ -7,7 +7,7 @@ Before(({ I }) => {
 });
 
 Scenario('showing empty liked outlet', ({ I }) => {
-	I.seeElement('.notfound-container');
+	I.seeElement('.notfound');
 	I.see("You haven't chosen your favorite outlet", '.notfound-title');
 	I.wait(3);
 });
@@ -44,5 +44,4 @@ Scenario('liking an outlet', async ({ I }) => {
 
 	// Outlet name should be the same as the one in the outlet page
 	assert.strictEqual(firstOutletName, favoritedOutletName);
-	I.wait(3);
 });

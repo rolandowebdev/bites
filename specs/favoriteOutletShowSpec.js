@@ -30,9 +30,7 @@ describe('Showing all favorite outlet', () => {
 			document
 				.getElementById('outlet')
 				.addEventListener('outlet:updated', () => {
-					expect(
-						document.querySelectorAll('.notfound-container').length
-					).toEqual(1);
+					expect(document.querySelectorAll('.notfound').length).toEqual(1);
 
 					done();
 				});

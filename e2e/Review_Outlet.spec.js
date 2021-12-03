@@ -5,8 +5,9 @@ Feature('Review Outlet');
 Before(({ I }) => {
 	I.amOnPage('/#/outlet');
 
-	const firstOutlet = locate('#outletName a').at(3);
-	I.click(firstOutlet);
+	const outlet = locate('#outletName a').at(3);
+	I.click(outlet);
+	I.wait(3);
 });
 
 Scenario('Give Review Feedback', async ({ I }) => {
@@ -14,6 +15,8 @@ Scenario('Give Review Feedback', async ({ I }) => {
 	const reviewDetail = `Reviewer Detail`;
 
 	I.seeElement('#form-container');
+
+	I.wait(3);
 
 	I.fillField('#reviewName', reviewName);
 	I.fillField('#reviewDetail', reviewDetail);
@@ -27,4 +30,5 @@ Scenario('Give Review Feedback', async ({ I }) => {
 
 	assert.strictEqual(reviewName, getReviewerName);
 	assert.strictEqual(reviewDetail, getReviewerDetail);
+	I.wait(3);
 });

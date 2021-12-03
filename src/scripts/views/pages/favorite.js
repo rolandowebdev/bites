@@ -17,7 +17,9 @@ const Favorite = {
 	},
 
 	async afterRender() {
+		const outlets = await FavoriteOutletDatabase.getAllOutlets();
 		let dataChoose = '';
+
 		data['choose'].map((data) => {
 			dataChoose += chooseBites(data);
 		});
@@ -32,23 +34,17 @@ const Favorite = {
 			favoriteOutlet: FavoriteOutletDatabase,
 		});
 
-		document.querySelector('#choose').innerHTML = dataChoose;
-
 		if (outlets.length === 0) {
 			document.querySelector('#notfound-container').style.display = 'block';
 			document.querySelector('#outlet-section').style.display = 'none';
 			document.querySelector('choose-component').style.display = 'none';
-			dou;
 		} else {
 			document.querySelector('#notfound-container').style.display = 'none';
 			document.querySelector('#outlet-section').style.display = 'block';
 			document.querySelector('#choose-section').style.display = 'block';
-			outlets.length === 1
-				? (document.querySelector('.outlet-image-wrapper').style.maxWidth =
-						'40%') &&
-				  (document.querySelector('.outlet-description').style.width = '40%')
-				: '';
 		}
+
+		document.querySelector('#choose').innerHTML = dataChoose;
 	},
 };
 

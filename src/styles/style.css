@@ -479,7 +479,7 @@ body {
 .search-container .search {
   display: inline-block;
   padding: 0.5rem 0.75rem;
-  width: 30%;
+  width: 28%;
   font-size: 1em;
   font-weight: 400;
   color: var(--dark-black);
