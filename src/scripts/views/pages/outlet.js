@@ -17,6 +17,7 @@ const Outlets = {
 		loading.show();
 		const outlet = await SourceOutlet.allOutlet();
 		const outletWrapper = document.querySelector('#outlet');
+		outletWrapper.innerHTML = '';
 
 		outlet.restaurants.map((outlet) => {
 			outletWrapper.innerHTML += listOutlet(outlet);

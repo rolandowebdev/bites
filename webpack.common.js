@@ -1,9 +1,11 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const ImageminPlugin = require('imagemin-webp-webpack-plugin');
 const { InjectManifest } = require('workbox-webpack-plugin');
-const path = require('path');
+const BundleAnalyzerPlugin =
+	require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
 	entry: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -29,6 +31,29 @@ module.exports = {
 				loader: 'url-loader?limit=100000',
 			},
 		],
+	},
+	optimization: {
+		splitChunks: {
+			chunks: 'all',
+			minSize: 20000,
+			maxSize: 70000,
+			minChunks: 1,
+			maxAsyncRequests: 30,
+			maxInitialRequests: 30,
+			automaticNameDelimiter: '~',
+			enforceSizeThreshold: 50000,
+			cacheGroups: {
+				defaultVendors: {
+					test: /[\\/]node_modules[\\/]/,
+					priority: -10,
+				},
+				default: {
+					minChunks: 2,
+					priority: -20,
+					reuseExistingChunk: true,
+				},
+			},
+		},
 	},
 	devServer: {
 		disableHostCheck: true,
@@ -104,6 +129,10 @@ module.exports = {
 					size: '512x512',
 				},
 			],
+		}),
+		new BundleAnalyzerPlugin({
+			openAnalyzer: 'false',
+			analyzerMode: 'static',
 		}),
 	],
 };

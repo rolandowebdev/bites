@@ -9,7 +9,7 @@ class Navbar extends HTMLElement {
             <a href="#mainContent" class="skip-link">Menuju ke konten</a>
             <div class="navbar-wrapper">
                <nav class="navbar" id="navbar">
-                  <img class="logo" src="logo.svg" alt="Bites Logo" />
+                  <img class="logo" src="icons-set/logo.svg" alt="Bites Logo" />
                   <ul class="nav-list">
                      <li class="nav-items">
                         <a class="list-items active" href="/" aria-label="list-items"

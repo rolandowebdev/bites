@@ -6,7 +6,7 @@ class NotFound extends HTMLElement {
 	render() {
 		this.innerHTML = `
          <div class="notfound-container" id="notfound-container">
-         <img class="notfound-image" src="404.jpg" alt="Not Found" />
+         <img class="notfound-image" src="images/404.jpg" alt="Not Found" />
             <h1 class="notfound-title">404 Not Found</h1>
             <p class="notfound-description">
             Please go to home route</p>

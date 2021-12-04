@@ -59,7 +59,7 @@ const LikeButtonInitiator = {
 				Swal.fire({
 					title: 'You remove your favorite outlet!',
 					text: 'Please come back later😥',
-					icon: 'error',
+					icon: 'warning',
 				});
 			}
 			checkOnline.status();

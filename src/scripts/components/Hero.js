@@ -7,10 +7,10 @@ class Hero extends HTMLElement {
 		this.innerHTML = `
       <div class="hero" id="hero">
          <picture>
-            <source type="image/webp" srcset="hero-large.webp">
-            <source type="image/webp" srcset="hero-small.webp">
-            <source srcset="hero-small.jpg" media="(max-width: 600px)">
-            <img class="hero-image" src="hero-large.jpg" alt="Heroes Image" />
+            <source type="image/webp" srcset="images/hero-large.webp">
+            <source type="image/webp" srcset="images/hero-small.webp">
+            <source srcset="images/hero-small.jpg" media="(max-width: 600px)">
+            <img class="hero-image" src="images/hero-large.jpg" alt="Heroes Image" />
          </picture>
          <h1 class="hero-title">We Serve The Taste You Love.</h1>
          <p class="hero-description">

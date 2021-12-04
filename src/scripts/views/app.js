@@ -1,6 +1,5 @@
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
-import NotFound from './pages/notfound';
 import routes from '../routes/routes';
 
 class App {
@@ -30,7 +29,7 @@ class App {
 		} catch (error) {
 			document.body.innerHTML = `
 				<div class="pagenotfound-container">
-					<img class="page-notfound" src="page.jpg" alt="Page Not Found" />
+					<img class="page-notfound" src="images/page.jpg" alt="Page Not Found" />
 					<a class="home-link" href="/">Go to the home</a>
 					<p>Your route is undefined, please back to the home</p>
 				</div>`;

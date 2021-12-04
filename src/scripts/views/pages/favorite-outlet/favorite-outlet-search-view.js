@@ -1,4 +1,5 @@
 import { listOutlet } from '../../templates/api-template';
+import { createSkeletonUi } from '../../templates/api-template';
 
 class FavoriteOutletSearchView {
 	getTemplate() {
@@ -9,7 +10,9 @@ class FavoriteOutletSearchView {
 				<input class="search" type="text" id="query" placeholder="Search..." autocomplete="off" required>
 			</div>
 			<p class="link-container"><a class="outlet-link" href="#/outlet">See all<i id="fasOutlet" class="fas fa-arrow-right"></i></a></p>
-         <div class="outlet-container" id="outlet"></div>
+         <div class="outlet-container" id="outlet">
+				${createSkeletonUi(20)}
+			</div>
       </section>
 		`;
 	}
@@ -49,7 +52,7 @@ class FavoriteOutletSearchView {
 	_getEmptyOutletTemplate() {
 		return `
 		<div class="notfound-container notfound" id="notfound-container" style="display: initial">
-			<img class="notfound-image" src="data.jpg" alt="Not Found" />
+			<img class="notfound-image" src="images/data.jpg" alt="Not Found" />
 			<h1 class="notfound-title">The outlet you are looking for does not exist</h1>
 			<p class="notfound-description">
 			Search again and make sure your outlet name what you want

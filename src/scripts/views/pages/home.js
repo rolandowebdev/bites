@@ -21,6 +21,9 @@ const Home = {
 	async afterRender() {
 		loading.show();
 		const outlet = await SourceOutlet.allOutlet();
+		const mostFood = document.querySelector('#most');
+		const hamburger = document.querySelectorAll('.hamburger-menu span');
+		const checkbox = document.querySelector('.hamburger-menu input');
 		const linkOutlet = document.querySelector('.outlet-link');
 		const linkFood = document.querySelector('.food-link');
 		const arrowOutlet = document.querySelector('#fasOutlet');
@@ -29,9 +32,12 @@ const Home = {
 
 		let dataChoose = '';
 		let dataMostFood = '';
+		outletWrapper.innerHTML = '';
+		mostFood.innerHTML = '';
 
 		arrowAnimation(linkOutlet, arrowOutlet);
 		arrowAnimation(linkFood, arrowFood);
+		hamburgerAction(checkbox, hamburger);
 
 		if (window.location.href === 'http://localhost:8080/') {
 			linkOutlet.style.display = 'block';
@@ -50,7 +56,7 @@ const Home = {
 			dataChoose += chooseBites(data);
 		});
 
-		document.querySelector('#most').innerHTML = dataMostFood;
+		mostFood.innerHTML = dataMostFood;
 		document.querySelector('#choose').innerHTML = dataChoose;
 		loading.hide();
 	},

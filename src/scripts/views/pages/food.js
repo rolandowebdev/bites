@@ -10,11 +10,13 @@ const Food = {
 	},
 
 	afterRender() {
+		const allFoodContainer = document.querySelector('#all');
 		const allFood = data['all'];
 		const choose = data['choose'];
 
 		let dataAllFood = '';
 		let dataChoose = '';
+		allFoodContainer.innerHTML = '';
 
 		allFood.map((food) => {
 			dataAllFood += allFoodData(food);
@@ -24,7 +26,7 @@ const Food = {
 			dataChoose += chooseBites(data);
 		});
 
-		document.querySelector('#all').innerHTML = dataAllFood;
+		allFoodContainer.innerHTML = dataAllFood;
 		document.querySelector('#choose').innerHTML = dataChoose;
 	},
 };

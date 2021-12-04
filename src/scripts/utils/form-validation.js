@@ -1,4 +1,4 @@
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2/';
 import SourceOutlet from '../data/data-outlet';
 
 function countIteration(count, iterator, notif) {
@@ -18,13 +18,11 @@ function handleInputFill(review) {
 		Swal.fire({
 			title: 'All data must be filled!',
 			text: 'Failed to send review feedback😒',
-			icon: 'error',
 		});
 	} else {
 		Swal.fire({
 			title: 'Successfully added review',
 			text: 'Thank you for your feedback😄',
-			icon: 'success',
 		});
 		SourceOutlet.postReview(review);
 	}
