@@ -178,6 +178,12 @@
     opacity: 0;
     z-index: 1;
   }
+  .hero .hero-title {
+    left: 10%;
+  }
+  .hero .hero-description {
+    left: 10%;
+  }
   .account-wrapper {
     display: flex;
     z-index: 2;

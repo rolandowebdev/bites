@@ -259,7 +259,7 @@ body {
 .hero .hero-title {
   position: absolute;
   top: 15%;
-  left: 10%;
+  left: 7%;
   font-family: 'Croissant One', cursive;
   font-size: 5vw;
   letter-spacing: 0.125em;
@@ -269,7 +269,7 @@ body {
 
 .hero .hero-description {
   position: absolute;
-  left: 10%;
+  left: 7%;
   bottom: 10%;
   max-width: 80%;
   font-size: 2.8vmin;
