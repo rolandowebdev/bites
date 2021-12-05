@@ -248,7 +248,7 @@ body {
 
 .hero .hero-image {
   display: block;
-  max-height: 27.5rem;
+  max-height: 30rem;
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -258,25 +258,25 @@ body {
 
 .hero .hero-title {
   position: absolute;
-  top: 10%;
-  left: 5%;
+  top: 15%;
+  left: 10%;
   font-family: 'Croissant One', cursive;
-  font-size: 5.658vw;
+  font-size: 5vw;
   letter-spacing: 0.125em;
   color: var(--primary-color);
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero .hero-description {
   position: absolute;
-  left: 5%;
+  left: 10%;
   bottom: 10%;
   max-width: 80%;
   font-size: 2.8vmin;
   font-weight: 300;
   line-height: 2em;
   color: var(--white-color);
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
 }
 
 
@@ -432,7 +432,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  min-height: 30%;
+  min-height: 40%;
   width: 100%;
   padding: 0 0.625rem;
   background-image: linear-gradient(to top, #202020, transparent);
@@ -440,7 +440,7 @@ body {
 
 .food-title {
   margin-bottom: 0.125rem;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 600;
   color: var(--white-color);
 }

@@ -123,6 +123,12 @@
   .list-choose-item {
     font-size: 1em;
   }
+  .footer-title {
+    font-size: 0.875em;
+  }
+  .footer-description {
+    font-size: 0.5em;
+  }
 }
 
 @media (max-width: 50rem) {
@@ -199,12 +205,6 @@
   }
   .outlet-description {
     width: 100%;
-  }
-  .footer-title {
-    font-size: 1em;
-  }
-  .footer-description {
-    font-size: 0.875em;
   }
 }
 
