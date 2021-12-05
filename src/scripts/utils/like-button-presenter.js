@@ -39,7 +39,6 @@ const LikeButtonInitiator = {
 				Swal.fire({
 					title: 'You have favorite outlet now!',
 					text: 'Enjoy for all menu here😍',
-					icon: 'success',
 					confirmButtonText:
 						'<a href="#/food"  style="text-decoration: none; color: #fff ;">Let\'s go see all menu</a>',
 				});
@@ -59,7 +58,6 @@ const LikeButtonInitiator = {
 				Swal.fire({
 					title: 'You remove your favorite outlet!',
 					text: 'Please come back later😥',
-					icon: 'warning',
 				});
 			}
 			checkOnline.status();

@@ -343,22 +343,25 @@ body {
 /* Main Content */
 
 .section-title {
+  font-family: 'Croissant One', cursive;
   font-size: 2em;
   text-align: center;
+  font-weight: 500;
   color: var(--primary-color);
 }
 
 .line-style {
-  background: var(--primary-color);
+  font-family: 'Croissant One', cursive;
+  background-color: var(--primary-color);
   color: var(--white-color);
   border-top-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
   border-top-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
-  padding: 0.125rem 0.5rem;
-  text-transform: uppercase;
+  padding: 0 0.5rem;
+  letter-spacing: 1px;
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 
@@ -481,7 +484,7 @@ body {
 /* All Food Section */
 
 .all-food {
-  margin-top: 3.125rem;
+  margin-top: 5.125rem;
 }
 
 .another-food {
@@ -541,7 +544,7 @@ body {
 .outlet-container .outlet-card {
   position: relative;
   border-radius: 0.75rem;
-  max-width: 100%;
+  max-width: 33.688rem;
 }
 
 .outlet-container .outlet-card:first-child,

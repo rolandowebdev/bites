@@ -189,6 +189,12 @@
   .link-container {
     margin-top: 2rem;
   }
+  .outlet-image-wrapper {
+    max-width: 100%;
+  }
+  .outlet-description {
+    width: 100%;
+  }
 }
 
 @media (max-width: 34.25rem) {

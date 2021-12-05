@@ -1,5 +1,4 @@
 import { listOutlet } from '../../templates/api-template';
-import { createSkeletonUi } from '../../templates/api-template';
 
 class FavoriteOutletSearchView {
 	getTemplate() {
@@ -10,9 +9,7 @@ class FavoriteOutletSearchView {
 				<input class="search" type="text" id="query" placeholder="Search..." autocomplete="off" required>
 			</div>
 			<p class="link-container"><a class="outlet-link" href="#/outlet">See all<i id="fasOutlet" class="fas fa-arrow-right"></i></a></p>
-         <div class="outlet-container" id="outlet">
-				${createSkeletonUi(20)}
-			</div>
+         <div class="outlet-container" id="outlet"></div>
       </section>
 		`;
 	}
@@ -38,11 +35,6 @@ class FavoriteOutletSearchView {
 			: (html = this._getEmptyOutletTemplate());
 
 		document.querySelector('#outlet').innerHTML = html;
-
-		if (outlet.length === 1) {
-			document.querySelector('.outlet-image-wrapper').style.maxWidth = '40%';
-			document.querySelector('.outlet-description').style.width = '40%';
-		}
 
 		document
 			.querySelector('#outlet')

@@ -14,7 +14,6 @@ import LikeButtonPresenter from '../../utils/like-button-presenter';
 const DetailOutlets = {
 	async render() {
 		return `
-		
 		<detail-outlet></detail-outlet>
 		<div class="menu wrapper">
 			<div class="list-menu-description">
@@ -29,7 +28,7 @@ const DetailOutlets = {
 		<button-container></button-container>
 		<form-container></form-container>
 		<div class="notfound-container" id="notfound">
-			<img class="notfound-image" src="404.svg" alt="Not Found" />
+			<img class="notfound-image" src="images/404.jpg" alt="Not Found" />
 			<h1 class="notfound-title">404 Not Found</h1>
 			<p class="notfound-description">Failed to fetch data, please check your connection</p>
 		</div>
@@ -58,17 +57,16 @@ const DetailOutlets = {
 			const outlet = await SourceOutlet.detailOutlet(url.id);
 
 			inputName.addEventListener('input', () => {
-				const jumlahKarakterDiketik = inputName.value.length;
-				const jumlahKarakterMaksimal = inputName.maxLength;
-				const sisaKarakterUpdate =
-					jumlahKarakterMaksimal - jumlahKarakterDiketik;
+				const characterTyped = inputName.value.length;
+				const maxCharacter = inputName.maxLength;
+				const remainingCharacter = maxCharacter - characterTyped;
 
-				iteration.innerText = sisaKarakterUpdate;
-				countIteration(sisaKarakterUpdate, 'countIteration', 'countInfo');
+				iteration.innerText = remainingCharacter;
+				countIteration(remainingCharacter, 'countIteration', 'countInfo');
 			});
 
 			inputName.addEventListener('focus', () => {
-				countInfo.style.visibility = 'inherit';
+				countInfo.style.visibility = 'initial';
 			});
 
 			inputName.addEventListener('blur', () => {

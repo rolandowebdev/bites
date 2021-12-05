@@ -63,6 +63,10 @@ const chooseBites = (data) => {
          <img class="arrow-icon" src="icons-set/arrow.svg" alt="Arrow Logo">
          ${data['reasonThree']}
        </span>
+       <span class="list-choose-item">
+         <img class="arrow-icon" src="icons-set/arrow.svg" alt="Arrow Logo">
+         ${data['reasonFour']}
+       </span>
      </div>
    </div>
    `;

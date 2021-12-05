@@ -16,8 +16,6 @@ Scenario('Give Review Feedback', async ({ I }) => {
 
 	I.seeElement('#form-container');
 
-	I.wait(3);
-
 	I.fillField('#reviewName', reviewName);
 	I.fillField('#reviewDetail', reviewDetail);
 	I.click('#submit');
@@ -27,6 +25,8 @@ Scenario('Give Review Feedback', async ({ I }) => {
 
 	const getReviewerName = await I.grabTextFrom(locate('.name').last());
 	const getReviewerDetail = await I.grabTextFrom(locate('.review-text').last());
+
+	I.wait(3);
 
 	assert.strictEqual(reviewName, getReviewerName);
 	assert.strictEqual(reviewDetail, getReviewerDetail);

@@ -131,8 +131,8 @@ module.exports = {
 			],
 		}),
 		new BundleAnalyzerPlugin({
-			openAnalyzer: 'false',
-			analyzerMode: 'static',
+			analyzerMode: 'json',
+			openAnalyzer: false,
 		}),
 	],
 };
