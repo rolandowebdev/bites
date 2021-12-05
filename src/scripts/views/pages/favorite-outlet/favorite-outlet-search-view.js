@@ -28,12 +28,14 @@ class FavoriteOutletSearchView {
 	showFavoriteOutlet(outlet = []) {
 		let html;
 
-		outlet.length
-			? (html = outlet.reduce(
-					(carry, outlet) => carry.concat(listOutlet(outlet)),
-					''
-			  ))
-			: (html = this._getEmptyOutletTemplate());
+		if (outlet.length) {
+			html = outlet.reduce(
+				(carry, outlet) => carry.concat(listOutlet(outlet)),
+				''
+			);
+		} else {
+			html = this._getEmptyOutletTemplate();
+		}
 
 		document.querySelector('#outlet').innerHTML = html;
 
