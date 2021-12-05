@@ -56,7 +56,7 @@ const LikeButtonInitiator = {
 				await this._favoriteOutlet.deleteOutlet(this._outlet.id);
 				this._renderButton();
 				Swal.fire({
-					title: 'You remove your favorite outlet!',
+					title: 'Outlet has been removed!',
 					text: 'Please come back later😥',
 				});
 			}

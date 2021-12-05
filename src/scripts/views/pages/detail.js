@@ -1,50 +1,33 @@
 import UrlParser from '../../routes/url-parser';
 import SourceOutlet from '../../data/data-outlet';
 import FavoriteOutletDatabase from '../../data/favorite-outlet';
-import { countIteration, handleInputFill } from '../../utils/form-validation';
 import checkOnline from '../../utils/check-online';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
+import { countIteration, handleInputFill } from '../../utils/form-validation';
 import {
 	detailOutlet,
 	foodMenu,
 	drinkMenu,
 	reviewOutlet,
 } from '../templates/api-template';
-import LikeButtonPresenter from '../../utils/like-button-presenter';
 
 const DetailOutlets = {
 	async render() {
 		return `
 		<detail-outlet></detail-outlet>
-		<div class="menu wrapper">
-			<div class="list-menu-description">
-				<h2 class="menu-title">Food & Drink Menu</h2>
-				<p class="menu-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero unde cumque id sit atque neque at dolorum quae ea.</p>
-				<a class="seeall-menu btn" href="#/food">See all menu</a>
-			</div>
-			<menu-food></menu-food>
-			<menu-drink></menu-drink>
-		</div>
+		<menu-container></menu-container>
 		<review-component></review-component>
 		<button-container></button-container>
 		<form-container></form-container>
-		<div class="notfound-container" id="notfound">
-			<img class="notfound-image" src="images/404.jpg" alt="Not Found" />
-			<h1 class="notfound-title">404 Not Found</h1>
-			<p class="notfound-description">Failed to fetch data, please check your connection</p>
-		</div>
+		<not-found></not-found>
       `;
 	},
 
 	async afterRender() {
 		const detailOutletContainer = document.querySelector('#detail-outlet');
-		const menuDescription = document.querySelector('.list-menu-description');
 		const foodContainer = document.querySelector('#foods');
 		const drinkContainer = document.querySelector('#drinks');
 		const reviewContainer = document.querySelector('#review');
-
-		const notFoundContainer = document.querySelector('#notfound');
-		const formContainer = document.querySelector('#form-container');
-		const reviewWrapper = document.querySelector('#reviews');
 
 		const inputName = document.querySelector('#reviewName');
 		const inputReview = document.querySelector('#reviewDetail');
@@ -111,14 +94,14 @@ const DetailOutlets = {
 				},
 			});
 		} catch (err) {
-			notFoundContainer.style.display = 'block';
+			document.querySelector('#notfound').style.display = 'block';
+			document.querySelector('.list-menu-description').style.display = 'none';
+			document.querySelector('#form-container').style.display = 'none';
+			document.querySelector('#reviews').style.display = 'none';
 			foodContainer.style.display = 'none';
 			drinkContainer.style.display = 'none';
 			reviewContainer.style.display = 'none';
-			formContainer.style.display = 'none';
-			reviewWrapper.style.display = 'none';
 			detailOutletContainer.style.display = 'none';
-			menuDescription.style.display = 'none';
 		}
 	},
 };

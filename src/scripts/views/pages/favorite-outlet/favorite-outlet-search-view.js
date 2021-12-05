@@ -36,6 +36,11 @@ class FavoriteOutletSearchView {
 
 		document.querySelector('#outlet').innerHTML = html;
 
+		if (outlet.length === 2) {
+			document.querySelector('.outlet-container .outlet-card').style.maxWidth =
+				'100%';
+		}
+
 		document
 			.querySelector('#outlet')
 			.dispatchEvent(new Event('outlet:updated'));

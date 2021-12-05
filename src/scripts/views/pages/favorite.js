@@ -38,12 +38,11 @@ const Favorite = {
 			document.querySelector('#notfound-container').style.display = 'block';
 			document.querySelector('#outlet-section').style.display = 'none';
 			document.querySelector('choose-component').style.display = 'none';
-		} else {
-			document.querySelector('#notfound-container').style.display = 'none';
-			document.querySelector('#outlet-section').style.display = 'block';
-			document.querySelector('#choose-section').style.display = 'block';
 		}
 
+		document.querySelector('#notfound-container').style.display = 'none';
+		document.querySelector('#outlet-section').style.display = 'block';
+		document.querySelector('#choose-section').style.display = 'block';
 		document.querySelector('#choose').innerHTML = dataChoose;
 	},
 };

@@ -18,7 +18,7 @@
 }
 
 .skeleton-text:first-child {
-  margin-top: 4px;
+  margin-top: 0.25rem;
 }
 
 .skeleton-text:nth-child(1) {

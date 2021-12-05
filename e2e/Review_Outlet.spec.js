@@ -20,6 +20,8 @@ Scenario('Give Review Feedback', async ({ I }) => {
 	I.fillField('#reviewDetail', reviewDetail);
 	I.click('#submit');
 
+	I.wait(3);
+
 	I.see('Successfully added review', '.swal2-popup');
 	I.click('.swal2-confirm');
 
@@ -30,5 +32,4 @@ Scenario('Give Review Feedback', async ({ I }) => {
 
 	assert.strictEqual(reviewName, getReviewerName);
 	assert.strictEqual(reviewDetail, getReviewerDetail);
-	I.wait(3);
 });

@@ -65,6 +65,12 @@
   }
 }
 
+@media (max-width: 62.375rem) {
+  .food-description {
+    padding: 2rem 0.625rem;
+  }
+}
+
 @media (max-width: 62.063rem) {
   .hero .hero-title {
     top: 25%;
@@ -106,7 +112,7 @@
     bottom: 10%;
   }
   .bites-excess {
-    margin: 100px auto;
+    margin: 6.25rem auto;
   }
   .badge {
     font-size: 0.875rem;

@@ -39,7 +39,7 @@ Scenario('Unliking Outlet From Favorite Outlet', ({ I }) => {
 	I.seeElement('#likeButton');
 	I.click('#likeButton');
 
-	I.see('You remove your favorite outlet!', '.swal2-popup');
+	I.see('Outlet has been removed!', '.swal2-popup');
 
 	I.amOnPage('/#/favorite');
 	I.see("You haven't chosen your favorite outlet", '.notfound-title');

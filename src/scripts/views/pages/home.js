@@ -35,20 +35,20 @@ const Home = {
 		outletWrapper.innerHTML = '';
 		mostFood.innerHTML = '';
 
-		arrowAnimation(linkOutlet, arrowOutlet);
-		arrowAnimation(linkFood, arrowFood);
-		hamburgerAction(checkbox, hamburger);
-
 		if (window.location.href === 'http://localhost:8080/') {
 			linkOutlet.style.display = 'block';
 			document.querySelector('.outlet-container').style.marginTop = '1rem';
 		}
 
-		outlet.restaurants.slice(0, 3).map((outlet) => {
+		arrowAnimation(linkOutlet, arrowOutlet);
+		arrowAnimation(linkFood, arrowFood);
+		hamburgerAction(checkbox, hamburger);
+
+		outlet.restaurants.slice(0, 6).map((outlet) => {
 			outletWrapper.innerHTML += listOutlet(outlet);
 		});
 
-		data['most'].slice(0, 4).map((data) => {
+		data['most'].slice(0, 6).map((data) => {
 			dataMostFood += mostFoodData(data);
 		});
 
