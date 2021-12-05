@@ -35,7 +35,7 @@ const Home = {
 		outletWrapper.innerHTML = '';
 		mostFood.innerHTML = '';
 
-		if (window.location.href === 'http://localhost:8080/') {
+		if (window.location.pathname === '/') {
 			linkOutlet.style.display = 'block';
 			document.querySelector('.outlet-container').style.marginTop = '1rem';
 		}
