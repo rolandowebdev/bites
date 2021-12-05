@@ -536,6 +536,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
   column-gap: 1.25rem;
+  margin-top: 1rem;
   row-gap: 0.8rem;
   text-align: left;
 }
