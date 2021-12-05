@@ -2,7 +2,6 @@
   --white-color: #ffffff;
   --primary-color: #ff8303;
   --dark-black: #1b1a17;
-  --badge-color: #ff3d68;
   --gold-color: #ffcc47;
 }
 
@@ -201,6 +200,12 @@
   .outlet-description {
     width: 100%;
   }
+  .footer-title {
+    font-size: 1em;
+  }
+  .footer-description {
+    font-size: 0.875em;
+  }
 }
 
 @media (max-width: 34.25rem) {
@@ -208,10 +213,10 @@
     margin: 0;
   }
   .hero .hero-title {
-    top: 30%;
+    top: 25%;
   }
   .hero .hero-description {
-    bottom: 15%;
+    bottom: 13%;
   }
   .hero .hero-image {
     max-height: 70%;

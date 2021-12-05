@@ -248,7 +248,7 @@ body {
 
 .hero .hero-image {
   display: block;
-  height: 500px;
+  max-height: 27.5rem;
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -258,10 +258,10 @@ body {
 
 .hero .hero-title {
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: 5%;
   font-family: 'Croissant One', cursive;
-  font-size: 5.9vw;
+  font-size: 5.658vw;
   letter-spacing: 0.125em;
   color: var(--primary-color);
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
@@ -272,7 +272,7 @@ body {
   left: 5%;
   bottom: 10%;
   max-width: 80%;
-  font-size: 3vmin;
+  font-size: 2.8vmin;
   font-weight: 300;
   line-height: 2em;
   color: var(--white-color);
@@ -474,8 +474,8 @@ body {
   font-weight: 500;
   font-size: 1em;
   color: var(--white-color);
-  border-top-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
   box-shadow: 0 43px 181px rgba(27, 26, 23, 0.07), 0 19.1268px 79.4118px rgba(27, 26, 23, 0.0456112), 0 13.3398px 53.9366px rgba(27, 26, 23, 0.035), 0 7.20765px 29.2138px rgba(27, 26, 23, 0.0243888);
   opacity: 0.9;
 }
