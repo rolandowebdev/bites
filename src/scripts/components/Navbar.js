@@ -42,9 +42,9 @@ class Navbar extends HTMLElement {
                         >
                      </li>
                      <div class="account-wrapper">
-                        <p><a class="social-media" href=""><i class="fab fa-instagram fa-2x"></i></a></p>
-                        <p><a class="social-media" href=""><i class="fab fa-github fa-2x"></i></a></p>
-                        <p><a class="social-media" href=""><i class="fab fa-twitter fa-2x"></i></a></p>
+                        <p><a class="social-media" href="https://www.instagram.com/rolandopranata_/"><i class="fab fa-instagram fa-2x"></i></a></p>
+                        <p><a class="social-media" href="https://github.com/rolandopranata"><i class="fab fa-github fa-2x"></i></a></p>
+                        <p><a class="social-media" href="https://twitter.com/Vzents1"><i class="fab fa-twitter fa-2x"></i></a></p>
                      </div>       
                   </ul>
                   <a href="#" class="hamburger-menu" id="hamburger">
