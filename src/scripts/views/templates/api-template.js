@@ -30,7 +30,7 @@ const listOutlet = (outlet) => {
 
 const createSkeletonUi = (count) => {
 	let skeleton = '';
-	for (let i = 0; i < count; i++) {
+	for (let i = 0; i < count; i += 1) {
 		skeleton += `
     <figure class="outlet-card">
       <div class="outlet-image-wrapper">

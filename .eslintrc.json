@@ -32,7 +32,10 @@
 		"no-unused-expressions": "off",
 		"no-useless-concat": "off",
 		"consistent-return": "off",
-		"no-return-assign": "off"
+		"no-return-assign": "off",
+		"no-prototype-builtins": "off",
+		"no-new": "off",
+		"object-curly-newline": "off"
 	},
 	"parser": "@babel/eslint-parser",
 	"plugins": ["jasmine", "codeceptjs"]

@@ -27,7 +27,7 @@ const mostFoodData = (data) => {
 
 const skeletonFood = (count) => {
 	let skeleton = '';
-	for (let i = 0; i < count; i++) {
+	for (let i = 0; i < count; i += 1) {
 		skeleton += `
     <figure class="card">
       <img class="food-image lazyload" src="images/placeholder.png" alt="skeleton image"> 
