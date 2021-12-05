@@ -20,15 +20,16 @@ Scenario('Give Review Feedback', async ({ I }) => {
 	I.fillField('#reviewDetail', reviewDetail);
 	I.click('#submit');
 
-	I.wait(3);
+	I.wait(2);
 
 	I.see('Successfully added review', '.swal2-popup');
+	I.wait(2);
 	I.click('.swal2-confirm');
+
+	I.wait(3);
 
 	const getReviewerName = await I.grabTextFrom(locate('.name').last());
 	const getReviewerDetail = await I.grabTextFrom(locate('.review-text').last());
-
-	I.wait(3);
 
 	assert.strictEqual(reviewName, getReviewerName);
 	assert.strictEqual(reviewDetail, getReviewerDetail);

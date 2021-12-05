@@ -227,6 +227,9 @@
   .hero .hero-image {
     max-height: 70%;
   }
+  .search-container {
+    margin-top: 1.875rem;
+  }
   .search-container .search {
     width: 100%;
   }

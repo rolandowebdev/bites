@@ -6,7 +6,8 @@ class FavoriteOutletSearchView {
 		<section class="outlet" id="outlet-section">
          <h2 class="section-title">Your Favorite Outlets <span class="line-style">Here</span></h2>
          <div class="search-container">
-				<input class="search" type="text" id="query" placeholder="Search..." autocomplete="off" required>
+				<label for="search">Search Outlet</label>
+				<input class="search" name="search" type="text" id="query" placeholder="Search..." autocomplete="off" required>
 			</div>
 			<p class="link-container"><a class="outlet-link" href="#/outlet">See all<i id="fasOutlet" class="fas fa-arrow-right"></i></a></p>
          <div class="outlet-container" id="outlet"></div>
@@ -40,6 +41,8 @@ class FavoriteOutletSearchView {
 			document.querySelector('.outlet-container .outlet-card').style.maxWidth =
 				'100%';
 		}
+
+		document.querySelector('.outlet-container').style.marginTop = '0';
 
 		document
 			.querySelector('#outlet')
