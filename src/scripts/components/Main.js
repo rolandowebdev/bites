@@ -5,7 +5,7 @@ class Main extends HTMLElement {
 
 	render() {
 		this.innerHTML = `
-      <main class="container" id="mainContent">
+      <main class="container" id="mainContent" tabindex="0">
 		</main>
       `;
 	}

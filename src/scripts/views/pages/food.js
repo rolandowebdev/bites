@@ -11,8 +11,11 @@ const Food = {
 
 	afterRender() {
 		const allFoodContainer = document.querySelector('#all');
+		const hero = document.querySelector('#hero');
 		const allFood = data['all'];
 		const choose = data['choose'];
+
+		hero.style.display = 'none';
 
 		let dataAllFood = '';
 		let dataChoose = '';

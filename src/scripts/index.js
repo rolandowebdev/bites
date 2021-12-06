@@ -4,7 +4,6 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import './components/Footer';
 import './components/Navbar';
 import './components/Main';
-import './components/Hero';
 import './components/AllFood';
 import './components/MostFood';
 import './components/Choose';

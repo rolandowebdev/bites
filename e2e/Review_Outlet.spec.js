@@ -11,8 +11,8 @@ Before(({ I }) => {
 });
 
 Scenario('Give Review Feedback', async ({ I }) => {
-	const reviewName = `Reviewer`;
-	const reviewDetail = `Reviewer Detail`;
+	const reviewName = 'Reviewer';
+	const reviewDetail = 'Reviewer Detail';
 
 	I.seeElement('#form-container');
 

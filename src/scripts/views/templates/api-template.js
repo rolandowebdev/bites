@@ -7,10 +7,7 @@ const listOutlet = (outlet) => {
         <img class="outlet-image lazyload" 
         data-src="${
 					CONFIG.BASE_IMAGE_URL + outlet.pictureId || 'outlet not found'
-				}"
-        src="${
-					CONFIG.BASE_IMAGE_URL + outlet.pictureId || 'outlet not found'
-				}" alt="${outlet.name || 'outlet not found'}">
+				}">
       </div>
       <figcaption class="outlet-wrapper">
          <p class="outlet-name" id="outletName"><a href="${`/#/detail/${

@@ -21,11 +21,15 @@ class App {
 
 	async renderPage() {
 		const url = UrlParser.parseActiveUrlWithCombiner();
+		const skipLink = document.querySelector('.skip-link');
 		const page = routes[url];
 		try {
 			this._content.innerHTML = await page.render();
 			await page.afterRender();
-			console.log(this._content.innerHTML);
+			skipLink.addEventListener('click', (event) => {
+				event.preventDefault();
+				document.querySelector('#mainContent').focus();
+			});
 		} catch (error) {
 			document.body.innerHTML = `
 				<div class="pagenotfound-container">

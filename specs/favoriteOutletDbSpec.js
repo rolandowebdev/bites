@@ -1,4 +1,4 @@
-import { itActsFavoriteOutlet } from './contract/favoriteOutletContract';
+import itActsFavoriteOutlet from './contract/favoriteOutletContract';
 import FavoriteOutletDatabase from '../src/scripts/data/favorite-outlet';
 
 describe('Favorite Outlet DB Contranct Test Implementation', () => {

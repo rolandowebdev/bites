@@ -18,7 +18,10 @@ const Favorite = {
 
 	async afterRender() {
 		const outlets = await FavoriteOutletDatabase.getAllOutlets();
+		const hero = document.querySelector('#hero');
 		let dataChoose = '';
+
+		hero.style.display = 'none';
 
 		data['choose'].map((data) => {
 			dataChoose += chooseBites(data);

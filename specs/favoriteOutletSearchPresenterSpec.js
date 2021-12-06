@@ -113,7 +113,7 @@ describe('Searching Outlet', () => {
 			expect(presenter.latestQuery.length).toEqual(0);
 		});
 
-		it('should show all favorite movies', () => {
+		it('should show all favorite outlet', () => {
 			searchOutlet('    ');
 
 			// Using toHaveBeenCalled for make sure getAllOutlets is callled
@@ -121,7 +121,7 @@ describe('Searching Outlet', () => {
 		});
 	});
 
-	describe('When no favorite movies could be found', () => {
+	describe('When no favorite outlet could be found', () => {
 		it('should show the empty message', (done) => {
 			document
 				.getElementById('outlet')

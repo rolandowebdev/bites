@@ -65,4 +65,4 @@ const itActsFavoriteOutlet = (favoriteOutlet) => {
 	});
 };
 
-export { itActsFavoriteOutlet };
+export default itActsFavoriteOutlet;

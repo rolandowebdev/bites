@@ -29,6 +29,7 @@ const DetailOutlets = {
 		const drinkContainer = document.querySelector('#drinks');
 		const reviewContainer = document.querySelector('#review');
 
+		const hero = document.querySelector('#hero');
 		const inputName = document.querySelector('#reviewName');
 		const inputReview = document.querySelector('#reviewDetail');
 		const submit = document.querySelector('#submit');
@@ -38,6 +39,8 @@ const DetailOutlets = {
 		try {
 			const url = UrlParser.parseActiveUrlWithoutCombiner();
 			const outlet = await SourceOutlet.detailOutlet(url.id);
+
+			hero.style.display = 'none';
 
 			inputName.addEventListener('input', () => {
 				const characterTyped = inputName.value.length;
@@ -98,6 +101,7 @@ const DetailOutlets = {
 			document.querySelector('.list-menu-description').style.display = 'none';
 			document.querySelector('#form-container').style.display = 'none';
 			document.querySelector('#reviews').style.display = 'none';
+			hero.style.display = 'none';
 			foodContainer.style.display = 'none';
 			drinkContainer.style.display = 'none';
 			reviewContainer.style.display = 'none';

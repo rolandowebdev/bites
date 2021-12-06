@@ -9,12 +9,11 @@ import { mostFoodData, chooseBites } from '../templates/local-template';
 const Home = {
 	async render() {
 		return `
-		<loading-component></loading-component>
-		<hero-component></hero-component>
 		<excess-component></excess-component>
 		<outlet-component></outlet-component>
 		<most-food></most-food>
 		<choose-component></choose-component>
+		<loading-component></loading-component>
       `;
 	},
 
@@ -29,11 +28,14 @@ const Home = {
 		const arrowOutlet = document.querySelector('#fasOutlet');
 		const arrowFood = document.querySelector('#fasFood');
 		const outletWrapper = document.querySelector('#outlet');
+		const hero = document.querySelector('#hero');
 
 		let dataChoose = '';
 		let dataMostFood = '';
 		outletWrapper.innerHTML = '';
 		mostFood.innerHTML = '';
+
+		hero.style.display = 'block';
 
 		if (window.location.pathname === '/') {
 			linkOutlet.style.display = 'block';

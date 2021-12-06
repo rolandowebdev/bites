@@ -35,8 +35,11 @@
 		"no-return-assign": "off",
 		"no-prototype-builtins": "off",
 		"no-new": "off",
-		"object-curly-newline": "off"
+		"object-curly-newline": "off",
+		"no-undef": "off",
+		"import/prefer-default-export": "off",
+		"max-len": "off"
 	},
-	"parser": "@babel/eslint-parser",
-	"plugins": ["jasmine", "codeceptjs"]
+	"plugins": ["jasmine", "codeceptjs"],
+	"parser": "@babel/eslint-parser"
 }

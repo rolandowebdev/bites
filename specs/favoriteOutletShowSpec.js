@@ -1,4 +1,4 @@
-import FavoriteOutletSearchView from './../src/scripts/views/pages/favorite-outlet/favorite-outlet-search-view';
+import FavoriteOutletSearchView from '../src/scripts/views/pages/favorite-outlet/favorite-outlet-search-view';
 import FavoriteOutletShowPresenter from '../src/scripts/views/pages/favorite-outlet/favorite-outlet-show-presenter';
 import FavoriteOutletDatabase from '../src/scripts/data/favorite-outlet';
 

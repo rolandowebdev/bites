@@ -79,6 +79,10 @@ body {
 
 /* Navigation Drawer */
 
+header {
+  margin-bottom: 6rem;
+}
+
 .navbar-wrapper {
   border-bottom: 1px solid var(--border-accent);
 }
@@ -94,7 +98,7 @@ body {
 }
 
 .navbar .logo {
-  max-width: 60%;
+  min-width: 2.75rem;
 }
 
 .hamburger-menu {
@@ -238,9 +242,11 @@ body {
 /* Hero */
 
 .hero {
+  display: none;
   position: relative;
-  margin-top: 1.875rem;
-  max-width: 62.5rem;
+  margin: 1.875rem auto 0 auto;
+  width: 62.5rem;
+  max-height: 100%;
   background-image: linear-gradient( to right top, #636363, #565656, #494949, #3c3c3c, #303030);
   background-attachment: fixed;
   border-radius: 0.5rem;
@@ -248,7 +254,7 @@ body {
 
 .hero .hero-image {
   display: block;
-  max-height: 30rem;
+  height: 30rem;
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -258,10 +264,13 @@ body {
 
 .hero .hero-title {
   position: absolute;
-  top: 15%;
-  left: 7%;
+  top: 14%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
   font-family: 'Croissant One', cursive;
-  font-size: 5vw;
+  font-size: 4rem;
   letter-spacing: 0.125em;
   color: var(--primary-color);
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
@@ -269,10 +278,13 @@ body {
 
 .hero .hero-description {
   position: absolute;
-  left: 7%;
-  bottom: 10%;
+  width: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 8%;
   max-width: 80%;
-  font-size: 2.8vmin;
+  font-size: 1.2rem;
   font-weight: 300;
   line-height: 2em;
   color: var(--white-color);

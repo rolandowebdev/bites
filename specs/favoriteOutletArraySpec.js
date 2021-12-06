@@ -1,4 +1,4 @@
-import { itActsFavoriteOutlet } from './contract/favoriteOutletContract';
+import itActsFavoriteOutlet from './contract/favoriteOutletContract';
 
 let favoriteOutletArray = [];
 
