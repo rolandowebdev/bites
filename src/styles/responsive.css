@@ -35,7 +35,6 @@
   }
   .hero .hero-image {
     max-width: 100%;
-    border-radius: 0;
   }
   .search-container .search {
     width: 40%;
@@ -64,6 +63,12 @@
 @media (max-width: 62.375rem) {
   .food-description {
     padding: 2rem 0.625rem;
+  }
+  .hero {
+    border-radius: 0;
+  }
+  .hero .hero-image {
+    border-radius: 0;
   }
 }
 
