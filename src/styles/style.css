@@ -36,11 +36,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 6.25rem auto;
+  margin: 6.25rem 1rem;
 }
 
 .pagenotfound-container .page-notfound {
-  max-width: 30%;
+  max-width: 35%;
 }
 
 .pagenotfound-container .home-link {
@@ -55,6 +55,7 @@ body {
 .pagenotfound-container p {
   font-size: 1em;
   color: var(--blue-gray);
+  text-align: center;
 }
 
 
@@ -441,7 +442,7 @@ header {
   transform: scale(1.1);
 }
 
-.food-image:hover {
+.card:hover .food-image {
   transform: scale(1);
 }
 
@@ -449,14 +450,16 @@ header {
   position: absolute;
   bottom: 0;
   left: 0;
-  min-height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 60%;
   width: 100%;
   padding: 0 0.625rem;
   background-image: linear-gradient(to top, #202020, transparent);
 }
 
 .food-title {
-  margin-bottom: 0.125rem;
   font-size: 1.5em;
   font-weight: 600;
   color: var(--white-color);
@@ -466,7 +469,6 @@ header {
 .location {
   display: flex;
   align-items: center;
-  margin-bottom: 0.188rem;
   font-weight: 400;
   color: var(--white-color);
   margin-bottom: 0.25rem;
@@ -481,7 +483,7 @@ header {
 .price {
   font-weight: 500;
   color: var(--primary-color);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.313rem;
 }
 
 .badge {
@@ -492,7 +494,7 @@ header {
   max-width: max-content;
   padding: 0.5rem 0.75rem;
   font-weight: 500;
-  font-size: 1em;
+  font-size: 0.875rem;
   color: var(--white-color);
   border-top-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;

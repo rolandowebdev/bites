@@ -58,12 +58,15 @@
   .footer-wrapper {
     margin: 0 2.25rem;
   }
+  .pagenotfound-container .page-notfound {
+    max-width: 80%;
+  }
 }
 
 @media (max-width: 62.375rem) {
-  .food-description {
+  /* .food-description {
     padding: 2rem 0.625rem;
-  }
+  } */
   .hero {
     border-radius: 0;
   }
@@ -203,7 +206,7 @@
     color: white;
   }
   .section-title {
-    font-size: 1.4em;
+    font-size: 1.6em;
   }
   .choose-title {
     margin-top: 1.875rem;

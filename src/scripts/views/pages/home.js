@@ -7,61 +7,61 @@ import { listOutlet } from '../templates/api-template';
 import { mostFoodData, chooseBites } from '../templates/local-template';
 
 const Home = {
-	async render() {
-		return `
+  async render() {
+    return `
 		<excess-component></excess-component>
 		<outlet-component></outlet-component>
 		<most-food></most-food>
 		<choose-component></choose-component>
 		<loading-component></loading-component>
       `;
-	},
+  },
 
-	async afterRender() {
-		loading.show();
-		const outlet = await SourceOutlet.allOutlet();
-		const mostFood = document.querySelector('#most');
-		const hamburger = document.querySelectorAll('.hamburger-menu span');
-		const checkbox = document.querySelector('.hamburger-menu input');
-		const linkOutlet = document.querySelector('.outlet-link');
-		const linkFood = document.querySelector('.food-link');
-		const arrowOutlet = document.querySelector('#fasOutlet');
-		const arrowFood = document.querySelector('#fasFood');
-		const outletWrapper = document.querySelector('#outlet');
-		const hero = document.querySelector('#hero');
+  async afterRender() {
+    loading.show();
+    const outlet = await SourceOutlet.allOutlet();
+    const mostFood = document.querySelector('#most');
+    const hamburger = document.querySelectorAll('.hamburger-menu span');
+    const checkbox = document.querySelector('.hamburger-menu input');
+    const linkOutlet = document.querySelector('.outlet-link');
+    const linkFood = document.querySelector('.food-link');
+    const arrowOutlet = document.querySelector('#fasOutlet');
+    const arrowFood = document.querySelector('#fasFood');
+    const outletWrapper = document.querySelector('#outlet');
+    const hero = document.querySelector('#hero');
 
-		let dataChoose = '';
-		let dataMostFood = '';
-		outletWrapper.innerHTML = '';
-		mostFood.innerHTML = '';
+    let dataChoose = '';
+    let dataMostFood = '';
+    outletWrapper.innerHTML = '';
+    mostFood.innerHTML = '';
 
-		hero.style.display = 'block';
+    hero.style.display = 'block';
 
-		if (window.location.pathname === '/') {
-			linkOutlet.style.display = 'block';
-			document.querySelector('.outlet-container').style.marginTop = '1rem';
-		}
+    if (window.location.pathname === '/') {
+      linkOutlet.style.display = 'block';
+      document.querySelector('.outlet-container').style.marginTop = '1rem';
+    }
 
-		arrowAnimation(linkOutlet, arrowOutlet);
-		arrowAnimation(linkFood, arrowFood);
-		hamburgerAction(checkbox, hamburger);
+    arrowAnimation(linkOutlet, arrowOutlet);
+    arrowAnimation(linkFood, arrowFood);
+    hamburgerAction(checkbox, hamburger);
 
-		outlet.restaurants.slice(0, 6).map((outlet) => {
-			outletWrapper.innerHTML += listOutlet(outlet);
-		});
+    outlet.restaurants.slice(0, 6).map((outlet) => {
+      outletWrapper.innerHTML += listOutlet(outlet);
+    });
 
-		data['most'].slice(0, 6).map((data) => {
-			dataMostFood += mostFoodData(data);
-		});
+    data['most'].slice(0, 6).map((data) => {
+      dataMostFood += mostFoodData(data);
+    });
 
-		data['choose'].map((data) => {
-			dataChoose += chooseBites(data);
-		});
+    data['choose'].map((data) => {
+      dataChoose += chooseBites(data);
+    });
 
-		mostFood.innerHTML = dataMostFood;
-		document.querySelector('#choose').innerHTML = dataChoose;
-		loading.hide();
-	},
+    mostFood.innerHTML = dataMostFood;
+    document.querySelector('#choose').innerHTML = dataChoose;
+    loading.hide();
+  },
 };
 
 export default Home;

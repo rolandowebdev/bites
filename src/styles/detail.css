@@ -22,7 +22,7 @@ li {
 }
 
 .notfound-container .notfound-image {
-  max-width: 50%;
+  width: 60%;
 }
 
 .notfound-container .notfound-title {
@@ -468,6 +468,12 @@ span {
   }
 }
 
+@media (max-width: 65.625rem) {
+  .notfound-container .notfound-image {
+    width: 75%;
+  }
+}
+
 @media (max-width: 50rem) {
   .list-menu-description .menu-title {
     font-size: 1.5em;
@@ -480,6 +486,12 @@ span {
   }
   .detail-outlet-section .detail-outlet-name {
     margin-top: 6.25rem;
+  }
+}
+
+@media (max-width: 46.875rem) {
+  .notfound-container .notfound-image {
+    width: 100%;
   }
 }
 
@@ -524,5 +536,15 @@ span {
   }
   .description-content .about-title {
     font-size: 1.3em;
+  }
+}
+
+@media (max-width: 27.313rem) {
+  .notfound-container .notfound-title {
+    font-size: 1rem;
+  }
+  .notfound-container .notfound-description {
+    font-size: 0.75rem;
+    color: var(--gray-color);
   }
 }
