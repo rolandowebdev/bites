@@ -2,26 +2,31 @@ import CONFIG from '../../global/config';
 
 const listOutlet = (outlet) => {
 	return `
-   <figure class="outlet-card">
+  <figure class="outlet-card">
+    <a href="${`/#/detail/${outlet.id || 'outlet not found'}`}">
       <div class="outlet-image-wrapper">
         <img class="outlet-image lazyload" 
         data-src="${
 					CONFIG.BASE_IMAGE_URL + outlet.pictureId || 'outlet not found'
 				}">
       </div>
-      <figcaption class="outlet-wrapper">
-         <p class="outlet-name" id="outletName"><a href="${`/#/detail/${
-						outlet.id || 'outlet not found'
-					}`}">${outlet.name || 'outlet not found'}</a></p>
-         <p class="outlet-location"><img class="location-icon" src="icons-set/location.svg" alt="Location Icon">${
-						outlet.city || 'outlet not found'
-					}</p>
-         <p class="outlet-description">${outlet.description}</p>
-         <p class="outlet-rating"><img class="star" src="icons-set/star.svg" alt="Star Logo">${
-						outlet.rating || 'outlet not found'
-					}</p>
-      </figcaption>
-   </figure>
+    </a>
+    <figcaption class="outlet-wrapper">
+      <p class="outlet-name" id="outletName">
+        <a href="${`/#/detail/${outlet.id || 'outlet not found'}`}">
+          ${outlet.name || 'outlet not found'}
+        </a>
+      </p>
+      <p class="outlet-location"><img class="location-icon" src="icons-set/location.svg" alt="Location Icon">${
+				outlet.city || 'outlet not found'
+			}
+      </p>
+      <p class="outlet-description">${outlet.description}</p>
+      <p class="outlet-rating"><img class="star" src="icons-set/star.svg" alt="Star Logo">
+        ${outlet.rating || 'outlet not found'}
+      </p>
+    </figcaption>
+  </figure>
    `;
 };
 
@@ -112,16 +117,16 @@ const drinkMenu = (menu) => {
 
 const reviewOutlet = (review) => {
 	return `
-    <div class="review-card">
-        <div class="desc"><p class="review-text">${review.review}</p></div>
-        <div class="profile">
-          <img class="photo" src="images/profile.jpg" alt="Profile Photo" />
-          <div class="profile-desc">
-            <p class="name">${review.name}</p>
-            <p class="date">${review.date}</p>
-          </div>
+    <section class="review-card">
+      <div class="desc"><p class="review-text">${review.review}</p></div>
+      <div class="profile">
+        <img class="photo" src="images/profile.jpg" alt="Profile Photo" />
+        <div class="profile-desc">
+          <p class="name">${review.name}</p>
+          <p class="date">${review.date}</p>
         </div>
       </div>
+    </section>
   `;
 };
 

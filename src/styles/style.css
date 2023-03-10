@@ -1,757 +1,766 @@
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
-  --primary-color: #ff8303;
-  --dark-black: #1f1d36;
-  --orange-soft: #ffc285;
-  --white-color: #fff;
-  --badge-color: #ff3d68;
-  --gold-color: #ffcc47;
-  --blue-gray: #9d9d9d;
-  --border-accent: #ececec;
+	--primary-color: #ff8303;
+	--dark-black: #1f1d36;
+	--orange-soft: #ffc285;
+	--white-color: #fff;
+	--badge-color: #ff3d68;
+	--gold-color: #ffcc47;
+	--blue-gray: #9d9d9d;
+	--border-accent: #ececec;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  color: var(--dark-black);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	color: var(--dark-black);
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  max-height: 100vh;
-  background-color: var(--white-color);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M24.37 16c.2.65.39 1.32.54 2H21.17l1.17 2.34.45.9-.24.11V28a5 5 0 0 1-2.23 8.94l-.02.06a8 8 0 0 1-7.75 6h-20a8 8 0 0 1-7.74-6l-.02-.06A5 5 0 0 1-17.45 28v-6.76l-.79-1.58-.44-.9.9-.44.63-.32H-20a23.01 23.01 0 0 1 44.37-2zm-36.82 2a1 1 0 0 0-.44.1l-3.1 1.56.89 1.79 1.31-.66a3 3 0 0 1 2.69 0l2.2 1.1a1 1 0 0 0 .9 0l2.21-1.1a3 3 0 0 1 2.69 0l2.2 1.1a1 1 0 0 0 .9 0l2.21-1.1a3 3 0 0 1 2.69 0l2.2 1.1a1 1 0 0 0 .86.02l2.88-1.27a3 3 0 0 1 2.43 0l2.88 1.27a1 1 0 0 0 .85-.02l3.1-1.55-.89-1.79-1.42.71a3 3 0 0 1-2.56.06l-2.77-1.23a1 1 0 0 0-.4-.09h-.01a1 1 0 0 0-.4.09l-2.78 1.23a3 3 0 0 1-2.56-.06l-2.3-1.15a1 1 0 0 0-.45-.11h-.01a1 1 0 0 0-.44.1L.9 19.22a3 3 0 0 1-2.69 0l-2.2-1.1a1 1 0 0 0-.45-.11h-.01a1 1 0 0 0-.44.1l-2.21 1.11a3 3 0 0 1-2.69 0l-2.2-1.1a1 1 0 0 0-.45-.11h-.01zm0-2h-4.9a21.01 21.01 0 0 1 39.61 0h-2.09l-.06-.13-.26.13h-32.31zm30.35 7.68l1.36-.68h1.3v2h-36v-1.15l.34-.17 1.36-.68h2.59l1.36.68a3 3 0 0 0 2.69 0l1.36-.68h2.59l1.36.68a3 3 0 0 0 2.69 0L2.26 23h2.59l1.36.68a3 3 0 0 0 2.56.06l1.67-.74h3.23l1.67.74a3 3 0 0 0 2.56-.06zM-13.82 27l16.37 4.91L18.93 27h-32.75zm-.63 2h.34l16.66 5 16.67-5h.33a3 3 0 1 1 0 6h-34a3 3 0 1 1 0-6zm1.35 8a6 6 0 0 0 5.65 4h20a6 6 0 0 0 5.66-4H-13.1z'/%3E%3Cpath id='path6_fill-copy' d='M284.37 16c.2.65.39 1.32.54 2H281.17l1.17 2.34.45.9-.24.11V28a5 5 0 0 1-2.23 8.94l-.02.06a8 8 0 0 1-7.75 6h-20a8 8 0 0 1-7.74-6l-.02-.06a5 5 0 0 1-2.24-8.94v-6.76l-.79-1.58-.44-.9.9-.44.63-.32H240a23.01 23.01 0 0 1 44.37-2zm-36.82 2a1 1 0 0 0-.44.1l-3.1 1.56.89 1.79 1.31-.66a3 3 0 0 1 2.69 0l2.2 1.1a1 1 0 0 0 .9 0l2.21-1.1a3 3 0 0 1 2.69 0l2.2 1.1a1 1 0 0 0 .9 0l2.21-1.1a3 3 0 0 1 2.69 0l2.2 1.1a1 1 0 0 0 .86.02l2.88-1.27a3 3 0 0 1 2.43 0l2.88 1.27a1 1 0 0 0 .85-.02l3.1-1.55-.89-1.79-1.42.71a3 3 0 0 1-2.56.06l-2.77-1.23a1 1 0 0 0-.4-.09h-.01a1 1 0 0 0-.4.09l-2.78 1.23a3 3 0 0 1-2.56-.06l-2.3-1.15a1 1 0 0 0-.45-.11h-.01a1 1 0 0 0-.44.1l-2.21 1.11a3 3 0 0 1-2.69 0l-2.2-1.1a1 1 0 0 0-.45-.11h-.01a1 1 0 0 0-.44.1l-2.21 1.11a3 3 0 0 1-2.69 0l-2.2-1.1a1 1 0 0 0-.45-.11h-.01zm0-2h-4.9a21.01 21.01 0 0 1 39.61 0h-2.09l-.06-.13-.26.13h-32.31zm30.35 7.68l1.36-.68h1.3v2h-36v-1.15l.34-.17 1.36-.68h2.59l1.36.68a3 3 0 0 0 2.69 0l1.36-.68h2.59l1.36.68a3 3 0 0 0 2.69 0l1.36-.68h2.59l1.36.68a3 3 0 0 0 2.56.06l1.67-.74h3.23l1.67.74a3 3 0 0 0 2.56-.06zM246.18 27l16.37 4.91L278.93 27h-32.75zm-.63 2h.34l16.66 5 16.67-5h.33a3 3 0 1 1 0 6h-34a3 3 0 1 1 0-6zm1.35 8a6 6 0 0 0 5.65 4h20a6 6 0 0 0 5.66-4H246.9z'/%3E%3Cpath d='M159.5 21.02A9 9 0 0 0 151 15h-42a9 9 0 0 0-8.5 6.02 6 6 0 0 0 .02 11.96A8.99 8.99 0 0 0 109 45h42a9 9 0 0 0 8.48-12.02 6 6 0 0 0 .02-11.96zM151 17h-42a7 7 0 0 0-6.33 4h54.66a7 7 0 0 0-6.33-4zm-9.34 26a8.98 8.98 0 0 0 3.34-7h-2a7 7 0 0 1-7 7h-4.34a8.98 8.98 0 0 0 3.34-7h-2a7 7 0 0 1-7 7h-4.34a8.98 8.98 0 0 0 3.34-7h-2a7 7 0 0 1-7 7h-7a7 7 0 1 1 0-14h42a7 7 0 1 1 0 14h-9.34zM109 27a9 9 0 0 0-7.48 4H101a4 4 0 1 1 0-8h58a4 4 0 0 1 0 8h-.52a9 9 0 0 0-7.48-4h-42z'/%3E%3Cpath d='M39 115a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6-8a6 6 0 1 1-12 0 6 6 0 0 1 12 0zm-3-29v-2h8v-6H40a4 4 0 0 0-4 4v10H22l-1.33 4-.67 2h2.19L26 130h26l3.81-40H58l-.67-2L56 84H42v-6zm-4-4v10h2V74h8v-2h-8a2 2 0 0 0-2 2zm2 12h14.56l.67 2H22.77l.67-2H40zm13.8 4H24.2l3.62 38h22.36l3.62-38z'/%3E%3Cpath d='M129 92h-6v4h-6v4h-6v14h-3l.24 2 3.76 32h36l3.76-32 .24-2h-3v-14h-6v-4h-6v-4h-8zm18 22v-12h-4v4h3v8h1zm-3 0v-6h-4v6h4zm-6 6v-16h-4v19.17c1.6-.7 2.97-1.8 4-3.17zm-6 3.8V100h-4v23.8a10.04 10.04 0 0 0 4 0zm-6-.63V104h-4v16a10.04 10.04 0 0 0 4 3.17zm-6-9.17v-6h-4v6h4zm-6 0v-8h3v-4h-4v12h1zm27-12v-4h-4v4h3v4h1v-4zm-6 0v-8h-4v4h3v4h1zm-6-4v-4h-4v8h1v-4h3zm-6 4v-4h-4v8h1v-4h3zm7 24a12 12 0 0 0 11.83-10h7.92l-3.53 30h-32.44l-3.53-30h7.92A12 12 0 0 0 130 126z'/%3E%3Cpath d='M212 86v2h-4v-2h4zm4 0h-2v2h2v-2zm-20 0v.1a5 5 0 0 0-.56 9.65l.06.25 1.12 4.48a2 2 0 0 0 1.94 1.52h.01l7.02 24.55a2 2 0 0 0 1.92 1.45h4.98a2 2 0 0 0 1.92-1.45l7.02-24.55a2 2 0 0 0 1.95-1.52L224.5 96l.06-.25a5 5 0 0 0-.56-9.65V86a14 14 0 0 0-28 0zm4 0h6v2h-9a3 3 0 1 0 0 6H223a3 3 0 1 0 0-6H220v-2h2a12 12 0 1 0-24 0h2zm-1.44 14l-1-4h24.88l-1 4h-22.88zm8.95 26l-6.86-24h18.7l-6.86 24h-4.98zM150 242a22 22 0 1 0 0-44 22 22 0 0 0 0 44zm24-22a24 24 0 1 1-48 0 24 24 0 0 1 48 0zm-28.38 17.73l2.04-.87a6 6 0 0 1 4.68 0l2.04.87a2 2 0 0 0 2.5-.82l1.14-1.9a6 6 0 0 1 3.79-2.75l2.15-.5a2 2 0 0 0 1.54-2.12l-.19-2.2a6 6 0 0 1 1.45-4.46l1.45-1.67a2 2 0 0 0 0-2.62l-1.45-1.67a6 6 0 0 1-1.45-4.46l.2-2.2a2 2 0 0 0-1.55-2.13l-2.15-.5a6 6 0 0 1-3.8-2.75l-1.13-1.9a2 2 0 0 0-2.5-.8l-2.04.86a6 6 0 0 1-4.68 0l-2.04-.87a2 2 0 0 0-2.5.82l-1.14 1.9a6 6 0 0 1-3.79 2.75l-2.15.5a2 2 0 0 0-1.54 2.12l.19 2.2a6 6 0 0 1-1.45 4.46l-1.45 1.67a2 2 0 0 0 0 2.62l1.45 1.67a6 6 0 0 1 1.45 4.46l-.2 2.2a2 2 0 0 0 1.55 2.13l2.15.5a6 6 0 0 1 3.8 2.75l1.13 1.9a2 2 0 0 0 2.5.8zm2.82.97a4 4 0 0 1 3.12 0l2.04.87a4 4 0 0 0 4.99-1.62l1.14-1.9a4 4 0 0 1 2.53-1.84l2.15-.5a4 4 0 0 0 3.09-4.24l-.2-2.2a4 4 0 0 1 .97-2.98l1.45-1.67a4 4 0 0 0 0-5.24l-1.45-1.67a4 4 0 0 1-.97-2.97l.2-2.2a4 4 0 0 0-3.09-4.25l-2.15-.5a4 4 0 0 1-2.53-1.84l-1.14-1.9a4 4 0 0 0-5-1.62l-2.03.87a4 4 0 0 1-3.12 0l-2.04-.87a4 4 0 0 0-4.99 1.62l-1.14 1.9a4 4 0 0 1-2.53 1.84l-2.15.5a4 4 0 0 0-3.09 4.24l.2 2.2a4 4 0 0 1-.97 2.98l-1.45 1.67a4 4 0 0 0 0 5.24l1.45 1.67a4 4 0 0 1 .97 2.97l-.2 2.2a4 4 0 0 0 3.09 4.25l2.15.5a4 4 0 0 1 2.53 1.84l1.14 1.9a4 4 0 0 0 5 1.62l2.03-.87zM152 207a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm6 2a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm-11 1a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm-6 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm3-5a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm-8 8a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm3 6a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm0 6a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm4 7a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm5-2a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm5 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm4-6a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm6-4a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm-4-3a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm4-3a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm-5-4a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm-24 6a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm16 5a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm7-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zm86-29a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm19 9a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm-14 5a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm-25 1a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm5 4a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm9 0a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm15 1a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm12-2a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm-11-14a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm-19 0a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm6 5a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm-25 15c0-.47.01-.94.03-1.4a5 5 0 0 1-1.7-8 3.99 3.99 0 0 1 1.88-5.18 5 5 0 0 1 3.4-6.22 3 3 0 0 1 1.46-1.05 5 5 0 0 1 7.76-3.27A30.86 30.86 0 0 1 246 184c6.79 0 13.06 2.18 18.17 5.88a5 5 0 0 1 7.76 3.27 3 3 0 0 1 1.47 1.05 5 5 0 0 1 3.4 6.22 4 4 0 0 1 1.87 5.18 4.98 4.98 0 0 1-1.7 8c.02.46.03.93.03 1.4v1h-62v-1zm.83-7.17a30.9 30.9 0 0 0-.62 3.57 3 3 0 0 1-.61-4.2c.37.28.78.49 1.23.63zm1.49-4.61c-.36.87-.68 1.76-.96 2.68a2 2 0 0 1-.21-3.71c.33.4.73.75 1.17 1.03zm2.32-4.54c-.54.86-1.03 1.76-1.49 2.68a3 3 0 0 1-.07-4.67 3 3 0 0 0 1.56 1.99zm1.14-1.7c.35-.5.72-.98 1.1-1.46a1 1 0 1 0-1.1 1.45zm5.34-5.77c-1.03.86-2 1.79-2.9 2.77a3 3 0 0 0-1.11-.77 3 3 0 0 1 4-2zm42.66 2.77c-.9-.98-1.87-1.9-2.9-2.77a3 3 0 0 1 4.01 2 3 3 0 0 0-1.1.77zm1.34 1.54c.38.48.75.96 1.1 1.45a1 1 0 1 0-1.1-1.45zm3.73 5.84c-.46-.92-.95-1.82-1.5-2.68a3 3 0 0 0 1.57-1.99 3 3 0 0 1-.07 4.67zm1.8 4.53c-.29-.9-.6-1.8-.97-2.67.44-.28.84-.63 1.17-1.03a2 2 0 0 1-.2 3.7zm1.14 5.51c-.14-1.21-.35-2.4-.62-3.57.45-.14.86-.35 1.23-.63a2.99 2.99 0 0 1-.6 4.2zM275 214a29 29 0 0 0-57.97 0h57.96zM72.33 198.12c-.21-.32-.34-.7-.34-1.12v-12h-2v12a4.01 4.01 0 0 0 7.09 2.54c.57-.69.91-1.57.91-2.54v-12h-2v12a1.99 1.99 0 0 1-2 2 2 2 0 0 1-1.66-.88zM75 176c.38 0 .74-.04 1.1-.12a4 4 0 0 0 6.19 2.4A13.94 13.94 0 0 1 84 185v24a6 6 0 0 1-6 6h-3v9a5 5 0 1 1-10 0v-9h-3a6 6 0 0 1-6-6v-24a14 14 0 0 1 14-14 5 5 0 0 0 5 5zm-17 15v12a1.99 1.99 0 0 0 1.22 1.84 2 2 0 0 0 2.44-.72c.21-.32.34-.7.34-1.12v-12h2v12a3.98 3.98 0 0 1-5.35 3.77 3.98 3.98 0 0 1-.65-.3V209a4 4 0 0 0 4 4h16a4 4 0 0 0 4-4v-24c.01-1.53-.23-2.88-.72-4.17-.43.1-.87.16-1.28.17a6 6 0 0 1-5.2-3 7 7 0 0 1-6.47-4.88A12 12 0 0 0 58 185v6zm9 24v9a3 3 0 1 0 6 0v-9h-6z'/%3E%3Cpath d='M-17 191a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm19 9a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zm-14 5a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm-25 1a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm5 4a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm9 0a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm15 1a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm12-2a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2H4zm-11-14a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm-19 0a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm6 5a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm-25 15c0-.47.01-.94.03-1.4a5 5 0 0 1-1.7-8 3.99 3.99 0 0 1 1.88-5.18 5 5 0 0 1 3.4-6.22 3 3 0 0 1 1.46-1.05 5 5 0 0 1 7.76-3.27A30.86 30.86 0 0 1-14 184c6.79 0 13.06 2.18 18.17 5.88a5 5 0 0 1 7.76 3.27 3 3 0 0 1 1.47 1.05 5 5 0 0 1 3.4 6.22 4 4 0 0 1 1.87 5.18 4.98 4.98 0 0 1-1.7 8c.02.46.03.93.03 1.4v1h-62v-1zm.83-7.17a30.9 30.9 0 0 0-.62 3.57 3 3 0 0 1-.61-4.2c.37.28.78.49 1.23.63zm1.49-4.61c-.36.87-.68 1.76-.96 2.68a2 2 0 0 1-.21-3.71c.33.4.73.75 1.17 1.03zm2.32-4.54c-.54.86-1.03 1.76-1.49 2.68a3 3 0 0 1-.07-4.67 3 3 0 0 0 1.56 1.99zm1.14-1.7c.35-.5.72-.98 1.1-1.46a1 1 0 1 0-1.1 1.45zm5.34-5.77c-1.03.86-2 1.79-2.9 2.77a3 3 0 0 0-1.11-.77 3 3 0 0 1 4-2zm42.66 2.77c-.9-.98-1.87-1.9-2.9-2.77a3 3 0 0 1 4.01 2 3 3 0 0 0-1.1.77zm1.34 1.54c.38.48.75.96 1.1 1.45a1 1 0 1 0-1.1-1.45zm3.73 5.84c-.46-.92-.95-1.82-1.5-2.68a3 3 0 0 0 1.57-1.99 3 3 0 0 1-.07 4.67zm1.8 4.53c-.29-.9-.6-1.8-.97-2.67.44-.28.84-.63 1.17-1.03a2 2 0 0 1-.2 3.7zm1.14 5.51c-.14-1.21-.35-2.4-.62-3.57.45-.14.86-.35 1.23-.63a2.99 2.99 0 0 1-.6 4.2zM15 214a29 29 0 0 0-57.97 0h57.96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  /* background-size: contain; */
-  background-position: center;
-  background-attachment: fixed;
+	max-height: 100vh;
+	background-color: var(--white-color);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M24.37 16c.2.65.39 1.32.54 2H21.17l1.17 2.34.45.9-.24.11V28a5 5 0 0 1-2.23 8.94l-.02.06a8 8 0 0 1-7.75 6h-20a8 8 0 0 1-7.74-6l-.02-.06A5 5 0 0 1-17.45 28v-6.76l-.79-1.58-.44-.9.9-.44.63-.32H-20a23.01 23.01 0 0 1 44.37-2zm-36.82 2a1 1 0 0 0-.44.1l-3.1 1.56.89 1.79 1.31-.66a3 3 0 0 1 2.69 0l2.2 1.1a1 1 0 0 0 .9 0l2.21-1.1a3 3 0 0 1 2.69 0l2.2 1.1a1 1 0 0 0 .9 0l2.21-1.1a3 3 0 0 1 2.69 0l2.2 1.1a1 1 0 0 0 .86.02l2.88-1.27a3 3 0 0 1 2.43 0l2.88 1.27a1 1 0 0 0 .85-.02l3.1-1.55-.89-1.79-1.42.71a3 3 0 0 1-2.56.06l-2.77-1.23a1 1 0 0 0-.4-.09h-.01a1 1 0 0 0-.4.09l-2.78 1.23a3 3 0 0 1-2.56-.06l-2.3-1.15a1 1 0 0 0-.45-.11h-.01a1 1 0 0 0-.44.1L.9 19.22a3 3 0 0 1-2.69 0l-2.2-1.1a1 1 0 0 0-.45-.11h-.01a1 1 0 0 0-.44.1l-2.21 1.11a3 3 0 0 1-2.69 0l-2.2-1.1a1 1 0 0 0-.45-.11h-.01zm0-2h-4.9a21.01 21.01 0 0 1 39.61 0h-2.09l-.06-.13-.26.13h-32.31zm30.35 7.68l1.36-.68h1.3v2h-36v-1.15l.34-.17 1.36-.68h2.59l1.36.68a3 3 0 0 0 2.69 0l1.36-.68h2.59l1.36.68a3 3 0 0 0 2.69 0L2.26 23h2.59l1.36.68a3 3 0 0 0 2.56.06l1.67-.74h3.23l1.67.74a3 3 0 0 0 2.56-.06zM-13.82 27l16.37 4.91L18.93 27h-32.75zm-.63 2h.34l16.66 5 16.67-5h.33a3 3 0 1 1 0 6h-34a3 3 0 1 1 0-6zm1.35 8a6 6 0 0 0 5.65 4h20a6 6 0 0 0 5.66-4H-13.1z'/%3E%3Cpath id='path6_fill-copy' d='M284.37 16c.2.65.39 1.32.54 2H281.17l1.17 2.34.45.9-.24.11V28a5 5 0 0 1-2.23 8.94l-.02.06a8 8 0 0 1-7.75 6h-20a8 8 0 0 1-7.74-6l-.02-.06a5 5 0 0 1-2.24-8.94v-6.76l-.79-1.58-.44-.9.9-.44.63-.32H240a23.01 23.01 0 0 1 44.37-2zm-36.82 2a1 1 0 0 0-.44.1l-3.1 1.56.89 1.79 1.31-.66a3 3 0 0 1 2.69 0l2.2 1.1a1 1 0 0 0 .9 0l2.21-1.1a3 3 0 0 1 2.69 0l2.2 1.1a1 1 0 0 0 .9 0l2.21-1.1a3 3 0 0 1 2.69 0l2.2 1.1a1 1 0 0 0 .86.02l2.88-1.27a3 3 0 0 1 2.43 0l2.88 1.27a1 1 0 0 0 .85-.02l3.1-1.55-.89-1.79-1.42.71a3 3 0 0 1-2.56.06l-2.77-1.23a1 1 0 0 0-.4-.09h-.01a1 1 0 0 0-.4.09l-2.78 1.23a3 3 0 0 1-2.56-.06l-2.3-1.15a1 1 0 0 0-.45-.11h-.01a1 1 0 0 0-.44.1l-2.21 1.11a3 3 0 0 1-2.69 0l-2.2-1.1a1 1 0 0 0-.45-.11h-.01a1 1 0 0 0-.44.1l-2.21 1.11a3 3 0 0 1-2.69 0l-2.2-1.1a1 1 0 0 0-.45-.11h-.01zm0-2h-4.9a21.01 21.01 0 0 1 39.61 0h-2.09l-.06-.13-.26.13h-32.31zm30.35 7.68l1.36-.68h1.3v2h-36v-1.15l.34-.17 1.36-.68h2.59l1.36.68a3 3 0 0 0 2.69 0l1.36-.68h2.59l1.36.68a3 3 0 0 0 2.69 0l1.36-.68h2.59l1.36.68a3 3 0 0 0 2.56.06l1.67-.74h3.23l1.67.74a3 3 0 0 0 2.56-.06zM246.18 27l16.37 4.91L278.93 27h-32.75zm-.63 2h.34l16.66 5 16.67-5h.33a3 3 0 1 1 0 6h-34a3 3 0 1 1 0-6zm1.35 8a6 6 0 0 0 5.65 4h20a6 6 0 0 0 5.66-4H246.9z'/%3E%3Cpath d='M159.5 21.02A9 9 0 0 0 151 15h-42a9 9 0 0 0-8.5 6.02 6 6 0 0 0 .02 11.96A8.99 8.99 0 0 0 109 45h42a9 9 0 0 0 8.48-12.02 6 6 0 0 0 .02-11.96zM151 17h-42a7 7 0 0 0-6.33 4h54.66a7 7 0 0 0-6.33-4zm-9.34 26a8.98 8.98 0 0 0 3.34-7h-2a7 7 0 0 1-7 7h-4.34a8.98 8.98 0 0 0 3.34-7h-2a7 7 0 0 1-7 7h-4.34a8.98 8.98 0 0 0 3.34-7h-2a7 7 0 0 1-7 7h-7a7 7 0 1 1 0-14h42a7 7 0 1 1 0 14h-9.34zM109 27a9 9 0 0 0-7.48 4H101a4 4 0 1 1 0-8h58a4 4 0 0 1 0 8h-.52a9 9 0 0 0-7.48-4h-42z'/%3E%3Cpath d='M39 115a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6-8a6 6 0 1 1-12 0 6 6 0 0 1 12 0zm-3-29v-2h8v-6H40a4 4 0 0 0-4 4v10H22l-1.33 4-.67 2h2.19L26 130h26l3.81-40H58l-.67-2L56 84H42v-6zm-4-4v10h2V74h8v-2h-8a2 2 0 0 0-2 2zm2 12h14.56l.67 2H22.77l.67-2H40zm13.8 4H24.2l3.62 38h22.36l3.62-38z'/%3E%3Cpath d='M129 92h-6v4h-6v4h-6v14h-3l.24 2 3.76 32h36l3.76-32 .24-2h-3v-14h-6v-4h-6v-4h-8zm18 22v-12h-4v4h3v8h1zm-3 0v-6h-4v6h4zm-6 6v-16h-4v19.17c1.6-.7 2.97-1.8 4-3.17zm-6 3.8V100h-4v23.8a10.04 10.04 0 0 0 4 0zm-6-.63V104h-4v16a10.04 10.04 0 0 0 4 3.17zm-6-9.17v-6h-4v6h4zm-6 0v-8h3v-4h-4v12h1zm27-12v-4h-4v4h3v4h1v-4zm-6 0v-8h-4v4h3v4h1zm-6-4v-4h-4v8h1v-4h3zm-6 4v-4h-4v8h1v-4h3zm7 24a12 12 0 0 0 11.83-10h7.92l-3.53 30h-32.44l-3.53-30h7.92A12 12 0 0 0 130 126z'/%3E%3Cpath d='M212 86v2h-4v-2h4zm4 0h-2v2h2v-2zm-20 0v.1a5 5 0 0 0-.56 9.65l.06.25 1.12 4.48a2 2 0 0 0 1.94 1.52h.01l7.02 24.55a2 2 0 0 0 1.92 1.45h4.98a2 2 0 0 0 1.92-1.45l7.02-24.55a2 2 0 0 0 1.95-1.52L224.5 96l.06-.25a5 5 0 0 0-.56-9.65V86a14 14 0 0 0-28 0zm4 0h6v2h-9a3 3 0 1 0 0 6H223a3 3 0 1 0 0-6H220v-2h2a12 12 0 1 0-24 0h2zm-1.44 14l-1-4h24.88l-1 4h-22.88zm8.95 26l-6.86-24h18.7l-6.86 24h-4.98zM150 242a22 22 0 1 0 0-44 22 22 0 0 0 0 44zm24-22a24 24 0 1 1-48 0 24 24 0 0 1 48 0zm-28.38 17.73l2.04-.87a6 6 0 0 1 4.68 0l2.04.87a2 2 0 0 0 2.5-.82l1.14-1.9a6 6 0 0 1 3.79-2.75l2.15-.5a2 2 0 0 0 1.54-2.12l-.19-2.2a6 6 0 0 1 1.45-4.46l1.45-1.67a2 2 0 0 0 0-2.62l-1.45-1.67a6 6 0 0 1-1.45-4.46l.2-2.2a2 2 0 0 0-1.55-2.13l-2.15-.5a6 6 0 0 1-3.8-2.75l-1.13-1.9a2 2 0 0 0-2.5-.8l-2.04.86a6 6 0 0 1-4.68 0l-2.04-.87a2 2 0 0 0-2.5.82l-1.14 1.9a6 6 0 0 1-3.79 2.75l-2.15.5a2 2 0 0 0-1.54 2.12l.19 2.2a6 6 0 0 1-1.45 4.46l-1.45 1.67a2 2 0 0 0 0 2.62l1.45 1.67a6 6 0 0 1 1.45 4.46l-.2 2.2a2 2 0 0 0 1.55 2.13l2.15.5a6 6 0 0 1 3.8 2.75l1.13 1.9a2 2 0 0 0 2.5.8zm2.82.97a4 4 0 0 1 3.12 0l2.04.87a4 4 0 0 0 4.99-1.62l1.14-1.9a4 4 0 0 1 2.53-1.84l2.15-.5a4 4 0 0 0 3.09-4.24l-.2-2.2a4 4 0 0 1 .97-2.98l1.45-1.67a4 4 0 0 0 0-5.24l-1.45-1.67a4 4 0 0 1-.97-2.97l.2-2.2a4 4 0 0 0-3.09-4.25l-2.15-.5a4 4 0 0 1-2.53-1.84l-1.14-1.9a4 4 0 0 0-5-1.62l-2.03.87a4 4 0 0 1-3.12 0l-2.04-.87a4 4 0 0 0-4.99 1.62l-1.14 1.9a4 4 0 0 1-2.53 1.84l-2.15.5a4 4 0 0 0-3.09 4.24l.2 2.2a4 4 0 0 1-.97 2.98l-1.45 1.67a4 4 0 0 0 0 5.24l1.45 1.67a4 4 0 0 1 .97 2.97l-.2 2.2a4 4 0 0 0 3.09 4.25l2.15.5a4 4 0 0 1 2.53 1.84l1.14 1.9a4 4 0 0 0 5 1.62l2.03-.87zM152 207a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm6 2a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm-11 1a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm-6 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm3-5a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm-8 8a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm3 6a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm0 6a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm4 7a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm5-2a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm5 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm4-6a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm6-4a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm-4-3a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm4-3a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm-5-4a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm-24 6a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm16 5a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm7-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zm86-29a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm19 9a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm-14 5a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm-25 1a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm5 4a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm9 0a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm15 1a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm12-2a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm-11-14a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm-19 0a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm6 5a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm-25 15c0-.47.01-.94.03-1.4a5 5 0 0 1-1.7-8 3.99 3.99 0 0 1 1.88-5.18 5 5 0 0 1 3.4-6.22 3 3 0 0 1 1.46-1.05 5 5 0 0 1 7.76-3.27A30.86 30.86 0 0 1 246 184c6.79 0 13.06 2.18 18.17 5.88a5 5 0 0 1 7.76 3.27 3 3 0 0 1 1.47 1.05 5 5 0 0 1 3.4 6.22 4 4 0 0 1 1.87 5.18 4.98 4.98 0 0 1-1.7 8c.02.46.03.93.03 1.4v1h-62v-1zm.83-7.17a30.9 30.9 0 0 0-.62 3.57 3 3 0 0 1-.61-4.2c.37.28.78.49 1.23.63zm1.49-4.61c-.36.87-.68 1.76-.96 2.68a2 2 0 0 1-.21-3.71c.33.4.73.75 1.17 1.03zm2.32-4.54c-.54.86-1.03 1.76-1.49 2.68a3 3 0 0 1-.07-4.67 3 3 0 0 0 1.56 1.99zm1.14-1.7c.35-.5.72-.98 1.1-1.46a1 1 0 1 0-1.1 1.45zm5.34-5.77c-1.03.86-2 1.79-2.9 2.77a3 3 0 0 0-1.11-.77 3 3 0 0 1 4-2zm42.66 2.77c-.9-.98-1.87-1.9-2.9-2.77a3 3 0 0 1 4.01 2 3 3 0 0 0-1.1.77zm1.34 1.54c.38.48.75.96 1.1 1.45a1 1 0 1 0-1.1-1.45zm3.73 5.84c-.46-.92-.95-1.82-1.5-2.68a3 3 0 0 0 1.57-1.99 3 3 0 0 1-.07 4.67zm1.8 4.53c-.29-.9-.6-1.8-.97-2.67.44-.28.84-.63 1.17-1.03a2 2 0 0 1-.2 3.7zm1.14 5.51c-.14-1.21-.35-2.4-.62-3.57.45-.14.86-.35 1.23-.63a2.99 2.99 0 0 1-.6 4.2zM275 214a29 29 0 0 0-57.97 0h57.96zM72.33 198.12c-.21-.32-.34-.7-.34-1.12v-12h-2v12a4.01 4.01 0 0 0 7.09 2.54c.57-.69.91-1.57.91-2.54v-12h-2v12a1.99 1.99 0 0 1-2 2 2 2 0 0 1-1.66-.88zM75 176c.38 0 .74-.04 1.1-.12a4 4 0 0 0 6.19 2.4A13.94 13.94 0 0 1 84 185v24a6 6 0 0 1-6 6h-3v9a5 5 0 1 1-10 0v-9h-3a6 6 0 0 1-6-6v-24a14 14 0 0 1 14-14 5 5 0 0 0 5 5zm-17 15v12a1.99 1.99 0 0 0 1.22 1.84 2 2 0 0 0 2.44-.72c.21-.32.34-.7.34-1.12v-12h2v12a3.98 3.98 0 0 1-5.35 3.77 3.98 3.98 0 0 1-.65-.3V209a4 4 0 0 0 4 4h16a4 4 0 0 0 4-4v-24c.01-1.53-.23-2.88-.72-4.17-.43.1-.87.16-1.28.17a6 6 0 0 1-5.2-3 7 7 0 0 1-6.47-4.88A12 12 0 0 0 58 185v6zm9 24v9a3 3 0 1 0 6 0v-9h-6z'/%3E%3Cpath d='M-17 191a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm19 9a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zm-14 5a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm-25 1a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm5 4a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm9 0a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm15 1a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm12-2a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2H4zm-11-14a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm-19 0a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm6 5a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zm-25 15c0-.47.01-.94.03-1.4a5 5 0 0 1-1.7-8 3.99 3.99 0 0 1 1.88-5.18 5 5 0 0 1 3.4-6.22 3 3 0 0 1 1.46-1.05 5 5 0 0 1 7.76-3.27A30.86 30.86 0 0 1-14 184c6.79 0 13.06 2.18 18.17 5.88a5 5 0 0 1 7.76 3.27 3 3 0 0 1 1.47 1.05 5 5 0 0 1 3.4 6.22 4 4 0 0 1 1.87 5.18 4.98 4.98 0 0 1-1.7 8c.02.46.03.93.03 1.4v1h-62v-1zm.83-7.17a30.9 30.9 0 0 0-.62 3.57 3 3 0 0 1-.61-4.2c.37.28.78.49 1.23.63zm1.49-4.61c-.36.87-.68 1.76-.96 2.68a2 2 0 0 1-.21-3.71c.33.4.73.75 1.17 1.03zm2.32-4.54c-.54.86-1.03 1.76-1.49 2.68a3 3 0 0 1-.07-4.67 3 3 0 0 0 1.56 1.99zm1.14-1.7c.35-.5.72-.98 1.1-1.46a1 1 0 1 0-1.1 1.45zm5.34-5.77c-1.03.86-2 1.79-2.9 2.77a3 3 0 0 0-1.11-.77 3 3 0 0 1 4-2zm42.66 2.77c-.9-.98-1.87-1.9-2.9-2.77a3 3 0 0 1 4.01 2 3 3 0 0 0-1.1.77zm1.34 1.54c.38.48.75.96 1.1 1.45a1 1 0 1 0-1.1-1.45zm3.73 5.84c-.46-.92-.95-1.82-1.5-2.68a3 3 0 0 0 1.57-1.99 3 3 0 0 1-.07 4.67zm1.8 4.53c-.29-.9-.6-1.8-.97-2.67.44-.28.84-.63 1.17-1.03a2 2 0 0 1-.2 3.7zm1.14 5.51c-.14-1.21-.35-2.4-.62-3.57.45-.14.86-.35 1.23-.63a2.99 2.99 0 0 1-.6 4.2zM15 214a29 29 0 0 0-57.97 0h57.96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	/* background-size: contain; */
+	background-position: center;
+	background-attachment: fixed;
 }
 
 .pagenotfound-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 6.25rem 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 6.25rem 1rem;
 }
 
 .pagenotfound-container .page-notfound {
-  max-width: 35%;
+	max-width: 35%;
 }
 
 .pagenotfound-container .home-link {
-  font-size: 1.6em;
-  font-weight: 500;
+	font-size: 1.6em;
+	font-weight: 500;
 }
 
 .pagenotfound-container .home-link:hover {
-  color: #ffc801;
+	color: #ffc801;
 }
 
 .pagenotfound-container p {
-  font-size: 1em;
-  color: var(--blue-gray);
-  text-align: center;
+	font-size: 1em;
+	color: var(--blue-gray);
+	text-align: center;
 }
-
 
 /* Skip to content */
 
 .skip-link {
-  position: absolute;
-  top: -3rem;
-  left: 0;
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  padding: 0.5rem;
-  z-index: 99;
+	position: absolute;
+	top: -3rem;
+	left: 0;
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	padding: 0.5rem;
+	z-index: 99;
 }
 
 .skip-link:focus {
-  top: 0.125rem;
-  left: 0.125rem;
-  border: 2px solid var(--dark-black);
+	top: 0.125rem;
+	left: 0.125rem;
+	border: 2px solid var(--dark-black);
 }
 
 .container {
-  max-width: 62.5rem;
-  margin: 0 auto;
+	max-width: 62.5rem;
+	margin: 0 auto;
 }
-
 
 /* Navigation Drawer */
 
 header {
-  margin-bottom: 6rem;
+	margin-bottom: 6rem;
 }
 
 .navbar-wrapper {
-  border-bottom: 1px solid var(--border-accent);
+	border-bottom: 1px solid var(--border-accent);
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.625rem 0;
-  max-width: 62.5rem;
-  height: 3.75rem;
-  margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.625rem 0;
+	max-width: 62.5rem;
+	height: 3.75rem;
+	margin: 0 auto;
 }
 
 .navbar .logo {
-  min-width: 2.75rem;
+	min-width: 2.75rem;
 }
 
 .hamburger-menu {
-  position: relative;
-  align-self: center;
-  margin-right: 1.25rem;
-  display: none;
-  min-width: 2.75rem;
-  min-height: 2.75rem;
+	position: relative;
+	align-self: center;
+	margin-right: 1.25rem;
+	display: none;
+	min-width: 2.75rem;
+	min-height: 2.75rem;
 }
 
 .hamburger-menu:focus {
-  border: 1px solid var(--primary-color);
+	border: 1px solid var(--primary-color);
 }
 
 .check {
-  position: absolute;
-  min-width: 2.75rem;
-  min-height: 2.75rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  cursor: pointer;
-  z-index: 3;
+	position: absolute;
+	min-width: 2.75rem;
+	min-height: 2.75rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	cursor: pointer;
+	z-index: 3;
 }
 
 .hamburger-menu span {
-  display: block;
-  min-width: 1.75rem;
-  min-height: 0.375rem;
-  background-color: var(--primary-color);
-  border-radius: 3.125rem;
-  transition: all 0.3s;
+	display: block;
+	min-width: 1.75rem;
+	min-height: 0.375rem;
+	background-color: var(--primary-color);
+	border-radius: 3.125rem;
+	transition: all 0.3s;
 }
-
 
 /* Drawer Menu Animation */
 
 .hamburger-menu span:nth-child(2) {
-  transform-origin: 0 0;
+	transform-origin: 0 0;
 }
 
 .hamburger-menu span:nth-child(4) {
-  transform-origin: 0 100%;
+	transform-origin: 0 100%;
 }
 
-.hamburger-menu input:checked~span:nth-child(2) {
-  transform: rotate(45deg);
+.hamburger-menu input:checked ~ span:nth-child(2) {
+	transform: rotate(45deg);
 }
 
-.hamburger-menu input:checked~span:nth-child(4) {
-  transform: rotate(-45deg);
+.hamburger-menu input:checked ~ span:nth-child(4) {
+	transform: rotate(-45deg);
 }
 
-.hamburger-menu input:checked~span:nth-child(3) {
-  opacity: 0;
-  transform: translateX(-3.125rem);
+.hamburger-menu input:checked ~ span:nth-child(3) {
+	opacity: 0;
+	transform: translateX(-3.125rem);
 }
-
 
 /* Nav Item */
 
 .nav-list {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  gap: 1.875rem;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	gap: 1.875rem;
 }
 
 .list-items {
-  position: relative;
-  min-height: 2.75rem;
-  min-width: 2.75rem;
-  text-decoration: none;
-  font-size: 1.3em;
-  color: var(--dark-black);
-  padding: 1rem 0;
-  transition: all 0.28s;
+	position: relative;
+	min-height: 2.75rem;
+	min-width: 2.75rem;
+	text-decoration: none;
+	font-size: 1.3em;
+	color: var(--dark-black);
+	padding: 1rem 0;
+	transition: all 0.28s;
 }
 
 .list-items.active {
-  color: var(--primary-color);
+	color: var(--primary-color);
 }
 
 .list-items:hover {
-  color: var(--primary-color);
+	color: var(--primary-color);
 }
 
 .list-items::after {
-  content: '';
-  position: absolute;
-  bottom: 0.6rem;
-  left: 50%;
-  transform: translateX(-50%);
-  min-height: 0.188rem;
-  min-width: 0;
-  border-radius: 0.625rem;
-  background-color: var(--primary-color);
-  transition: all 0.28s;
+	content: '';
+	position: absolute;
+	bottom: 0.6rem;
+	left: 50%;
+	transform: translateX(-50%);
+	min-height: 0.188rem;
+	min-width: 0;
+	border-radius: 0.625rem;
+	background-color: var(--primary-color);
+	transition: all 0.28s;
 }
 
 .list-items:hover::after {
-  min-width: 100%;
+	min-width: 100%;
 }
 
 .account-wrapper {
-  display: none;
-  gap: 2rem;
-  margin-top: 2rem;
+	display: none;
+	gap: 2rem;
+	margin-top: 2rem;
 }
 
 .social-media {
-  padding: 0.8rem;
-  color: var(--white-color);
+	padding: 0.8rem;
+	color: var(--white-color);
 }
 
 .social-media .fab {
-  max-width: 1.6rem;
-  color: var(--white-color);
-  transition: 0.4s;
+	max-width: 1.6rem;
+	color: var(--white-color);
+	transition: 0.4s;
 }
 
 .social-media .fab:hover {
-  transform: translateY(-5px);
+	transform: translateY(-5px);
 }
 
 .social-media .fa-instagram:hover {
-  color: #833ab4;
+	color: #833ab4;
 }
 
 .social-media .fa-twitter:hover {
-  color: #1da1f2;
+	color: #1da1f2;
 }
 
 .social-media .fa-github:hover {
-  color: #ff501b;
+	color: #ff501b;
 }
-
 
 /* Hero */
 
 .hero {
-  display: none;
-  position: relative;
-  margin: 1.875rem auto 0 auto;
-  width: 62.5rem;
-  max-height: 100%;
-  background-image: linear-gradient( to right top, #636363, #565656, #494949, #3c3c3c, #303030);
-  background-attachment: fixed;
-  border-radius: 0.5rem;
+	display: none;
+	position: relative;
+	margin: 1.875rem auto 0 auto;
+	width: 62.5rem;
+	max-height: 100%;
+	background-image: linear-gradient(
+		to right top,
+		#636363,
+		#565656,
+		#494949,
+		#3c3c3c,
+		#303030
+	);
+	background-attachment: fixed;
+	border-radius: 0.5rem;
 }
 
 .hero .hero-image {
-  display: block;
-  height: 30rem;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 0.5rem;
-  mix-blend-mode: overlay;
+	display: block;
+	height: 30rem;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 0.5rem;
+	mix-blend-mode: overlay;
 }
 
 .hero .hero-title {
-  position: absolute;
-  top: 14%;
-  left: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  font-family: 'Croissant One', cursive;
-  font-size: 4rem;
-  letter-spacing: 0.125em;
-  color: var(--primary-color);
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 14%;
+	left: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-family: 'Croissant One', cursive;
+	font-size: 4rem;
+	letter-spacing: 0.125em;
+	color: var(--primary-color);
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero .hero-description {
-  position: absolute;
-  width: 100%;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  bottom: 8%;
-  max-width: 80%;
-  font-size: 1.2rem;
-  font-weight: 300;
-  line-height: 2em;
-  color: var(--white-color);
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+	position: absolute;
+	width: 100%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	bottom: 8%;
+	max-width: 80%;
+	font-size: 1.2rem;
+	font-weight: 300;
+	line-height: 2em;
+	color: var(--white-color);
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
 }
-
 
 /* Bites Excess */
 
 .bites-excess {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  margin: 9.375rem auto;
-  min-width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 1rem;
+	align-items: center;
+	justify-content: center;
+	margin: 9.375rem auto;
+	min-width: 100%;
 }
 
 .bites-excess .excess {
-  position: relative;
-  margin: 0 auto;
-  padding-left: 3rem;
-  width: 100%;
-  /* border-left: 1px solid var(--orange-soft); */
+	position: relative;
+	margin: 0 auto;
+	padding-left: 3rem;
+	width: 100%;
+	/* border-left: 1px solid var(--orange-soft); */
 }
 
 .bites-excess .excess:first-child::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  height: 60%;
-  width: 1px;
-  background-color: var(--orange-soft);
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	height: 60%;
+	width: 1px;
+	background-color: var(--orange-soft);
 }
 
 .bites-excess .excess:last-child::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 60%;
-  width: 1px;
-  background-color: var(--orange-soft);
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 60%;
+	width: 1px;
+	background-color: var(--orange-soft);
 }
 
 .excess .excesss-number {
-  font-size: 4em;
-  color: var(--orange-soft);
+	font-size: 4em;
+	color: var(--orange-soft);
 }
 
 .excess .excess-title {
-  margin: 0.25rem 0 0.5rem 0;
-  font-weight: 2.3em;
-  font-weight: 700;
-  color: var(--dark-black);
+	margin: 0.25rem 0 0.5rem 0;
+	font-weight: 2.3em;
+	font-weight: 700;
+	color: var(--dark-black);
 }
 
 .excess .excess-description {
-  font-size: 1em;
-  color: var(--blue-gray);
+	font-size: 1em;
+	color: var(--blue-gray);
 }
-
 
 /* Main Content */
 
 .section-title {
-  font-family: 'Croissant One', cursive;
-  font-size: 2em;
-  text-align: center;
-  font-weight: 600;
-  color: var(--primary-color);
+	font-family: 'Croissant One', cursive;
+	font-size: 2em;
+	text-align: center;
+	font-weight: 600;
+	color: var(--primary-color);
 }
 
 .line-style {
-  font-family: 'Croissant One', cursive;
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  border-top-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  padding: 0 0.5rem;
-  letter-spacing: 1px;
-  font-size: 1em;
-  font-weight: 600;
+	font-family: 'Croissant One', cursive;
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	border-top-right-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+	border-top-left-radius: 0.25rem;
+	border-bottom-right-radius: 0.25rem;
+	padding: 0 0.5rem;
+	letter-spacing: 1px;
+	font-size: 1em;
+	font-weight: 600;
 }
-
 
 /* Most Favorite Section */
 
 .most-favorite {
-  margin-top: 9.375rem;
-  text-align: right;
+	margin-top: 9.375rem;
+	text-align: right;
 }
 
 .link-container {
-  display: inline-block;
+	display: inline-block;
 }
 
 .link-container .fas {
-  color: var(--primary-color);
-  transition: 0.5s;
-  margin-left: 0.4rem;
+	color: var(--primary-color);
+	transition: 0.5s;
+	margin-left: 0.4rem;
 }
 
 .link-container a.food-link {
-  display: inline-block;
-  padding: 0.563rem 0;
-  text-decoration: none;
-  font-size: 1.125em;
-  font-weight: 600;
-  color: var(--primary-color);
+	display: inline-block;
+	padding: 0.563rem 0;
+	text-decoration: none;
+	font-size: 1.125em;
+	font-weight: 600;
+	color: var(--primary-color);
 }
 
 .food {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
-  gap: 0.75rem;
-  margin-top: 1rem;
-  text-align: left;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+	gap: 0.75rem;
+	margin-top: 1rem;
+	text-align: left;
 }
 
 .food .card {
-  position: relative;
-  max-width: 100%;
-  max-height: 100%;
-  background-color: var(--white-color);
-  background-color: var(--white-color);
-  -webkit-box-shadow: 2px 10px 48px -15px rgba(209, 209, 209, 1);
-  -moz-box-shadow: 2px 10px 48px -15px rgba(209, 209, 209, 1);
-  box-shadow: 2px 10px 48px -15px rgba(209, 209, 209, 1);
-  border-radius: 0.5rem;
-  overflow: hidden;
+	position: relative;
+	max-width: 100%;
+	max-height: 100%;
+	background-color: var(--white-color);
+	background-color: var(--white-color);
+	-webkit-box-shadow: 2px 10px 48px -15px rgba(209, 209, 209, 1);
+	-moz-box-shadow: 2px 10px 48px -15px rgba(209, 209, 209, 1);
+	box-shadow: 2px 10px 48px -15px rgba(209, 209, 209, 1);
+	border-radius: 0.5rem;
+	overflow: hidden;
 }
 
 .food-image {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 0.5rem;
-  transition: 0.4s;
-  transform: scale(1.1);
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 0.5rem;
+	transition: 0.4s;
+	transform: scale(1.1);
 }
 
 .card:hover .food-image {
-  transform: scale(1);
+	transform: scale(1);
 }
 
 .food-description {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 60%;
-  width: 100%;
-  padding: 0 0.625rem;
-  background-image: linear-gradient(to top, #202020, transparent);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 60%;
+	width: 100%;
+	padding: 0 0.625rem;
+	background-image: linear-gradient(to top, #202020, transparent);
 }
 
 .food-title {
-  font-size: 1.5em;
-  font-weight: 600;
-  color: var(--white-color);
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+	font-size: 1.5em;
+	font-weight: 600;
+	color: var(--white-color);
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .location {
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-  color: var(--white-color);
-  margin-bottom: 0.25rem;
+	display: flex;
+	align-items: center;
+	font-weight: 400;
+	color: var(--white-color);
+	margin-bottom: 0.25rem;
 }
 
 .location-icon {
-  margin-right: 0.313rem;
-  max-width: 0.7rem;
-  color: var(--white-color);
+	margin-right: 0.313rem;
+	max-width: 0.7rem;
+	color: var(--white-color);
 }
 
 .price {
-  font-weight: 500;
-  color: var(--primary-color);
-  margin-bottom: 0.313rem;
+	font-weight: 500;
+	color: var(--primary-color);
+	margin-bottom: 0.313rem;
 }
 
 .badge {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: var(--badge-color);
-  max-width: max-content;
-  padding: 0.5rem 0.75rem;
-  font-weight: 500;
-  font-size: 0.875rem;
-  color: var(--white-color);
-  border-top-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-  box-shadow: 0 43px 181px rgba(27, 26, 23, 0.07), 0 19.1268px 79.4118px rgba(27, 26, 23, 0.0456112), 0 13.3398px 53.9366px rgba(27, 26, 23, 0.035), 0 7.20765px 29.2138px rgba(27, 26, 23, 0.0243888);
-  opacity: 0.9;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: var(--badge-color);
+	max-width: max-content;
+	padding: 0.5rem 0.75rem;
+	font-weight: 500;
+	font-size: 0.875rem;
+	color: var(--white-color);
+	border-top-right-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+	box-shadow: 0 43px 181px rgba(27, 26, 23, 0.07),
+		0 19.1268px 79.4118px rgba(27, 26, 23, 0.0456112),
+		0 13.3398px 53.9366px rgba(27, 26, 23, 0.035),
+		0 7.20765px 29.2138px rgba(27, 26, 23, 0.0243888);
+	opacity: 0.9;
 }
-
 
 /* All Food Section */
 
 .all-food {
-  margin-top: 5.125rem;
+	margin-top: 5.125rem;
 }
 
 .another-food {
-  margin-bottom: 2.563rem;
+	margin-bottom: 2.563rem;
 }
-
 
 /* Outlest Section */
 
 .outlet {
-  margin-top: 5.125rem;
-  text-align: right;
+	margin-top: 5.125rem;
+	text-align: right;
 }
 
 .search-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 100%;
 }
 
 .search-container label {
-  margin-bottom: 0.25rem;
-  font-weight: 500;
-  font-size: 1em;
-  color: var(--primary-color);
+	margin-bottom: 0.25rem;
+	font-weight: 500;
+	font-size: 1em;
+	color: var(--primary-color);
 }
 
 .search-container .search {
-  display: inline-block;
-  padding: 0.5rem 0.75rem;
-  width: 28%;
-  font-size: 1em;
-  font-weight: 400;
-  color: var(--dark-black);
-  border-radius: 0.75rem;
-  border: 2px solid var(--primary-color);
+	display: inline-block;
+	padding: 0.5rem 0.75rem;
+	width: 28%;
+	font-size: 1em;
+	font-weight: 400;
+	color: var(--dark-black);
+	border-radius: 0.75rem;
+	border: 2px solid var(--primary-color);
 }
 
 .search-container .search:focus {
-  box-shadow: 0 0 3px 1px rgba(255, 131, 3, 1), 0 0 5px 2px rgba(248, 136, 23, 1);
-  outline: none;
+	box-shadow: 0 0 3px 1px rgba(255, 131, 3, 1),
+		0 0 5px 2px rgba(248, 136, 23, 1);
+	outline: none;
 }
 
 .link-container .outlet-link {
-  display: none;
-  text-decoration: none;
-  padding: 0.563rem 0;
-  text-align: right;
-  font-size: 1.125em;
-  font-weight: 500;
-  color: var(--primary-color);
+	display: none;
+	text-decoration: none;
+	padding: 0.563rem 0;
+	text-align: right;
+	font-size: 1.125em;
+	font-weight: 500;
+	color: var(--primary-color);
 }
 
 .outlet-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
-  column-gap: 1.25rem;
-  margin-top: 1rem;
-  row-gap: 0.8rem;
-  text-align: left;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
+	column-gap: 1.25rem;
+	margin-top: 1rem;
+	row-gap: 0.8rem;
+	text-align: left;
 }
 
 .outlet-container .outlet-card {
-  position: relative;
-  border-radius: 0.75rem;
-  max-width: 33.688rem;
+	position: relative;
+	border-radius: 0.75rem;
+	max-width: 33.688rem;
 }
 
 .outlet-container .outlet-card:first-child,
 .outlet-container .outlet-card:nth-child(7),
 .outlet-container .outlet-card:nth-child(13) {
-  grid-column: 1 / span 2;
+	grid-column: 1 / span 2;
 }
 
 .outlet-container .outlet-card:nth-child(12),
 .outlet-container .outlet-card:nth-child(18),
 .outlet-container .outlet-card:nth-child(6) {
-  grid-column: 3 / span 2;
+	grid-column: 3 / span 2;
 }
 
 .outlet-image-wrapper {
-  position: relative;
-  max-width: 100%;
-  overflow: hidden;
-  border-radius: 0.75rem;
+	position: relative;
+	max-width: 100%;
+	overflow: hidden;
+	border-radius: 0.75rem;
 }
 
 .outlet-image-wrapper .outlet-image {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 12.5rem;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 0.75rem;
-  transform: scale(1.1);
-  transition: 0.4s;
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 12.5rem;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 0.75rem;
+	transform: scale(1.1);
+	transition: 0.4s;
 }
 
 .outlet-image-wrapper .outlet-image:hover {
-  transform: scale(1);
+	transform: scale(1);
 }
 
 .outlet-wrapper {
-  padding: 0.188rem;
+	padding: 0.188rem;
 }
 
 .outlet-name {
-  display: inline-block;
-  font-size: 1.1em;
-  font-weight: 500;
-  margin-bottom: 0.188rem;
+	display: inline-block;
+	font-size: 1.1em;
+	font-weight: 500;
+	margin-bottom: 0.188rem;
 }
 
 .outlet-name a {
-  padding: 0.625rem 0;
-  text-decoration: none;
+	padding: 0.625rem 0;
+	text-decoration: none;
 }
 
 .outlet-name:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .outlet-location {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.188rem;
-  font-weight: 400;
-  color: var(--blue-gray);
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.188rem;
+	font-weight: 400;
+	color: var(--blue-gray);
 }
 
 .outlet-description {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: max-content;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: max-content;
 }
 
 .outlet-rating {
-  display: flex;
-  align-items: center;
-  margin-top: 0.313rem;
-  font-weight: 500;
-  color: var(--gold-color);
+	display: flex;
+	align-items: center;
+	margin-top: 0.313rem;
+	font-weight: 500;
+	color: var(--gold-color);
 }
 
 .star {
-  margin-right: 0.313rem;
-  align-self: flex-start;
-  margin-top: 0.063rem;
+	margin-right: 0.313rem;
+	align-self: flex-start;
+	margin-top: 0.063rem;
 }
-
 
 /* Choose Section */
 
 .choose {
-  margin: 9.375rem auto;
+	margin: 9.375rem auto;
 }
 
 .choose-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1.875rem;
-  margin-top: 3.125rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 1.875rem;
+	margin-top: 3.125rem;
 }
 
 .choose-outline {
-  max-width: 100%;
-  border: 2px solid var(--primary-color);
-  border-radius: 0.75rem;
+	max-width: 100%;
+	border: 2px solid var(--primary-color);
+	border-radius: 0.75rem;
 }
 
 .choose-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  clip-path: polygon( 50% 0%, 100% 0, 100% 43%, 100% 80%, 80% 100%, 32% 100%, 0 100%, 0 18%, 18% 0);
-  border-radius: 0.5rem;
+	display: block;
+	width: 100%;
+	height: 100%;
+	clip-path: polygon(
+		50% 0%,
+		100% 0,
+		100% 43%,
+		100% 80%,
+		80% 100%,
+		32% 100%,
+		0 100%,
+		0 18%,
+		18% 0
+	);
+	border-radius: 0.5rem;
 }
 
 .choose-title {
-  font-size: 1.875em;
+	font-size: 1.875em;
 }
 
 .list-choose {
-  margin-top: 1.25rem;
+	margin-top: 1.25rem;
 }
 
 .list-choose-item {
-  display: flex;
-  align-items: center;
-  column-gap: 1.25rem;
-  margin-bottom: 1rem;
-  font-size: 1.125em;
-  color: var(--dark-black);
+	display: flex;
+	align-items: center;
+	column-gap: 1.25rem;
+	margin-bottom: 1rem;
+	font-size: 1.125em;
+	color: var(--dark-black);
 }
 
 .arrow-icon {
-  max-width: 1.625rem;
+	max-width: 1.625rem;
 }
-
 
 /* Footer Section */
 
 .footer-container {
-  border-top: 1px solid var(--border-accent);
+	border-top: 1px solid var(--border-accent);
 }
 
 .footer-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 3.125rem 0;
-  max-width: 62.5rem;
-  margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 3.125rem 0;
+	max-width: 62.5rem;
+	margin: 0 auto;
 }
 
 .footer-main {
-  text-align: start;
+	text-align: start;
 }
 
 .footer-title {
-  font-size: 1.1em;
-  margin-bottom: 0.5rem;
+	font-size: 1.1em;
+	margin-bottom: 0.5rem;
 }
 
 .bites-description {
-  font-size: 1.1em;
-  font-weight: 500;
+	font-size: 1.1em;
+	font-weight: 500;
 }
 
 .list-footer {
-  list-style: none;
+	list-style: none;
 }
 
 .footer-item {
-  margin-bottom: 0.313rem;
+	margin-bottom: 0.313rem;
 }
 
 .copyright {
-  text-align: center;
-  padding-bottom: 3.125rem;
-  font-size: 1.125rem;
-  font-weight: 500;
+	text-align: center;
+	padding-bottom: 3.125rem;
+	font-size: 1.125rem;
+	font-weight: 500;
 }
