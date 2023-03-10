@@ -1,36 +1,50 @@
 import FavoriteOutletDatabase from '../../data/favorite-outlet';
-import { listOutlet } from '../templates/api-template';
+import FavoriteOutletSearchView from './favorite-outlet/favorite-outlet-search-view';
+import FavoriteOutletShowPresenter from './favorite-outlet/favorite-outlet-show-presenter';
+import FavoriteOutletSearchPresenter from './favorite-outlet/favorite-outlet-search-presenter';
 import data from '../../json/BITES.json';
 import { chooseBites } from '../templates/local-template';
 
+const view = new FavoriteOutletSearchView();
+
 const Favorite = {
 	async render() {
-		return `	
-      <outlet-component></outlet-component>
+		return `
+		${view.getTemplate()}
 		<choose-component></choose-component>
 		<favorite-notfound></favorite-notfound>
-      `;
+		`;
 	},
 
 	async afterRender() {
 		const outlets = await FavoriteOutletDatabase.getAllOutlets();
-		const outletsData = document.querySelector('#outlet');
-
-		const choose = data['choose'];
+		const hero = document.querySelector('#hero');
 		let dataChoose = '';
 
-		choose.map((data) => {
+		hero.style.display = 'none';
+
+		data['choose'].map((data) => {
 			dataChoose += chooseBites(data);
 		});
 
+		new FavoriteOutletShowPresenter({
+			view,
+			favoriteOutlet: FavoriteOutletDatabase,
+		});
+
+		new FavoriteOutletSearchPresenter({
+			view,
+			favoriteOutlet: FavoriteOutletDatabase,
+		});
+
 		if (outlets.length === 0) {
-			document.getElementById('notfound-container').style.display = 'block';
+			document.querySelector('#notfound-container').style.display = 'block';
 			document.querySelector('#outlet-section').style.display = 'none';
-			document.querySelector('#choose-section').style.display = 'none';
+			document.querySelector('choose-component').style.display = 'none';
 		} else {
-			outlets.map((outlet) => {
-				outletsData.innerHTML += listOutlet(outlet);
-			});
+			document.querySelector('#notfound-container').style.display = 'none';
+			document.querySelector('#outlet-section').style.display = 'block';
+			document.querySelector('#choose-section').style.display = 'block';
 			document.querySelector('#choose').innerHTML = dataChoose;
 		}
 	},

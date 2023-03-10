@@ -2,31 +2,36 @@ import data from '../../json/BITES.json';
 import { allFoodData, chooseBites } from '../templates/local-template';
 
 const Food = {
-	render() {
-		return `
+  render() {
+    return `
       <all-food></all-food>
 		<choose-component></choose-component>
    `;
-	},
+  },
 
-	afterRender() {
-		const allFood = data['all'];
-		const choose = data['choose'];
+  afterRender() {
+    const allFoodContainer = document.querySelector('#all');
+    const hero = document.querySelector('#hero');
+    const allFood = data['all'];
+    const choose = data['choose'];
 
-		let dataAllFood = '';
-		let dataChoose = '';
+    hero.style.display = 'none';
 
-		allFood.map((food) => {
-			dataAllFood += allFoodData(food);
-		});
+    let dataAllFood = '';
+    let dataChoose = '';
+    allFoodContainer.innerHTML = '';
 
-		choose.map((data) => {
-			dataChoose += chooseBites(data);
-		});
+    allFood.map((food) => {
+      dataAllFood += allFoodData(food);
+    });
 
-		document.querySelector('#all').innerHTML = dataAllFood;
-		document.querySelector('#choose').innerHTML = dataChoose;
-	},
+    choose.map((data) => {
+      dataChoose += chooseBites(data);
+    });
+
+    allFoodContainer.innerHTML = dataAllFood;
+    document.querySelector('#choose').innerHTML = dataChoose;
+  },
 };
 
 export default Food;

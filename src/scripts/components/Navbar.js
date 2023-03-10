@@ -9,7 +9,7 @@ class Navbar extends HTMLElement {
             <a href="#mainContent" class="skip-link">Menuju ke konten</a>
             <div class="navbar-wrapper">
                <nav class="navbar" id="navbar">
-                  <img class="logo" src="logo.svg" alt="Bites Logo" />
+                  <img class="logo" src="icons-set/logo.svg" alt="Bites Logo" />
                   <ul class="nav-list">
                      <li class="nav-items">
                         <a class="list-items active" href="/" aria-label="list-items"
@@ -32,11 +32,6 @@ class Navbar extends HTMLElement {
                         >
                      </li>
                      <li class="nav-items">
-                        <a class="list-items" href="#choose-section" aria-label="list-items"
-                           >Why Choose</a
-                        >
-                     </li>
-                     <li class="nav-items">
                         <a
                            class="list-items"
                            href="https://github.com/rolandopranata"
@@ -46,6 +41,11 @@ class Navbar extends HTMLElement {
                            >About Us</a
                         >
                      </li>
+                     <div class="account-wrapper">
+                        <p><a class="social-media" href="https://www.instagram.com/rolandopranata_/"><i class="fab fa-instagram fa-2x"></i></a></p>
+                        <p><a class="social-media" href="https://github.com/rolandopranata"><i class="fab fa-github fa-2x"></i></a></p>
+                        <p><a class="social-media" href="https://twitter.com/Vzents1"><i class="fab fa-twitter fa-2x"></i></a></p>
+                     </div>       
                   </ul>
                   <a href="#" class="hamburger-menu" id="hamburger">
                      <input class="check" type="checkbox" />
@@ -54,7 +54,17 @@ class Navbar extends HTMLElement {
                      <span></span>
                   </a>
                </nav>
-            </div>
+               </div>
+               <div class="hero" id="hero">
+                  <picture>
+                     <source srcset="images/hero-small.jpg" media="(max-width: 600px)">
+                     <img class="hero-image" src="images/hero-large.jpg" alt="Heroes Image" />
+                  </picture>
+                  <h1 class="hero-title">We Serve The Taste <br> You Love.</h1>
+                  <p class="hero-description">
+                     This is a type of restaurant which typically serves food and drinks. in addition to light refreshments such as baked goods or scanks. The term comes the rench word meaning food.
+                  </p>
+               </div>
          </header>
       `;
 	}

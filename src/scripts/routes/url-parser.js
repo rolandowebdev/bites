@@ -13,7 +13,7 @@ const UrlParser = {
 	},
 
 	_scrollOnTop() {
-		window.scrollTo(0, 0);
+		window.top.scrollTo(0, 0);
 	},
 
 	_urlSplitter(url) {

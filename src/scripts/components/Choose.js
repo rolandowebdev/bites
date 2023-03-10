@@ -9,7 +9,9 @@ class Choose extends HTMLElement {
          <h2 class="section-title">
             Why you choose <span class="line-style">Bites?</span>
          </h2>
-         <div class="choose-container" id="choose"></div>
+         <div class="choose-container" id="choose">
+            
+         </div>
       </section>
       `;
 	}

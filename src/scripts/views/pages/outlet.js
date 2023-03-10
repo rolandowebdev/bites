@@ -7,9 +7,9 @@ import { chooseBites } from '../templates/local-template';
 const Outlets = {
 	async render() {
 		return `
-		<loading-component></loading-component>
 		<outlet-component></outlet-component>
 		<choose-component></choose-component>
+		<loading-component></loading-component>
       `;
 	},
 
@@ -17,6 +17,10 @@ const Outlets = {
 		loading.show();
 		const outlet = await SourceOutlet.allOutlet();
 		const outletWrapper = document.querySelector('#outlet');
+		const hero = document.querySelector('#hero');
+		outletWrapper.innerHTML = '';
+
+		hero.style.display = 'none';
 
 		outlet.restaurants.map((outlet) => {
 			outletWrapper.innerHTML += listOutlet(outlet);

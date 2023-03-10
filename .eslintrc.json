@@ -29,7 +29,17 @@
 		"no-var": "off",
 		"class-methods-use-this": "off",
 		"no-mixed-spaces-and-tabs": "off",
-		"no-unused-expressions": "off"
+		"no-unused-expressions": "off",
+		"no-useless-concat": "off",
+		"consistent-return": "off",
+		"no-return-assign": "off",
+		"no-prototype-builtins": "off",
+		"no-new": "off",
+		"object-curly-newline": "off",
+		"no-undef": "off",
+		"import/prefer-default-export": "off",
+		"max-len": "off"
 	},
+	"plugins": ["jasmine", "codeceptjs"],
 	"parser": "@babel/eslint-parser"
 }

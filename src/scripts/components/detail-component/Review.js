@@ -6,8 +6,8 @@ class Review extends HTMLElement {
 	render() {
 		this.innerHTML = `
          <div class="reviews wrapper" id="reviews">
-				<h2 class="reviews-title">Customer Reviews</h2>
-				<div class="reviews-container" id="review"></div>
+				<h2 class="review-title">Customer Reviews</h2>
+				<div class="review-container" id="review"></div>
 			</div>
       `;
 	}

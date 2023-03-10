@@ -1,32 +1,25 @@
-/* eslint-disable no-useless-concat */
-/* eslint-disable consistent-return */
-/* eslint-disable no-return-assign */
 import UrlParser from '../../routes/url-parser';
 import SourceOutlet from '../../data/data-outlet';
+import FavoriteOutletDatabase from '../../data/favorite-outlet';
 import checkOnline from '../../utils/check-online';
-import Swal from 'sweetalert2';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
+import { countIteration, handleInputFill } from '../../utils/form-validation';
 import {
 	detailOutlet,
 	foodMenu,
 	drinkMenu,
 	reviewOutlet,
 } from '../templates/api-template';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const DetailOutlets = {
 	async render() {
 		return `
-		<div class="notfound-container" id="notfound">
-			<img class="notfound-image" src="404.svg" alt="Not Found" />
-			<h1 class="notfound-title">404 Not Found</h1>
-			<p class="notfound-description">Failed to fetch data, please check your connection</p>
-		</div>
 		<detail-outlet></detail-outlet>
-		<menu-food></menu-food>
-		<menu-drink></menu-drink>
+		<menu-container></menu-container>
 		<review-component></review-component>
 		<button-container></button-container>
 		<form-container></form-container>
+		<not-found></not-found>
       `;
 	},
 
@@ -36,21 +29,35 @@ const DetailOutlets = {
 		const drinkContainer = document.querySelector('#drinks');
 		const reviewContainer = document.querySelector('#review');
 
-		const notFoundContainer = document.querySelector('#notfound');
-		const formContainer = document.querySelector('#form-container');
-		const reviewWrapper = document.querySelector('#reviews');
-
+		const hero = document.querySelector('#hero');
 		const inputName = document.querySelector('#reviewName');
-		const inputReview = document.querySelector('#reviewValue');
+		const inputReview = document.querySelector('#reviewDetail');
 		const submit = document.querySelector('#submit');
+		const iteration = document.querySelector('#countIteration');
+		const countInfo = document.querySelector('#countInfo');
 
 		try {
 			const url = UrlParser.parseActiveUrlWithoutCombiner();
 			const outlet = await SourceOutlet.detailOutlet(url.id);
 
-			const foodData = outlet.restaurant.menus.foods;
-			const drinksData = outlet.restaurant.menus.drinks;
-			const reviewData = outlet.restaurant.customerReviews;
+			hero.style.display = 'none';
+
+			inputName.addEventListener('input', () => {
+				const characterTyped = inputName.value.length;
+				const maxCharacter = inputName.maxLength;
+				const remainingCharacter = maxCharacter - characterTyped;
+
+				iteration.innerText = remainingCharacter;
+				countIteration(remainingCharacter, 'countIteration', 'countInfo');
+			});
+
+			inputName.addEventListener('focus', () => {
+				countInfo.style.visibility = 'initial';
+			});
+
+			inputName.addEventListener('blur', () => {
+				countInfo.style.visibility = 'hidden';
+			});
 
 			submit.addEventListener('click', () => {
 				const review = {
@@ -58,43 +65,28 @@ const DetailOutlets = {
 					name: inputName.value,
 					review: inputReview.value,
 				};
-				if (window.navigator.onLine === true) {
-					if (review.name === '' || review.review === '') {
-						Swal.fire({
-							title: 'All data must be filled!',
-							text: 'Failed to send review feedback😪',
-							icon: 'failed',
-						});
-					} else {
-						Swal.fire({
-							title: 'Successfully added review',
-							text: 'Thank you for your feedback😄',
-							icon: 'success',
-						});
-						SourceOutlet.postReview(review);
-						window.location.reload(3);
-						return false;
-					}
-				}
-				checkOnline.status();
+				window.navigator.onLine === true
+					? handleInputFill(review)
+					: checkOnline.status();
 			});
 
 			detailOutletContainer.innerHTML = detailOutlet(outlet.restaurant);
 
-			foodData.slice(0, 4).map((food) => {
+			outlet.restaurant.menus.foods.slice(0, 4).map((food) => {
 				foodContainer.innerHTML += foodMenu(food);
 			});
 
-			drinksData.slice(0, 4).map((drink) => {
+			outlet.restaurant.menus.drinks.slice(0, 4).map((drink) => {
 				drinkContainer.innerHTML += drinkMenu(drink);
 			});
 
-			reviewData.map(
+			outlet.restaurant.customerReviews.map(
 				(review) => (reviewContainer.innerHTML += reviewOutlet(review))
 			);
 
-			LikeButtonInitiator.init({
+			LikeButtonPresenter.init({
 				likeButtonContainer: document.querySelector('#likeButtonContainer'),
+				favoriteOutlet: FavoriteOutletDatabase,
 				outlet: {
 					id: outlet.restaurant.id,
 					name: outlet.restaurant.name,
@@ -105,12 +97,14 @@ const DetailOutlets = {
 				},
 			});
 		} catch (err) {
-			notFoundContainer.style.display = 'block';
+			document.querySelector('#notfound').style.display = 'block';
+			document.querySelector('.list-menu-description').style.display = 'none';
+			document.querySelector('#form-container').style.display = 'none';
+			document.querySelector('#reviews').style.display = 'none';
+			hero.style.display = 'none';
 			foodContainer.style.display = 'none';
 			drinkContainer.style.display = 'none';
 			reviewContainer.style.display = 'none';
-			formContainer.style.display = 'none';
-			reviewWrapper.style.display = 'none';
 			detailOutletContainer.style.display = 'none';
 		}
 	},

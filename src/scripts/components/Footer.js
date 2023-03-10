@@ -8,7 +8,7 @@ class Footer extends HTMLElement {
       <footer class="footer-container">
         <div class="footer-wrapper">
           <div class="footer-main">
-            <img src="logo.svg" alt="Logo Bites" />
+            <img src="icons-set/logo.svg" alt="Logo Bites" />
             <p class="bites-description">
               Find your favorite food here and taste the <br /> unforgettable delicacy.
             </p>

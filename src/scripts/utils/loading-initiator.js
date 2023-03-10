@@ -13,7 +13,7 @@ const loading = {
 				clearInterval(fadeEffect);
 				document.getElementById('loading').style.display = 'none';
 			}
-		}, 50);
+		});
 	},
 };
 
