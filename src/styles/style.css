@@ -529,7 +529,7 @@ header {
 }
 
 .search-container label {
-	margin-bottom: 0.25rem;
+	margin-bottom: 0.3rem;
 	font-weight: 500;
 	font-size: 1em;
 	color: var(--primary-color);
@@ -542,13 +542,13 @@ header {
 	font-size: 1em;
 	font-weight: 400;
 	color: var(--dark-black);
-	border-radius: 0.75rem;
+	border-radius: 0.25rem;
 	border: 2px solid var(--primary-color);
 }
 
 .search-container .search:focus {
-	box-shadow: 0 0 3px 1px rgba(255, 131, 3, 1),
-		0 0 5px 2px rgba(248, 136, 23, 1);
+	box-shadow: 0 0 8px 1px rgba(255, 204, 71, 0.8),
+		0 0 5px 2px rgba(255, 204, 71, 0.8);
 	outline: none;
 }
 
@@ -593,7 +593,7 @@ header {
 	position: relative;
 	max-width: 100%;
 	overflow: hidden;
-	border-radius: 0.75rem;
+	border-radius: 0.5rem;
 }
 
 .outlet-image-wrapper .outlet-image {
@@ -603,7 +603,7 @@ header {
 	height: 12.5rem;
 	object-fit: cover;
 	object-position: center;
-	border-radius: 0.75rem;
+	border-radius: 0.5rem;
 	transform: scale(1.1);
 	transition: 0.4s;
 }
