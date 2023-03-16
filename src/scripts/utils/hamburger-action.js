@@ -6,7 +6,7 @@ function hamburgerAction(checkbox, hamburger) {
 			const menu = menus;
 			checkbox.checked === true
 				? (menu.style.backgroundColor = '#fff')
-				: (menu.style.backgroundColor = '#ff8303');
+				: (menu.style.backgroundColor = '#ff4f03');
 		});
 	});
 }

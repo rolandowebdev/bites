@@ -3,26 +3,30 @@ import CONFIG from '../../global/config';
 const listOutlet = (outlet) => {
 	return `
   <figure class="outlet-card">
-    <a href="${`/#/detail/${outlet.id || 'outlet not found'}`}">
+    <a href="${`/#/detail/${
+			outlet.id || 'outlet not found'
+		}`}" aria-label="Outlet not found">
       <div class="outlet-image-wrapper">
         <img class="outlet-image lazyload" 
         data-src="${
 					CONFIG.BASE_IMAGE_URL + outlet.pictureId || 'outlet not found'
-				}">
+				}" alt="Lazyload Image">
       </div>
     </a>
     <figcaption class="outlet-wrapper">
       <p class="outlet-name" id="outletName">
-        <a href="${`/#/detail/${outlet.id || 'outlet not found'}`}">
+        <a href="${`/#/detail/${
+					outlet.id || 'outlet not found'
+				}`}" aria-label="Outlet not found">
           ${outlet.name || 'outlet not found'}
         </a>
       </p>
-      <p class="outlet-location"><img class="location-icon" src="icons-set/location.svg" alt="Location Icon">${
+      <p class="outlet-location"><img class="location-icon" src="icons-set/location.svg" height="15" width="15" alt="Location Icon">${
 				outlet.city || 'outlet not found'
 			}
       </p>
       <p class="outlet-description">${outlet.description}</p>
-      <p class="outlet-rating"><img class="star" src="icons-set/star.svg" alt="Star Logo">
+      <p class="outlet-rating"><img class="star" src="icons-set/star.svg" height="18" width="18" alt="Star Logo">
         ${outlet.rating || 'outlet not found'}
       </p>
     </figcaption>
@@ -37,7 +41,7 @@ const createSkeletonUi = (count) => {
     <figure class="outlet-card">
       <div class="outlet-image-wrapper">
         <img class="outlet-image lazyload skeleton" 
-        src="images/placeholder.png">
+        src="images/placeholder.png" alt="Lazyload Image">
       </div>
       <figcaption class="outlet-wrapper">
          <p class="skeleton skeleton-text"></p>
@@ -86,7 +90,7 @@ const foodMenu = (menu) => {
         <img class="menu-icon" src="https://images.unsplash.com/photo-1543826173-70651703c5a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZHxlbnwwfDJ8MHxibGFja3w%3D&auto=format&fit=crop&w=500&q=60" alt="Food Menu"/>
         <div class="menu-list">
           <p class="menu-name">${menu.name}</p>
-          <span class="menu-location"><img class="location-icon" src="icons-set/location.svg" alt="Location Icon">Western food</span>
+          <span class="menu-location"><img class="location-icon" src="icons-set/location.svg" height="15" width="15" alt="Location Icon">Western food</span>
           <span class="menu-buy">
             <p class="menu-price">$4.3</p>
             <span class="chart-wrapper"><img class="chart-icon" src="icons-set/chart.svg" alt="Chart Icon"/></span>
@@ -104,7 +108,7 @@ const drinkMenu = (menu) => {
         <img class="menu-icon" src="https://images.unsplash.com/photo-1616360151857-3914da25dbe0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGRyaW5rcyUyMGJvdHRsZXxlbnwwfDJ8MHxibGFja3w%3D&auto=format&fit=crop&w=500&q=60" alt="Drink Menu"/>
         <div class="menu-list">
           <p class="menu-name">${menu.name}</p>
-          <span class="menu-location"><img class="location-icon" src="icons-set/location.svg" alt="Location Icon">Indonesian food</span>
+          <span class="menu-location"><img class="location-icon" src="icons-set/location.svg" height="15" width="15" alt="Location Icon">Indonesian food</span>
           <span class="menu-buy">
             <p class="menu-price">$4.3</p>
             <span class="chart-wrapper"><img class="chart-icon" src="icons-set/chart.svg" alt="Chart Icon"/></span>

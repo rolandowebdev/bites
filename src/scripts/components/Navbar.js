@@ -6,7 +6,7 @@ class Navbar extends HTMLElement {
 	render() {
 		this.innerHTML = `
          <header>
-            <a href="#mainContent" class="skip-link">Menuju ke konten</a>
+            <a href="#mainContent" class="skip-link" aria-label="Skip to content">Menuju ke konten</a>
             <div class="navbar-wrapper">
                <nav class="navbar" id="navbar">
                   <img class="logo" src="icons-set/logo.svg" alt="Bites Logo" />
@@ -41,14 +41,16 @@ class Navbar extends HTMLElement {
                            >About Us</a
                         >
                      </li>
-                     <div class="account-wrapper">
-                        <p><a class="social-media" href="https://www.instagram.com/rolandopranata_/"><i class="fab fa-instagram fa-2x"></i></a></p>
-                        <p><a class="social-media" href="https://github.com/rolandopranata"><i class="fab fa-github fa-2x"></i></a></p>
-                        <p><a class="social-media" href="https://twitter.com/Vzents1"><i class="fab fa-twitter fa-2x"></i></a></p>
-                     </div>       
+                     <li class="account-wrapper">
+                        <p><a class="social-media" href="https://www.instagram.com/rolandowebdev/" aria-label="Instagram rolandowebdev"><i class="fab fa-instagram fa-2x"></i></a></p>
+                        <p><a class="social-media" href="https://github.com/rolandowebdev" aria-label="Github rolandowebdev"><i class="fab fa-github fa-2x"></i></a></p>
+                        <p><a class="social-media" href="https://twitter.com/rolandowebdev" aria-label="Twitter rolandowebdev"><i class="fab fa-twitter fa-2x"></i></a></p>
+                     </li>       
                   </ul>
-                  <a href="#" class="hamburger-menu" id="hamburger">
-                     <input class="check" type="checkbox" />
+                  <a href="#" class="hamburger-menu" id="hamburger" aria-label="Hamburger menu">
+                     <label for="check">
+                        <input id="check" class="check" type="checkbox" />
+                     </label>
                      <span></span>
                      <span></span>
                      <span></span>

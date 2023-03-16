@@ -9,7 +9,7 @@ class MenuContainer extends HTMLElement {
          <div class="list-menu-description">
             <h2 class="menu-title">Food & Drink Menu</h2>
             <p class="menu-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero unde cumque id sit atque neque at dolorum quae ea.</p>
-            <a class="seeall-menu btn" href="#/food">See all menu</a>
+            <a class="seeall-menu btn" href="#/food" aria-label="See all menu">See all menu</a>
          </div>
          <div class="menu-section">
 			   <div id="foods" class="menu-container"></div>
