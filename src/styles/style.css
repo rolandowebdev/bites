@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
 
 :root {
-	--primary-color: #ff8303;
+	--primary-color: #ff4f03;
 	--dark-black: #1f1d36;
-	--orange-soft: #ffc285;
+	--orange-soft: #ff8000;
 	--white-color: #fff;
 	--badge-color: #ff3d68;
-	--gold-color: #ffcc47;
-	--blue-gray: #9d9d9d;
+	--gold-color: #ffb700;
+	--blue-gray: #616161;
 	--border-accent: #ececec;
 }
 
@@ -319,7 +319,6 @@ header {
 	margin: 0 auto;
 	padding-left: 3rem;
 	width: 100%;
-	/* border-left: 1px solid var(--orange-soft); */
 }
 
 .bites-excess .excess:first-child::after {
@@ -330,7 +329,7 @@ header {
 	transform: translateY(-50%);
 	height: 60%;
 	width: 1px;
-	background-color: var(--orange-soft);
+	background-color: var(--primary-color);
 }
 
 .bites-excess .excess:last-child::before {
@@ -341,12 +340,12 @@ header {
 	transform: translateY(-50%);
 	height: 60%;
 	width: 1px;
-	background-color: var(--orange-soft);
+	background-color: var(--primary-color);
 }
 
 .excess .excesss-number {
 	font-size: 4em;
-	color: var(--orange-soft);
+	color: var(--primary-color);
 }
 
 .excess .excess-title {

@@ -9,7 +9,7 @@ function hideDrawer(menu, drawer, checkbox, hamburger) {
 			if (check.checked === false) {
 				hamburger.forEach((menus) => {
 					const menu = menus;
-					menu.style.backgroundColor = '#ff8303';
+					menu.style.backgroundColor = '#ff4f03';
 				});
 			}
 		});

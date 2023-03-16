@@ -41,11 +41,11 @@ class Navbar extends HTMLElement {
                            >About Us</a
                         >
                      </li>
-                     <div class="account-wrapper">
+                     <li class="account-wrapper">
                         <p><a class="social-media" href="https://www.instagram.com/rolandowebdev/" aria-label="Instagram rolandowebdev"><i class="fab fa-instagram fa-2x"></i></a></p>
                         <p><a class="social-media" href="https://github.com/rolandowebdev" aria-label="Github rolandowebdev"><i class="fab fa-github fa-2x"></i></a></p>
                         <p><a class="social-media" href="https://twitter.com/rolandowebdev" aria-label="Twitter rolandowebdev"><i class="fab fa-twitter fa-2x"></i></a></p>
-                     </div>       
+                     </li>       
                   </ul>
                   <a href="#" class="hamburger-menu" id="hamburger" aria-label="Hamburger menu">
                      <label for="check">
