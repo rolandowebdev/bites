@@ -9,7 +9,7 @@ class FavoriteOutletSearchView {
 				<label for="search">Search Outlet</label>
 				<input class="search" name="search" type="text" id="query" placeholder="Search..." autocomplete="off" required>
 			</div>
-			<p class="link-container"><a class="outlet-link" href="#/outlet">See all<i id="fasOutlet" class="fas fa-arrow-right"></i></a></p>
+			<p class="link-container"><a class="outlet-link" href="#/outlet" aria-label="See all outlet">See all<i id="fasOutlet" class="fas fa-arrow-right"></i></a></p>
          <div class="outlet-container" id="outlet"></div>
       </section>
 		`;

@@ -34,7 +34,7 @@ class App {
 			document.body.innerHTML = `
 				<div class="pagenotfound-container">
 					<img class="page-notfound" src="images/page.jpg" alt="Page Not Found" />
-					<a class="home-link" href="/">Go to the home</a>
+					<a class="home-link" href="/" aria-label="Home link">Go to the home</a>
 					<p>Your route is undefined, please back to the home</p>
 				</div>`;
 		}

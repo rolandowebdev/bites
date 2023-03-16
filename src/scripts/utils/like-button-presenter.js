@@ -40,7 +40,7 @@ const LikeButtonInitiator = {
 					title: 'You have favorite outlet now!',
 					text: 'Enjoy for all menu here😍',
 					confirmButtonText:
-						'<a href="#/food"  style="text-decoration: none; color: #fff ;">Let\'s go see all menu</a>',
+						'<a href="#/food" style="text-decoration: none; color: #fff;" aria-label="See all menu">Let\'s go see all menu</a>',
 				});
 			}
 			checkOnline.status();

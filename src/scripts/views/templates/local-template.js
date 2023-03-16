@@ -52,19 +52,19 @@ const chooseBites = (data) => {
      <h3 class="choose-title">${data['title']}</h3>
      <div class="list-choose">
        <span class="list-choose-item">
-         <img class="arrow-icon" src="icons-set/arrow.svg" alt="Arrow Logo">
+         <img class="arrow-icon" src="icons-set/arrow.svg" height="26" width="26" alt="Arrow Logo">
          ${data['reasonOne']}
        </span>
        <span class="list-choose-item">
-         <img class="arrow-icon" src="icons-set/arrow.svg" alt="Arrow Logo">
+         <img class="arrow-icon" src="icons-set/arrow.svg" height="26" width="26" alt="Arrow Logo">
          ${data['reasonTwo']}
        </span>
        <span class="list-choose-item">
-         <img class="arrow-icon" src="icons-set/arrow.svg" alt="Arrow Logo">
+         <img class="arrow-icon" src="icons-set/arrow.svg" height="26" width="26" alt="Arrow Logo">
          ${data['reasonThree']}
        </span>
        <span class="list-choose-item">
-         <img class="arrow-icon" src="icons-set/arrow.svg" alt="Arrow Logo">
+         <img class="arrow-icon" src="icons-set/arrow.svg" height="26" width="26" alt="Arrow Logo">
          ${data['reasonFour']}
        </span>
      </div>
